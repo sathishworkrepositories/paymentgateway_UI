@@ -357,7 +357,7 @@ container.footer-bottom .right span {
   backdrop-filter: blur(31.7438px); */
   border-radius: 12.6975px;
   background: var(--Backgrounds-White, #ffffff);
-  box-shadow: 0px 0px 10px 0px #0000001a;
+  box-shadow: 0px 0px 10px 0px #a6cea9;
   /* background: url(../img/left-bg.png);
   background-size: 100% 100%;
   background-repeat: no-repeat; */
@@ -434,7 +434,7 @@ section.Dashboard-page>.container-fluid {
 
 .succes-icon img.otp {
   margin-bottom: 15px;
-  box-shadow: 0px 8px 16px 0px #3b8aff40;
+  box-shadow: 0px 8px 16px 0px #a6cea9;
   border-radius: 50%;
 }
 
@@ -648,7 +648,7 @@ ul.profile-list.showing {
   height: auto;
   overflow: visible;
   transition: all 0.2s ease-in-out;
-  box-shadow: 0px 7.41px 22.22px 0px #11269266;
+  box-shadow: 0px 7.41px 22.22px 0px #a6cea9;
 }
 
 ul.profile-list li {
@@ -767,7 +767,7 @@ ul.profile-list li a:hover {
     transform: scale(1.1);
     padding: 6px 10px !important;
     background-blend-mode: soft-light, normal;
-    box-shadow: 0px 8px 16px 0px #3b8aff40;
+    box-shadow: 0px 8px 16px 0px #a6cea9;
   }
 
   ul.menu-mobile li a .left-icons {
@@ -841,7 +841,7 @@ ul.profile-list li a:hover {
     background: #e7ecf7;
     padding: 5px;
     border-radius: 10px 10px 0 0;
-    box-shadow: 0px 4px 4px 0px #00000040 inset;
+    box-shadow: 0px 4px 4px 0px #a6cea9 inset;
   }
 }
 

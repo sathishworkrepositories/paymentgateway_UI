@@ -2294,6 +2294,10 @@ p.para-title {
   background-repeat: no-repeat;
 }
 
+/* .loginouterbox.a3 {
+  padding: 8px 30px !important;
+} */
+
 /* .bg-img.left-side,
 .bg-img.right-side {
   display: flex;
@@ -2426,6 +2430,36 @@ section.sign-in-page {
   /* height: 100vh; */
   align-items: center;
   justify-content: center;
+}
+
+.sign-up-page {
+  height: 100vh;
+  display: flex;
+
+}
+
+.for-register {
+  flex: 1;
+  display: flex;
+}
+
+.for-register .row {
+  flex: 1;
+}
+
+.success-page {
+  display: flex;
+
+}
+
+.success-page .container-fluid {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.success-page .container-fluid .row {
+  flex: 1;
 }
 
 /* .sign-in-page .bg-img:before {
@@ -2794,10 +2828,10 @@ h5.enter-otp {
     position: relative !important;
   }
 
-  .sign-in-page .bg-img,
+  /* .sign-in-page .bg-img,
   .sign-up-page .bg-img {
     height: 100vh !important;
-  }
+  } */
 }
 
 @media (min-width: 768px) and (max-width: 1199.98px) {

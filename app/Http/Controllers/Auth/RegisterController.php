@@ -61,11 +61,11 @@ class RegisterController extends Controller
             'first_name' => ['required_if:account,==,Personal', 'max:50'],
             'last_name' => ['required_if:account,==,Personal', 'max:50'],
             'business_name' => ['required_if:account,==,Business',  'max:160'],
-            'company_website' => ['required_if:account,==,Business', 'max:190'],
+            // 'company_website' => ['required_if:account,==,Business', 'max:190'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed','regex:/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{6,}$/'],
-            'referralid' => 'nullable|alpha_num|max:18',
-            'g-recaptcha-response' => 'required|captcha',
+            'referralid' => 'nullable|alpha_num|max:18'
+            // 'g-recaptcha-response' => 'required|captcha',
         ]);
     }
 
@@ -77,6 +77,7 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        
         $secret1 = $this->createSecret();
         $referal_id = $this->generateBarcodeNumber();
         $role = $data['account'];
@@ -96,25 +97,25 @@ class RegisterController extends Controller
             $user =  User::create([
                 'role'  => $role,
                 'name' => $name,
-                'first_name' => $data['first_name'],
-                'last_name' => $data['last_name'],
-                'business_name' => $data['business_name'],
-                'company_website' => $data['company_website'],
+                // 'first_name' => $data['first_name'],
+                // 'last_name' => $data['last_name'],
+                'business_name' => $data['business_name'] ?? "",
+                // 'company_website' => $data['company_website'] ?? "",
                 'email' => $data['email'],
-                'phone_no' => $data['phoneno'],
+                'phone_no' => $data['phoneno'] ?? "",
                 'referral_id'  => $referal_id,
                 'password' => Hash::make($data['password']),
                 'google2fa_secret'  => $secret1,
-                'parent_id'     => $data['referralid']
+                'parent_id'     => $data['referralid'] ?? ""
             ]);
         }else{
             $user =  User::create([
                 'role'  => $role,
                 'name' => $name,
-                'first_name' => $data['first_name'],
-                'last_name' => $data['last_name'],
-                'business_name' => $data['business_name'],
-                'company_website' => $data['company_website'],
+                // 'first_name' => $data['first_name'],
+                // 'last_name' => $data['last_name'],
+                'business_name' => $data['business_name'] ?? "",
+                // 'company_website' => $data['company_website'] ?? "",
                 'email' => $data['email'],
                 'referral_id'  => $referal_id,
                 'password' => Hash::make($data['password']),

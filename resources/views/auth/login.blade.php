@@ -4,10 +4,11 @@ $title = "Sign In";
 @extends('layouts.app')
 
 @section('content')
-<section class="sign-in-page">
+<section class="sign-in-page success-page">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-6 col-xl-6 col-md-12 col-sm-12 col-xs-12 bg-img left-side">
+            <div class="col-lg-12 col-xl-12 col-md-12 col-sm-12 col-xs-12 bg-img left-side"
+                style="display: flex;justify-content: center;align-items: center;flex-direction: column">
                 <div class="loginouterbox">
                     <div class="login-form">
                         <div class="logo">
@@ -82,10 +83,10 @@ $title = "Sign In";
 
                                                 <!-- {!! app('captcha')->display() !!} -->
                                                 <!-- @if ($errors->has('g-recaptcha-response'))
-              <span class="text-danger errors-text show_error_password">
-                <strong>{{ $errors->first('g-recaptcha-response') }}</strong>
-              </span>
-            @endif -->
+                                              <span class="text-danger errors-text show_error_password">
+                                                <strong>{{ $errors->first('g-recaptcha-response') }}</strong>
+                                                    </span>
+                                                    @endif -->
 
                                             </div>
                                         </div>
@@ -136,11 +137,11 @@ $title = "Sign In";
                     </ul>
                 </div>
             </div>
-            <div class="col-lg-6 col-xl-6 col-md-12 col-sm-12 col-xs-12 right-side">
+            <!-- <div class="col-lg-6 col-xl-6 col-md-12 col-sm-12 col-xs-12 right-side">
                 <div class="signin-right-side-img">
-                    <!-- <img src="{{ url('/img/confirm-pageright-img.png') }}" alt="" class="img-fluid"> -->
+                     <img src="{{ url('/img/confirm-pageright-img.png') }}" alt="" class="img-fluid"> 
                 </div>
-            </div>
+            </div> -->
 
         </div>
     </div>
