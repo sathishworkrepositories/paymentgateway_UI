@@ -52,7 +52,7 @@ class LoginController extends Controller
     public function reconfirm_account($email) {       
         $check = User::where('email', $email)->first();
         if ($check) {
-            $this->sendEmail($check);
+            // $this->sendEmail($check);
             \Session::flash('status', 'You need to confirm your account. We have resent you an activation link, please check your email inbox/spam');
         } else {
             \Session::flash('error', 'Invalid email id, please check your email');
@@ -70,39 +70,39 @@ class LoginController extends Controller
                 User::where(['id'=> $user->id])->update(['referral_id' => $ref]);
             }
 
-            $ip =$request->getClientIp();
-            $ip1 = $_SERVER['REMOTE_ADDR'];
+            // $ip =$request->getClientIp();
+            // $ip1 = $_SERVER['REMOTE_ADDR'];
 
 
-            $details = json_decode(crul("http://ipinfo.io/{$ip1}/json"));
+            // $details = json_decode(crul("http://ipinfo.io/{$ip1}/json"));
 
-            if(isset($details->country)){
-                $location = $details->city.', '.$details->region.', '.$details->country;
-            }else{
-                $location = "";
-            }   
+            // if(isset($details->country)){
+            //     $location = $details->city.', '.$details->region.', '.$details->country;
+            // }else{
+            //     $location = "";
+            // }   
 
             //User login
-            $UserLogin = UserLogin::where(['user_id' => \Auth::id(),'login_ip' => $ip])->first();   
+            // $UserLogin = UserLogin::where(['user_id' => \Auth::id(),'login_ip' => $ip])->first();   
 
-            if($UserLogin)
-            {
-                 $UserLogin->status = 1;
-                 $UserLogin->save();
+            // if($UserLogin)
+            // {
+            //      $UserLogin->status = 1;
+            //      $UserLogin->save();
 
-            }
-            else
-            {
-                $data =array();
-                $data['user_id'] =\Auth::id(); 
-                $data['login_ip'] = $ip;
-                $data['location'] = $location;
-                $data['status'] = 1;
-                UserLogin::attemptSave($data);
-            }
+            // }
+            // else
+            // {
+            //     $data =array();
+            //     $data['user_id'] =\Auth::id(); 
+            //     $data['login_ip'] = $ip;
+            //     $data['location'] = $location;
+            //     $data['status'] = 1;
+            //     UserLogin::attemptSave($data);
+            // }
             $userupdate = User::where('id',\Auth::id())->first();
-            $userupdate->ipaddr = $ip;
-            $userupdate->location = $location;
+            // $userupdate->ipaddr = $ip;
+            // $userupdate->location = $location;
             $userupdate->save();
             return redirect('/verify-access');
 
@@ -148,14 +148,14 @@ class LoginController extends Controller
     }
     protected function validateLogin(Request $request)
     {
-        $niceNames = array(
-            'g-recaptcha-response' => 'ReCaptcha ',
-        );
+        // $niceNames = array(
+        //     'g-recaptcha-response' => 'ReCaptcha ',
+        // );
         $this->validate($request, [
             'email' => 'required|email|max:120',
-            'password' => 'required|string',
-            'g-recaptcha-response' => 'required|captcha',
-      ],[],$niceNames);
+            'password' => 'required|string'
+            // 'g-recaptcha-response' => 'required|captcha',
+      ]);
 
     }
 }

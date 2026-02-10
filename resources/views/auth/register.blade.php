@@ -5,16 +5,12 @@ $title = "Sign Up";
 
 @section('content')
 <section class="sign-up-page bg-img">
-    <div class="container-fluid">
+    <div class="container-fluid for-register">
         <div class="row">
-            <div class="col-lg-6 col-xl-6 col-md-12 col-sm-12 col-xs-12 left-side">
-                <div class="signin-left-side-img">
-                    <!-- <img src="{{url('img/confirm-pageright-img.png')}}" alt="" class="img-fluid"> -->
-                </div>
-            </div>
 
-            <div class="col-lg-6 col-xl-6 col-md-12 col-sm-12 col-xs-12  bg-img right-side">
-                <div class="loginouterbox">
+
+            <div class="col-lg-12 col-xl-12 col-md-12 col-sm-12 col-xs-12  bg-img right-side">
+                <div class="loginouterbox a3">
                     <div class="login-form">
                         <div class="logo">
                             <a href="{{ url('/') }}">

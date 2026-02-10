@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Hashcodex Payment Gateway Demo'),
+    'name' => env('APP_NAME', 'ECOBanx Payment Gateway Demo'),
 
     /*
     |--------------------------------------------------------------------------
