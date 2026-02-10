@@ -1,5 +1,5 @@
 @php $title = "Helpcenter";
-    $atitle = "helpcenter";
+$atitle = "helpcenter";
 @endphp
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
@@ -12,9 +12,9 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- @if(isset($title))
-    <title>{{ $title . ' | ' . 'Hashcodex | Crypto Payment Gateway' }}</title>
+    <title>{{ $title . ' | ' . 'Eco Banx  | Crypto Payment Gateway' }}</title>
     @else
-    <title>Hashcodex | Crypto Payment Gateway</title>
+    <title>Eco Banx  | Crypto Payment Gateway</title>
     @endif -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{ url('css/custom-new.css') }}">
@@ -63,7 +63,7 @@
                                     </p>
 
                                     <ul>
-                                        <li>Sign up for a Hashcodex account <a href="{{ url('register') }}">here</a>
+                                        <li>Sign up for a Eco Banx account <a href="{{ url('register') }}">here</a>
                                         </li>
                                         <li>After signing up, verify your account by clicking the activation link in the
                                             email
@@ -93,7 +93,8 @@
                                         <li>In the "<span>ACCOUNT > COIN ACCEPTANCE SETTINGS</span>" select which coins
                                             you
                                             want
-                                            to accept as payment by selecting the dropdown box in front of each coin and click
+                                            to accept as payment by selecting the dropdown box in front of each coin and
+                                            click
                                             "<span>Update Coin Preferences</span>".</li>
                                         <li>Go to "<span>ACCOUNT > API KEYS</span>" and generate a new key by clicking
                                             the
@@ -119,7 +120,7 @@
                                     <h2>Set Up Crypto Payments</h2>
                                     <p class="testing-info">Depending on how much automation you’re looking for and what
                                         type of
-                                        platform you use to conduct your business activity, Hashcodex can be integrated
+                                        platform you use to conduct your business activity, Eco Banx can be integrated
                                         via:
                                     </p>
 
@@ -132,7 +133,7 @@
                                             plugin
                                             settings to complete the integration. Note for Shopify users: just follow
                                             the
-                                            prompts to login to your store and enable payments via Hashcodex.
+                                            prompts to login to your store and enable payments via Eco Banx .
                                         </li>
                                         <li>
                                             <p>Custom APIs</p>
@@ -184,7 +185,7 @@
                                     <p class="testing-info">Now that you have finished the previous steps, there’s just
                                         one
                                         thing left to do – test a transaction!</p>
-                                    <p class="testing-info">Luckily, Hashcodex already has a free cryptocurrency
+                                    <p class="testing-info">Luckily, Eco Banx  already has a free cryptocurrency
                                         dedicated
                                         to
                                         testing transactions for your integration – it’s called Litecoin Testnet (LTCT).
@@ -214,54 +215,54 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"
         integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
     <script>
-        $(document).ready(function () {
+    $(document).ready(function() {
 
-            $('.accrd-panel-head').click(function () {
+        $('.accrd-panel-head').click(function() {
 
-                if ($(this).hasClass('active')) {
-                    $(this).removeClass('active');
-                    $(this).siblings('.accrd-panel-body').slideUp(200);
-                    $(this).parent('.block-1').removeClass('coloured');
-                } else {
-                    $('.accrd-panel-head').removeClass('active');
-                    $(this).addClass('active');
-                    $('.accrd-panel-head').siblings('.accrd-panel-body').slideUp(200);
-                    $(this).siblings('.accrd-panel-body').slideDown(200);
-                    $('.accrd-panel-head').parent('.block-1').removeClass('coloured');
-                    $(this).parent('.block-1').addClass('coloured');
-                }
-
-            });
+            if ($(this).hasClass('active')) {
+                $(this).removeClass('active');
+                $(this).siblings('.accrd-panel-body').slideUp(200);
+                $(this).parent('.block-1').removeClass('coloured');
+            } else {
+                $('.accrd-panel-head').removeClass('active');
+                $(this).addClass('active');
+                $('.accrd-panel-head').siblings('.accrd-panel-body').slideUp(200);
+                $(this).siblings('.accrd-panel-body').slideDown(200);
+                $('.accrd-panel-head').parent('.block-1').removeClass('coloured');
+                $(this).parent('.block-1').addClass('coloured');
+            }
 
         });
+
+    });
     </script>
     <script>
-        $(document).ready(function () {
+    $(document).ready(function() {
 
-            $('.extras').click(function () {
+        $('.extras').click(function() {
 
-                $('.profile-list').toggleClass('showing')
+            $('.profile-list').toggleClass('showing')
 
-            });
+        });
 
-            $('.more-menu-bottom').click(function () {
+        $('.more-menu-bottom').click(function() {
 
-                $('.extra-menu-mobile').toggleClass('showall-extramenus')
-
-            })
+            $('.extra-menu-mobile').toggleClass('showall-extramenus')
 
         })
+
+    })
     </script>
     <script>
-        $(document).ready(function () {
-            $(window).scroll(function () {
-                if ($(this).scrollTop() > 100) { // Change 100 to the height you want to trigger the effect
-                    $('.sticky').addClass('is-sticky');
-                } else {
-                    $('.sticky').removeClass('is-sticky');
-                }
-            });
+    $(document).ready(function() {
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 100) { // Change 100 to the height you want to trigger the effect
+                $('.sticky').addClass('is-sticky');
+            } else {
+                $('.sticky').removeClass('is-sticky');
+            }
         });
+    });
     </script>
 
 </body>

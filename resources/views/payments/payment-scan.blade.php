@@ -19,7 +19,7 @@
                         {!! QrCode::size(180)->generate($order->payment_address) !!}
                         @endif
                     </div>
-                    <h4 class="headtxt text-center">Hashcodex  Demo Support</h4>
+                    <h4 class="headtxt text-center">Eco Banx Demo Support</h4>
                     <div class="paymenttable">
                         <div class="form-group">
                             <label>Amount</label>

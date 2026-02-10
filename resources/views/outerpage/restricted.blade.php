@@ -4,13 +4,13 @@
 <main class="legal-main">
     <div class="container">
         <div class="legal-main-card">
-            <h1>Restricted Jurisdictions For Using Hashcodex PAY.</h1>
+            <h1>Restricted Jurisdictions For Using Eco Banx PAY.</h1>
 
             <ul>
                 <li>
                     By accessing and using <a href="{{ url('/') }}">https://pgdemo1.hashcodex.com </a> or
                     any of
-                    Hashcodex Company or any
+                    Eco Banx Company or any
                     of their respective partners' services, you acknowledge and confirm that you
                     are
                     not on any trade or economic sanctions list, such as the UN Security Council
@@ -19,12 +19,12 @@
                     of applicable law.
                 </li>
                 <li>
-                    Each of Hashcodex Companies reserves the right to select the
+                    Each of Eco Banx Companies reserves the right to select the
                     jurisdictions where it provides its services and may restrict or deny its
                     services to persons or entities in certain jurisdictions. Prohibited persons
                     should not use or access <a href="{{ url('/') }}">https://pgdemo1.hashcodex.com</a>
                 </li>
-                <li>The following is a list of countries and jurisdictions where Hashcodex's
+                <li>The following is a list of countries and jurisdictions where Eco Banx 's
                     services are unavailable:</li>
             </ul>
             <h2 class="country-text">Country</h2>

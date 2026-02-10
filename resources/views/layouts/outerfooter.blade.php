@@ -22,16 +22,11 @@
                     </h3>
 
                     <div class="foot-social-media">
-                        <a href="https://www.facebook.com/HashcodexBank/" target="_blank" class="sm-logo"><i
-                                class="fa-brands fa-facebook-f"></i></a>
-                        <a href="https://x.com/Hashcodex_official" target="_blank" class="sm-logo"><i
-                                class="fa-brands fa-x-twitter"></i></a>
-                        <a href="https://www.linkedin.com/company/Hashcodextrustcustody/" target="_blank"
-                            class="sm-logo"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="https://www.instagram.com/Hashcodex_global" target="_blank" class="sm-logo"><i
-                                class="fa-brands fa-instagram"></i></a>
-                        <a href="https://medium.com/@Hashcodexcustody" target="_blank" class="sm-logo"><i
-                                class="fa-brands fa-medium"></i></a>
+                        <a href="#" target="_blank" class="sm-logo"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" target="_blank" class="sm-logo"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" target="_blank" class="sm-logo"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" target="_blank" class="sm-logo"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" target="_blank" class="sm-logo"><i class="fa-brands fa-medium"></i></a>
                     </div>
                 </div>
             </div>
@@ -39,7 +34,7 @@
             <div class="row footer-top-block-2">
                 <div class="col-xl-2 col-lg-2 col-md-6 col-sm-12">
                     <h4 class="foot-sub-title">
-                        Hashcodex PAY
+                        Eco Banx PAY
                     </h4>
 
                     <ul class="footer-link">
@@ -62,12 +57,12 @@
                             <a href="{{ url('/merchant-tool') }}"> Merchant Tools</a>
 
                         </li>
-                        <li><a href="https://experience.Hashcodex.global/Hashcodex-pay/integration-guide">Integration
+                        <li><a href="#">Integration
                                 Guide</a>
                         </li>
                         <li><a href="{{ url('/invoice-builder') }}">Store Directory</a>
                         </li>
-                        <li><a href="https://experience.Hashcodex.global/Hashcodex-pay">FAQ</a></li>
+                        <li><a href="#">FAQ</a></li>
                     </ul>
 
 
@@ -128,10 +123,11 @@
         </div>
         <div class="copy-rights-block">
 
-            <p>Copyright © 2024 Hashcodex</P>
+            <p>Copyright © 2024 Eco Banx </P>
             <span>
-                Hashcodex PAY Services are not available in United States, UK and other prohibited jurisdictions. No legal,
-                tax, investment, or other advice is provided by any Hashcodex entity. Please consult your
+                Eco Banx PAY Services are not available in United States, UK and other prohibited jurisdictions. No
+                legal,
+                tax, investment, or other advice is provided by any Eco Banx entity. Please consult your
                 legal/tax/investment professional for questions about your specific circumstances. Digital asset
                 holdings involve a high degree of risk, and can fluctuate greatly on any given day. Accordingly, your
                 digital asset holdings may be subject to large swings in value and may even become worthless.
@@ -239,7 +235,7 @@ var swiper = new Swiper(".mySwiper-1", {
 });
 </script>
 <!--Start of Tawk.to Script-->
-<script defer>
+<!-- <script defer>
 setTimeout(function() {
     var Tawk_API = Tawk_API || {},
         Tawk_LoadStart = new Date();
@@ -290,7 +286,7 @@ setTimeout(function() {
         window.addEventListener("resize", tryRevealWidget);
     };
 }, 1000);
-</script>
+</script> -->
 <!--End of Tawk.to Script-->
 
 </body>

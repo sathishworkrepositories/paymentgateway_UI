@@ -15,7 +15,7 @@ $atitle = 'support coins';
                             <span> SUPPORTED</span> COINS<span>.</span>
                         </h1>
                         <P class="para-text">Accept payments in Bitcoin, Ethereum, and various other cryptocurrencies by
-                            utilizing the Hashcodex payment gateway. This service enables you to easily accept a wide
+                            utilizing the Eco Banx payment gateway. This service enables you to easily accept a wide
                             range of digital currencies for your transactions.</P>
 
                         <a href="https://Hashcodex.global/buy-crypto?asset=APE_ERC20" class=" crypto-coin-link">
@@ -56,7 +56,7 @@ $atitle = 'support coins';
 
             <h3>Our Portfolio</h3> -->
 
-             <div class="flip-card-container">
+            <div class="flip-card-container">
                 <!-- Bitcoin Card -->
                 <div class="flip-card">
                     <div class="flip-card-inner">
@@ -68,7 +68,8 @@ $atitle = 'support coins';
                                         class="img-fluid" width="265" height="265">
                                 </div>
                                 <div class="add-portfolio">
-                                    <img src="{{ url('/outerpage-assert/image/our-portfolio-add.svg') }}" alt="Portfolio">
+                                    <img src="{{ url('/outerpage-assert/image/our-portfolio-add.svg') }}"
+                                        alt="Portfolio">
                                 </div>
                             </div>
                         </div>
@@ -96,7 +97,8 @@ $atitle = 'support coins';
                                         class="img-fluid" width="265" height="265">
                                 </div>
                                 <div class="add-portfolio">
-                                    <img src="{{ url('/outerpage-assert/image/our-portfolio-add.svg') }}" alt="Portfolio">
+                                    <img src="{{ url('/outerpage-assert/image/our-portfolio-add.svg') }}"
+                                        alt="Portfolio">
                                 </div>
                             </div>
                         </div>
@@ -124,7 +126,8 @@ $atitle = 'support coins';
                                         class="img-fluid" width="265" height="265">
                                 </div>
                                 <div class="add-portfolio">
-                                    <img src="{{ url('/outerpage-assert/image/our-portfolio-add.svg') }}" alt="Portfolio">
+                                    <img src="{{ url('/outerpage-assert/image/our-portfolio-add.svg') }}"
+                                        alt="Portfolio">
                                 </div>
                             </div>
                         </div>
@@ -152,7 +155,8 @@ $atitle = 'support coins';
                                         class="img-fluid" width="265" height="265">
                                 </div>
                                 <div class="add-portfolio">
-                                    <img src="{{ url('/outerpage-assert/image/our-portfolio-add.svg') }}" alt="Portfolio">
+                                    <img src="{{ url('/outerpage-assert/image/our-portfolio-add.svg') }}"
+                                        alt="Portfolio">
                                 </div>
                             </div>
                         </div>
@@ -176,11 +180,12 @@ $atitle = 'support coins';
                             <div class="our-portfolio-block card-block">
                                 <h3 class="card-sub-title">EURST.</h3>
                                 <div class="portfolio-img">
-                                    <img src="{{ url('/outerpage-assert/image/port-eurst.png') }}" alt="EURST" class="img-fluid"
-                                        width="265" height="265">
+                                    <img src="{{ url('/outerpage-assert/image/port-eurst.png') }}" alt="EURST"
+                                        class="img-fluid" width="265" height="265">
                                 </div>
                                 <div class="add-portfolio">
-                                    <img src="{{ url('/outerpage-assert/image/our-portfolio-add.svg') }}" alt="Portfolio">
+                                    <img src="{{ url('/outerpage-assert/image/our-portfolio-add.svg') }}"
+                                        alt="Portfolio">
                                 </div>
                             </div>
                         </div>
@@ -208,7 +213,8 @@ $atitle = 'support coins';
                                         class="img-fluid" width="265" height="265">
                                 </div>
                                 <div class="add-portfolio">
-                                    <img src="{{ url('/outerpage-assert/image/our-portfolio-add.svg') }}" alt="Portfolio">
+                                    <img src="{{ url('/outerpage-assert/image/our-portfolio-add.svg') }}"
+                                        alt="Portfolio">
                                 </div>
                             </div>
                         </div>

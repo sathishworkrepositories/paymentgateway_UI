@@ -46,7 +46,7 @@ if (isset($atitle)) {
   $active = "";
 }
 ?>
-<div class="col-lg-2 col-xl-2 col-md-12 col-sm-12 col-xs-12 tab-margin-px">
+<div class="col-lg-2 col-xl-2 col-md-12 col-sm-12 col-xs-12 tab-margin-px ar3">
     <div class="inner-left-padding sticky">
 
         <div class="extras-my-profile">
@@ -236,7 +236,7 @@ if (isset($atitle)) {
         <li><a class="@if($active == 'wallet') active @endif" href="{{ route('wallet') }}" href="{{ route('wallet') }}">
                 <div class="left-icons"><i class="fa-solid fa-wallet"></i></div>My Wallet
             </a></li>
-      
+
         <li><a class="@if($active == 'histroy') active @endif" href="{{route('accounthistroy')}}"
                 href="{{route('accounthistroy')}}">
                 <div class="left-icons">

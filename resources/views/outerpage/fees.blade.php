@@ -194,7 +194,7 @@ $atitle = 'fees';
         <div class="contain-width">
             <h2><span>ABOUT</span> NETWORK FEES<span>.</span></h2>
             <p class="para-text">
-                We do not charge any withdrawal fees to use the Hashcodex Pay wallet. However in order to send
+                We do not charge any withdrawal fees to use the Eco Banx Pay wallet. However in order to send
                 cryptocurrency, you need to
                 pay a network fee to the cryptocurrency miners. Network fees vary based on which cryptocurrency you are
                 trying to send

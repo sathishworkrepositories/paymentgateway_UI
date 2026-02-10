@@ -40,20 +40,26 @@
                                     <ul>
                                         <li>This data privacy, use and retention notice (the “Privacy Notice”) applies
                                             to all personal information collection and processing activities carried out
-                                            by Hashcodex Digital Holding Inc. and the Hashcodex group (together, “Hashcodex PAY
-                                            ”). Hashcodex PAY is a data controller in respect of personal information that
+                                            by Eco Banx Digital Holding Inc. and the Eco Banx group (together, “Eco Banx
+                                            PAY
+                                            ”). Eco Banx PAY is a data controller in respect of personal information
+                                            that
                                             we process in connection with our business (including the products and
-                                            services that we provide through the Hashcodex PAY app). In this notice,
-                                            references to “we”, “us” or “our” are references to Hashcodex PAY . Different
-                                            Hashcodex companies may control and process your data depending on where you
-                                            are ordinarily resident. The Hashcodex PAY company that provides you with
-                                            access to the Hashcodex PAY Service and your Hashcodex PAY Profile, as identified
-                                            in the Hashcodex PAY General Terms of Service above ("Hashcodex PAY ", or “we”,
-                                            “our”, or “us”) is the Hashcodex PAY company directly responsible for handling
+                                            services that we provide through the Eco Banx PAY app). In this notice,
+                                            references to “we”, “us” or “our” are references to Eco Banx PAY . Different
+                                            Eco Banx companies may control and process your data depending on where you
+                                            are ordinarily resident. The Eco Banx PAY company that provides you with
+                                            access to the Eco Banx PAY Service and your Eco Banx PAY Profile, as
+                                            identified
+                                            in the Eco Banx PAY General Terms of Service above ("Eco Banx PAY ", or
+                                            “we”,
+                                            “our”, or “us”) is the Eco Banx PAY company directly responsible for
+                                            handling
                                             your personal data.
                                         </li>
-                                        <li>Our privacy email address for all Hashcodex PAY companies is
-                                            privacy@Hashcodex.global . We respect individuals' rights to privacy and to the
+                                        <li>Our privacy email address for all Eco Banx PAY companies is
+                                            privacy@Eco Banx .global . We respect individuals' rights to privacy and to
+                                            the
                                             protection of personal information. The purpose of this Privacy Notice is to
                                             explain how we collect and use personal information in connection with our
                                             business. “Personal information” means information about a living individual
@@ -114,7 +120,7 @@
                                             beneficial owners of that business and your transactions. It may include:
                                         </li>
                                         <li>A. information you give to us;</li>
-                                        <li>B. information that we receive from third parties – including other Hashcodex
+                                        <li>B. information that we receive from third parties – including other Eco Banx
                                             PAY group companies, third parties who provide services to you or us, credit
                                             reference, fraud prevention or government agencies,</li>
                                         <li>C. and other financial institutions (where permitted by law);</li>
@@ -141,17 +147,19 @@
                                             wish to exercise any of these rights, if you have any queries about how we
                                             use your personal information that are not answered here, or if you wish to
                                             complain to our Data Protection team, please contact us at
-                                            privacy@Hashcodex.global . Please note that in some cases, if you do not agree
+                                            privacy@Eco Banx .global . Please note that in some cases, if you do not
+                                            agree
                                             to the way we process your information, it may not be possible for us to
                                             continue to operate your account and/or provide certain products and
-                                            services to you through the Hashcodex PAY app. In the event our relationship
-                                            with you terminated (for example, you choose to close your Hashcodex PAY
+                                            services to you through the Eco Banx PAY app. In the event our relationship
+                                            with you terminated (for example, you choose to close your Eco Banx PAY
                                             Account), you may request the erasure of your personal data by contacting
-                                            privacy@Hashcodex.global . Please note that Hashcodex PAY will only comply with
+                                            privacy@Eco Banx .global . Please note that Eco Banx PAY will only comply
+                                            with
                                             such requests to the extent it is legally obligated to and depending on your
                                             account activity until that date, certain personal data may be maintained in
                                             accordance with anti-money laundering and counter-terrorist financing
-                                            legislation to which Hashcodex PAY is subject.</li>
+                                            legislation to which Eco Banx PAY is subject.</li>
                                     </ul>
                                     <div class="Country-text">5. CHANGES TO THE WAY WE USE YOUR INFORMATION</div>
                                     <ul>
@@ -161,15 +169,15 @@
                                             before the change is made. However, please note that in some cases, if you
                                             do not agree to such changes it may not be possible for us to continue to
                                             operate your account and/or provide certain products and services to you
-                                            through the Hashcodex PAY app.</li>
+                                            through the Eco Banx PAY app.</li>
                                     </ul>
                                     <div class="Country-text">6. HOW WE MAY USE AND SHARE YOUR INFORMATION WITH OTHER
-                                        Hashcodex GROUP COMPANIES</div>
+                                        Eco Banx GROUP COMPANIES</div>
                                     <ul>
                                         <li>
                                             We will only use and share your information where it is necessary for us to
                                             lawfully carry out our business activities. Your information may be shared
-                                            with and processed by other Hashcodex PAY group companies. We want to ensure
+                                            with and processed by other Eco Banx PAY group companies. We want to ensure
                                             that you fully understand how your information may be used. We have
                                             described the purposes for which your information may be used in detail in a
                                             table in Schedule B – Purposes of Processing.
@@ -177,11 +185,12 @@
                                     </ul>
                                     <div class="Country-text">7. SHARING WITH THIRD PARTIES</div>
                                     <ul>
-                                        <li>We will not share your information with anyone outside of the Hashcodex PAY
+                                        <li>We will not share your information with anyone outside of the Eco Banx PAY
                                             group except:</li>
                                         <li>A. where we have your permission;</li>
                                         <li>B. where required to provide your product(s) or service(s). This may include
-                                            sharing your name with other Hashcodex PAY customers if you are already in the
+                                            sharing your name with other Eco Banx PAY customers if you are already in
+                                            the
                                             contact book stored on their device or when we are required to do so by the
                                             applicable law;</li>
                                         <li>C. where we are required by law and by law enforcement agencies, judicial
@@ -216,14 +225,15 @@
                                             any privacy statement they provide to you. In the event that any additional
                                             authorised users are added to your account, we may share information about
                                             the use of the account by any authorised user with all other authorised
-                                            users. Hashcodex PAY will not share your information with third parties for
+                                            users. Eco Banx PAY will not share your information with third parties for
                                             their own marketing purposes without your permission.</li>
                                     </ul>
                                     <div class="Country-text">8. TRANSFERRING INFORMATION OVERSEAS</div>
                                     <ul>
                                         <li>We may transfer your information to or your information may be collected
-                                            directly by organisations in other countries (including other Hashcodex PAY
-                                            group companies, for example in Canada, where Hashcodex PAY 's Customer Support
+                                            directly by organisations in other countries (including other Eco Banx PAY
+                                            group companies, for example in Canada, where Eco Banx PAY 's Customer
+                                            Support
                                             function could be located) on the basis that anyone to whom we pass that
                                             information or who collects it directly protects it in the same way we would
                                             and in accordance with applicable laws. In the event that we transfer
@@ -242,10 +252,10 @@
                                     </ul>
                                     <div class="Country-text">9. MARKETING INFORMATION</div>
                                     <ul>
-                                        <li>Upon signing up to, and continued use of Hashcodex PAY 's services, you agree
+                                        <li>Upon signing up to, and continued use of Eco Banx PAY 's services, you agree
                                             to hear from us regarding marketing updates and receive targeted marketing
                                             materials. We will send you relevant marketing information (including
-                                            details of other products or services provided by us or other Hashcodex group
+                                            details of other products or services provided by us or other Eco Banx group
                                             companies which we believe may be of interest to you) by postal or
                                             electronic communication methods, including but not limited to email and
                                             SMS. If you change your mind about how you would like us to contact you, or
@@ -255,13 +265,14 @@
                                         </li>
                                         <li>Our marketing text message. By texting “STOP” in any text messages we have
                                             sent.</li>
-                                        <li>Our postal marketing material. By contacting us at: privacy@Hashcodex.global
+                                        <li>Our postal marketing material. By contacting us at: privacy@Eco Banx .global
                                         </li>
                                     </ul>
                                     <div class="Country-text">10. COMMUNICATIONS ABOUT YOUR ACCOUNT</div>
                                     <ul>
                                         <li>We will contact you with information relevant to the operation and
-                                            maintenance of your Hashcodex PAY account (including updated information about
+                                            maintenance of your Eco Banx PAY account (including updated information
+                                            about
                                             how we process your personal information), by a variety of means including
                                             via, email, text message, and in-app notifications. If at any point in the
                                             future you change your contact details you should tell us promptly about
@@ -280,10 +291,12 @@
                                             provide to us;
                                         </li>
                                         <li>Application decisions may be taken based solely on automated checks of
-                                            information, for example from fraud prevention agencies and internal Hashcodex
-                                            PAY records. To help us make decisions on verifying your Hashcodex PAY account,
-                                            as well as transaction limits on your Hashcodex PAY account, we look at
-                                            information you give us when you apply for a Hashcodex PAY Account; including
+                                            information, for example from fraud prevention agencies and internal Eco
+                                            Banx
+                                            PAY records. To help us make decisions on verifying your Eco Banx PAY
+                                            account,
+                                            as well as transaction limits on your Eco Banx PAY account, we look at
+                                            information you give us when you apply for a Eco Banx PAY Account; including
                                             biometric data such as your photograph and/ or facial scan, information
                                             regarding your location, age, nationality and/ or citizenship and other
                                             information which enables us to verify your identity and perform a risk
@@ -291,12 +304,14 @@
                                             rights in relation to the automated decision-making used in the verification
                                             process, including a right to attempt account verification again, or contact
                                             our Customer Support team if your application is refused. We will also
-                                            profile your Hashcodex PAY Account to assign a risk rating for the purposes of
+                                            profile your Eco Banx PAY Account to assign a risk rating for the purposes
+                                            of
                                             fraud and unusual transaction monitoring and unauthorised access prevention.
                                             The information we will use to profile you will include your age, bank
                                             country of residence and status as a politically exposed person or
                                             otherwise. We will continue to collect and monitor information about how you
-                                            manage your Hashcodex PAY account including your account balance, payments into
+                                            manage your Eco Banx PAY account including your account balance, payments
+                                            into
                                             your account, the regularity of payments being made, and any default in
                                             making payments, while you have a relationship with us. This information may
                                             be made available to other organisations (including fraud prevention
@@ -334,13 +349,16 @@
                                             us demonstrate that we are meeting our responsibilities and to keep as
                                             evidence of our business activities. Retention periods for records are
                                             determined based on the type of record, the nature of the activity, product
-                                            or service, the country in which the relevant Hashcodex PAY company is located
+                                            or service, the country in which the relevant Eco Banx PAY company is
+                                            located
                                             and the applicable local legal or regulatory requirements. We (and other
-                                            Hashcodex PAY group companies) normally keep customer account records for up to
-                                            six years after your relationship with Hashcodex PAY ends. Retention periods
+                                            Eco Banx PAY group companies) normally keep customer account records for up
+                                            to
+                                            six years after your relationship with Eco Banx PAY ends. Retention periods
                                             may be changed from time to time (or waived where deemed low-risk) based on
                                             business or legal and regulatory requirements. Where there has been no
-                                            activity on your Hashcodex PAY account since it was opened, we may delete your
+                                            activity on your Eco Banx PAY account since it was opened, we may delete
+                                            your
                                             data after a period of 6 months, as you will be deemed an "unactivated
                                             user". If there has been any transactional activity on your account, we will
                                             maintain your data until you request that we delete it, unless we are
@@ -348,10 +366,10 @@
                                             on exception retain your information for longer periods than those stated
                                             above, particularly where we need to withhold destruction or disposal based
                                             on an order from the courts or an investigation by law enforcement agencies
-                                            or our regulators. This is intended to make sure that Hashcodex PAY will be
+                                            or our regulators. This is intended to make sure that Eco Banx PAY will be
                                             able to produce records as evidence, if they're needed. If you would like
                                             more information about how long we keep your information, please contact us
-                                            at: privacy@Hashcodex.global or in intercom.
+                                            at: privacy@Eco Banx .global or in intercom.
                                         </li>
                                     </ul>
                                     <p><b>Schedule A – Your Rights</b></p>
@@ -360,9 +378,10 @@
                                         <li>Access – You have a right to get access to the personal information we hold
                                             about you.</li>
                                         <li>If you would like a copy of the personal information we hold about you, if
-                                            you are a customer please send an email to us at privacy@Hashcodex.global ; For
+                                            you are a customer please send an email to us at privacy@Eco Banx .global ;
+                                            For
                                             more information on how to get access to your information and the documents
-                                            we need you to submit, please email privacy@Hashcodex.global . You will be
+                                            we need you to submit, please email privacy@Eco Banx .global . You will be
                                             required to complete a form outlining your request and will also need to
                                             provide proof of your identity (to ensure we are dealing with the account
                                             owner).</li>
@@ -373,9 +392,11 @@
                                             that information and to rectify the inaccurate personal information. Please
                                             note that if you request us to restrict processing your information, we may
                                             have to suspend the operation of your account and/or the products and
-                                            services we provide to you through the Hashcodex PAY app. For more information
+                                            services we provide to you through the Eco Banx PAY app. For more
+                                            information
                                             on how to rectify your information and the documents we need you to submit,
-                                            please email privacy@Hashcodex.global . You will be required to complete a form
+                                            please email privacy@Eco Banx .global . You will be required to complete a
+                                            form
                                             outlining your request and will also need to provide proof of your identity
                                             (to ensure we are dealing with the account owner).
                                         </li>
@@ -392,7 +413,8 @@
                                                 have to suspend the operation of your account and/or the products and
                                                 services we provide to you. For more information on how to request
                                                 erasure of your information and the documents we need you to submit,
-                                                please email privacy@Hashcodex.global . You will be required to complete a
+                                                please email privacy@Eco Banx .global . You will be required to complete
+                                                a
                                                 form outlining your request and will also need to provide proof of your
                                                 identity (to ensure we are dealing with the account owner).</b></li>
                                         <li>Restriction – You have a right to request us to restrict the processing of
@@ -408,7 +430,7 @@
                                             we may have to suspend the operation of your account and/or the products and
                                             services we provide to you. For more information on how to request a
                                             restriction of processing of your information and the documents we need you
-                                            to submit, please email privacy@Hashcodex.global . You will be required to
+                                            to submit, please email privacy@Eco Banx .global . You will be required to
                                             complete a form outlining your request and will also need to provide proof
                                             of your identity (to ensure we are dealing with the account owner).</li>
                                     </ul>
@@ -423,7 +445,7 @@
                                             governed by their agreement with you and any privacy statement they provide
                                             to you. If you would like to request a copy of the personal information you
                                             provided to us, and you are a customer and please write an email us at
-                                            privacy@Hashcodex.global .</li>
+                                            privacy@Eco Banx .global .</li>
                                         <li>Objection – You have a right to object to the processing of your personal
                                             information</li>
                                         <li>You have a right to object to us processing your personal information (and
@@ -455,7 +477,7 @@
                                         <li><b>Schedule B – Schedule of Purposes of Processing</b></li>
                                         <li>We will only use and share your information where it is necessary for us to
                                             carry out our lawful business activities. Your information may be shared
-                                            with and processed by other Hashcodex group companies. We want to ensure that
+                                            with and processed by other Eco Banx group companies. We want to ensure that
                                             you fully understand how your information may be used. We have described the
                                             purposes for which your information may be used in detail in the table
                                             below:</li>
@@ -470,7 +492,8 @@
                                             services to you. This may include processing to:</li>
                                         <li>A. assess and process applications for products or services;</li>
                                         <li>B. provide and administer those products and services throughout your
-                                            relationship with Hashcodex PAY , including opening, setting up or closing your
+                                            relationship with Eco Banx PAY , including opening, setting up or closing
+                                            your
                                             accounts or products; collecting and issuing all necessary documentation;
                                             executing your instructions; processing transactions, including transferring
                                             money between accounts; making payments to third parties; resolving any
@@ -479,9 +502,9 @@
                                             and monitored for these purposes.
                                         </li>
                                         <li>C. manage and maintain our relationships with you and for ongoing customer
-                                            service. This may involve sharing your information with other Hashcodex group
+                                            service. This may involve sharing your information with other Eco Banx group
                                             companies to improve the availability of our services, for example enabling
-                                            customers to visit branches of other Hashcodex group companies;</li>
+                                            customers to visit branches of other Eco Banx group companies;</li>
                                         <li>D. administer any credit facilities or debts, including agreeing repayment
                                             options; and</li>
                                         <li>E. communicate with you about your account(s) or the products and services
@@ -527,16 +550,16 @@
                                         </li>
                                         <li>I. perform assessments and analyse customer data for the purposes of
                                             managing, improving and fixing data quality;</li>
-                                        <li>J. provide assurance that Hashcodex PAY has effective processes to identify,
+                                        <li>J. provide assurance that Eco Banx PAY has effective processes to identify,
                                             manage, monitor and report the risks it is or might be exposed to;</li>
-                                        <li>K. investigate and report on incidents or emergencies on Hashcodex PAY 's
+                                        <li>K. investigate and report on incidents or emergencies on Eco Banx PAY 's
                                             properties and premises;</li>
                                         <li>L. coordinate responses to business-disrupting incidents and to ensure
                                             facilities, systems and people are available to continue providing services;
                                             and</li>
                                         <li>M. monitor dealings to prevent market abuse.</li>
                                     </ul>
-                                    <div class="Country-text">12.3 Legitimate Interests of Hashcodex PAY </div>
+                                    <div class="Country-text">12.3 Legitimate Interests of Eco Banx PAY </div>
                                     <ul>
                                         <li>
                                             We may process your information where it is in our legitimate interests to
@@ -559,8 +582,8 @@
                                             users' access to our information technology for the purpose of preventing
                                             cyber-attacks, unauthorised use of our communications systems and websites,
                                             prevention or detection of crime and protection of your personal data;</li>
-                                        <li>D. provide assurance on Hashcodex PAY 's material risks and reporting to
-                                            internal management and supervisory authorities on whether Hashcodex PAY is
+                                        <li>D. provide assurance on Eco Banx PAY 's material risks and reporting to
+                                            internal management and supervisory authorities on whether Eco Banx PAY is
                                             managing them effectively;</li>
                                         <li>E. perform general, financial and regulatory accounting and reporting;</li>
                                         <li>F. protect our legal rights and interests; and</li>
@@ -574,12 +597,13 @@
                                             into applications or proposals for new business and to develop our
                                             relationship with you;</li>
                                         <li>B. send you relevant marketing information (including details of other
-                                            products or services provided by us or other Hashcodex group companies which we
+                                            products or services provided by us or other Eco Banx group companies which
+                                            we
                                             believe may be of interest to you);</li>
                                         <li>C. understand our customers' actions, behaviour, preferences, expectations,
                                             feedback and financial history in order to improve our products and
                                             services, develop new products and services, and to improve the relevance of
-                                            offers of products and services by Hashcodex group companies;</li>
+                                            offers of products and services by Eco Banx group companies;</li>
                                         <li>D. monitor the performance and effectiveness of products and services;</li>
                                         <li>E. assess the quality of our customer services and to provide staff
                                             training. Calls to our Customer Support teams and communications to our

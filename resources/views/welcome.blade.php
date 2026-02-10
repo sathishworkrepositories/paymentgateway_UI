@@ -14,9 +14,9 @@ if (!isset($active)) {
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     @if(isset($title))
-    <title>{{ $title . ' | ' . 'Hashcodex | Crypto Payment Gateway' }}</title>
+    <title>{{ $title . ' | ' . 'Eco Banx  | Crypto Payment Gateway' }}</title>
     @else
-    <title>Hashcodex | Crypto Payment Gateway</title>
+    <title>Eco Banx | Crypto Payment Gateway</title>
     @endif
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"> -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -56,7 +56,7 @@ if (!isset($active)) {
 } ?>" href="{{url('/')}}">Home</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="https://Hashcodex.global/buy-crypto?asset=APE_ERC20">Buy
+                                    <a class="nav-link" href="3">Buy
                                         Crypto</a>
                                 </li>
                                 <li class="nav-item">
@@ -620,8 +620,9 @@ if (!isset($active)) {
                             <ul class="foot-list">
                                 <li><a href="#">FAQ</a></li>
                                 <li><a href="#">AML Policy</a></li>
-                                <li><a href="https://Hashcodex.global/terms-and-conditions">Terms and Conditions</a></li>
-                                <li><a href="https://Hashcodex.global/policies">Privacy Policy</a></li>
+                                <li><a href="#">Terms and Conditions</a>
+                                </li>
+                                <li><a href="#">Privacy Policy</a></li>
                                 <li><a href="#">Documentation</a></li>
                             </ul>
                         </div>

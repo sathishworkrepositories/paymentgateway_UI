@@ -4,34 +4,34 @@
 <main class="legal-main">
     <div class="container">
         <div class="legal-main-card">
-            <h1>User Agreement For Using Hashcodex PAY.</h1>
+            <h1>User Agreement For Using Eco Banx PAY.</h1>
 
             <ul>
                 <li>
                     This User Agreement, any terms and conditions constituting a supplement to
                     or complementing this User Agreement and all agreements incorporated by
                     reference and forming part of this User Agreement (collectively, this
-                    “Agreement”) are among you, Hashcodex Digital Holding Inc., a Deleware company
+                    “Agreement”) are among you, Eco Banx Digital Holding Inc., a Deleware company
                     and the additional counterparty defined below in accordance with our
                     requirements and your country of residency or formation (the “Additional
                     Counterparty”) as follows:
                 </li>
                 <li>if you have met certain requirements and reside in or are incorporated in a
                     member country of the European Economic Area, United Kingdom, Switzerland,
-                    Canada and the others accepted jurisdictions, Hashcodex Custody Ltd., reg.
+                    Canada and the others accepted jurisdictions, Eco Banx Custody Ltd., reg.
                     number: BC1314228, with reg. address: 5307 VICTORIA DRIVE #562, Vancouver,
                     BC V5P 3V6, Canada, registered as a Money Service Business with FINTRAC
-                    (“Hashcodex PAY ”).</li>
-                <li>The following is a list of countries and jurisdictions where Hashcodex's
+                    (“Eco Banx PAY ”).</li>
+                <li>The following is a list of countries and jurisdictions where Eco Banx 's
                     services are unavailable:</li>
-                <li>Unless otherwise stated herein, references to “Hashcodex PAY ”, “we”, “us” or
-                    “our” in this Agreement will refer collectively to Hashcodex Digital Holding
+                <li>Unless otherwise stated herein, references to “Eco Banx PAY ”, “we”, “us” or
+                    “our” in this Agreement will refer collectively to Eco Banx Digital Holding
                     Inc. and the sole and exclusive Additional Counterparty providing VASP
                     Services to you, their respective direct and indirect subsidiaries and
-                    affiliates and any entities under common control with Hashcodex PAY or such
+                    affiliates and any entities under common control with Eco Banx PAY or such
                     Additional Counterparty. In this Agreement, “you,” “your” or “User” means
-                    any person or entity using the Hashcodex PAY Site (as defined below) or our
-                    Services (as defined below) and the person or entity to whom Hashcodex Digital
+                    any person or entity using the Eco Banx PAY Site (as defined below) or our
+                    Services (as defined below) and the person or entity to whom Eco Banx Digital
                     Holding Inc. and the applicable Additional Counterparty providing VASP
                     Services to you enters into this Agreement. </li>
                 <li>If we are required to do so for legal or regulatory purposes or at any time
@@ -43,33 +43,33 @@
                     agree to such novation and all of the terms and conditions of this Agreement
                     with such Additional Counterparty.</li>
                 <li>This Agreement governs your use of the gateway payments software
-                    applications accessed through the Hashcodex PAY Site and all services provided
+                    applications accessed through the Eco Banx PAY Site and all services provided
                     by us from time to time, including, without limitation, the VASP Services
-                    provided by Hashcodex CUSTODY Ltd (collectively, the “Services”). In this
+                    provided by Eco Banx CUSTODY Ltd (collectively, the “Services”). In this
                     Agreement, “VASP Services” means act as a custodian digital currency wallet
                     provider; accept digital currency as a method of payment for the sale of
                     commercial goods by a third party; and the transfer of digital currency,
                     that is to say, move digital currency from one digital currency address or
                     account to another. By using any of the Services or signing up to use an
-                    account through <a href="{{ url('/') }}">payg2.hashcodex.com</a> (the
+                    account through <a href="{{ url('/') }}">payg2.Eco Banx .com</a> (the
                     “Website”) or by accessing or using any of our associated websites
                     (including, without limitation, the technology and the platform integrated
                     therein), APIs and/or any and all related applications (collectively, the
-                    “Other Sites” together with the Website, the “Hashcodex PAY Site”), you agree
+                    “Other Sites” together with the Website, the “Eco Banx PAY Site”), you agree
                     that you have read, understood and accept all of the terms and conditions
                     contained in this Agreement, as well as all of the terms and conditions of
                     our Privacy Policy which is hereby incorporated by reference and forms part
                     of this Agreement. You should read this Agreement and the Privacy Policy
                     carefully and in their entirety. This Agreement is effective as of the
-                    earliest date and time at which you use any of the Services or the Hashcodex
+                    earliest date and time at which you use any of the Services or the Eco Banx
                     Site. </li>
                 <li>If you do not agree to be bound by the terms and conditions of this
-                    Agreement or the Privacy Policy, you must not use or access the Hashcodex PAY
-                    Site or use or access any of Hashcodex products or Services. Any use of or
-                    access to the Hashcodex Site or our Services means you consent to and agree
+                    Agreement or the Privacy Policy, you must not use or access the Eco Banx PAY
+                    Site or use or access any of Eco Banx products or Services. Any use of or
+                    access to the Eco Banx Site or our Services means you consent to and agree
                     to the terms and conditions of this Agreement and the Privacy Policy. If you
                     do not read and accept this Agreement and our Privacy Policy in their
-                    entirety, you should not use or continue using the Hashcodex Site or our
+                    entirety, you should not use or continue using the Eco Banx Site or our
                     Services.</li>
                 <li>No partnership, joint venture, employee-employer, joint associates for
                     profit, agency or franchiserfranchisee relationship is intended or created
@@ -80,7 +80,7 @@
                     this Agreement shall be deemed or is intended to be deemed, nor shall it
                     cause, any fiduciary or advisory relationship between you and us to exist;
                     and (b) no communication or information provided to you by us including,
-                    without limitation, content on the Hashcodex PAY Site shall be considered or
+                    without limitation, content on the Eco Banx PAY Site shall be considered or
                     construed as transaction, investment, tax, or any other form of advice.
                     Independent advice should be sought where applicable and appropriate. You
                     acknowledge and agree that the decision to use our Services and all
@@ -105,8 +105,8 @@
                     use of such Services is subject to those additional terms and conditions,
                     which are hereby incorporated into this Agreement by reference.</li>
                 <li>If you have questions about this Agreement or our Services, please also
-                    consult the FAQ section of the Website or contact us at <a
-                        href="{{ url('/') }}">support@Hashcodex.global.</a> </li>
+                    consult the FAQ section of the Website or contact us at <a href="{{ url('/') }}">support@Eco Banx
+                        .global.</a> </li>
                 <li><b>1. Eligibility :</b></li>
                 <li> You represent and warrant that you: (a) are of legal
                     age to form a binding contract (at least 18 years old) and have full power,
@@ -121,15 +121,15 @@
                     of Foreign Assets Control (OFAC) list or in breach of applicable law; (g)
                     will not use our Services if any applicable laws in your country prohibit
                     you from doing so; and (h) meet all eligibility requirements for the
-                    Services at the time of using any Services. The Hashcodex PAY Site and our
+                    Services at the time of using any Services. The Eco Banx PAY Site and our
                     Services are also not available to persons who, in our sole opinion, present
                     an unacceptable level of credit, legal or reputational risk to us, our
-                    Services or to others. Any use of the Hashcodex PAY Site or our Services by
+                    Services or to others. Any use of the Eco Banx PAY Site or our Services by
                     anyone who does not meet our eligibility requirements is strictly prohibited
-                    and in violation of this Agreement. Hashcodex PAY may require, on an ongoing
+                    and in violation of this Agreement. Eco Banx PAY may require, on an ongoing
                     basis, that you demonstrate to us that you continue to meet our eligibility
                     requirements. Our decisions with respect to eligibility are final. In order
-                    to use the Hashcodex PAY Site and our Services, you must register for a
+                    to use the Eco Banx PAY Site and our Services, you must register for a
                     personal or merchant account (an “Account”) and accept the terms of this
                     Agreement and our Privacy Policy. We may, in our sole discretion, refuse to
                     open an Account for you or limit the number of Accounts that you may hold.
@@ -145,11 +145,11 @@
                     you agree to this Agreement on the entity’s or organization’s behalf.
                 </li>
                 <li><b>2. Our Services : </b></li>
-                <li><b>2.1 Digital Currency Services :</b> Hashcodex PAY ’s VASP Services or the
+                <li><b>2.1 Digital Currency Services :</b> Eco Banx PAY ’s VASP Services or the
                     services of their partners enable you to store, track, transfer, manage and
                     convert your balances (collectively, “Digital Currency Transactions”) of
                     certain supported digital currencies in digital currency wallets hosted by
-                    Hashcodex PAY , as the case may be. We will process Digital Currency
+                    Eco Banx PAY , as the case may be. We will process Digital Currency
                     Transactions in accordance with the instructions we receive from you. When
                     you request that an Additional Counterparty receive or deposit digital
                     currency into your Account from another one of your accounts or wallets or
@@ -232,7 +232,7 @@
                     cannot ensure that a buyer or a seller you are dealing with will complete
                     the Digital Currency Transaction and all risk of a Digital Currency
                     Transaction remains with you. We do not guarantee continuous, uninterrupted
-                    or secure access to our Services or the Hashcodex PAY Site and we make no
+                    or secure access to our Services or the Eco Banx PAY Site and we make no
                     representations or warranties regarding the amount of time needed to
                     complete Digital Currency Transaction processing which is dependent upon
                     many factors outside of our control. Access to Services may become degraded
@@ -288,7 +288,8 @@
                     (passwords that use a combination of upper and lower case letters, numbers
                     and symbols) with your Account. You must notify us immediately of any breach
                     of security or unauthorized use of your Account by emailing us at <a
-                        href="{{ url('https://Hashcodex.global/contact-us') }}">support@Hashcodex.global.</a> We will not be
+                        href="{{ url('https://Eco Banx .global/contact-us') }}">support@Eco Banx .global.</a> We will
+                    not be
                     responsible or liable for any damages, liability or losses caused by any
                     unauthorized use of your Account.
                 </li>
@@ -302,39 +303,39 @@
                     “unsubscribe”, or something similar in the email message. Opting out may
                     prevent you from receiving email messages regarding updates, improvements,
                     or offers.</li>
-                <li><b>2.5 No Warranty.</b> THE Hashcodex PAY SITE, ALL INFORMATION PROVIDED
-                    THROUGH THE Hashcodex PAY SITE AND OUR PRODUCTS AND SERVICES ARE PROVIDED ON AN
+                <li><b>2.5 No Warranty.</b> THE Eco Banx PAY SITE, ALL INFORMATION PROVIDED
+                    THROUGH THE Eco Banx PAY SITE AND OUR PRODUCTS AND SERVICES ARE PROVIDED ON AN
                     “AS IS” AND “AS AVAILABLE” BASIS.</li>
                 <li> EACH OF US AND OUR RESPECTIVE PAST, PRESENT AND FUTURE EMPLOYEES, OFFICERS,
                     DIRECTORS, ADVISORS, CONTRACTORS, CONSULTANTS, LICENSORS, EQUITY HOLDERS,
                     MEMBERS, PARTNERS, SHAREHOLDERS, SUPPLIERS, MANAGERS, VENDORS, SERVICE
                     PROVIDERS, PARENT COMPANIES, SUBSIDIARIES, AFFILIATES, AGENTS,
                     REPRESENTATIVES, PREDECESSORS, SUCCESSORS AND ASSIGNS (INDIVIDUALLY, A
-                    “Hashcodex PAY PARTY” AND COLLECTIVELY, THE “Hashcodex PAY PARTIES”) EXPRESSLY
+                    “Eco Banx PAY PARTY” AND COLLECTIVELY, THE “Eco Banx PAY PARTIES”) EXPRESSLY
                     DISCLAIM, AND YOU WAIVE, ALL WARRANTIES, WHETHER EXPRESS, IMPLIED OR
                     STATUTORY, INCLUDING, WITHOUT LIMITATION, IMPLIED WARRANTIES OF
                     TITLE,MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND
                     NON-INFRINGEMENT. No information, whether oral or written, obtained by you
-                    from us or through use of the Hashcodex PAY Site or our Services will create
+                    from us or through use of the Eco Banx PAY Site or our Services will create
                     any warranty not expressly stated herein. Without limiting the foregoing,
-                    the Hashcodex PAY Parties do not warrant that our Services will meet your
-                    requirements; the content on the Hashcodex PAY Site is accurate, reliable, or
+                    the Eco Banx PAY Parties do not warrant that our Services will meet your
+                    requirements; the content on the Eco Banx PAY Site is accurate, reliable, or
                     correct; that our Services will be available at any particular time or
                     location, uninterrupted, error-free or secure; that any defects or errors
-                    will be corrected; or that the Hashcodex PAY Site is free of viruses or other
-                    harmful components. Use of the Hashcodex PAY Site and our Services are at
+                    will be corrected; or that the Eco Banx PAY Site is free of viruses or other
+                    harmful components. Use of the Eco Banx PAY Site and our Services are at
                     entirely your own risk and any content downloaded or otherwise obtained
-                    through the use of the Hashcodex PAY Site or our Services is downloaded at your
+                    through the use of the Eco Banx PAY Site or our Services is downloaded at your
                     own risk.
                 </li>
-                <li>The materials and related graphics on the Hashcodex PAY Site could include
+                <li>The materials and related graphics on the Eco Banx PAY Site could include
                     technical inaccuracies or typographical errors. Accordingly, you should
                     verify all information before relying on it, and all decisions based on
-                    information contained on the Hashcodex PAY Site are your sole responsibility
+                    information contained on the Eco Banx PAY Site are your sole responsibility
                     and we shall have no liability for such decisions. Changes are periodically
-                    added to the information contained on the Hashcodex PAY Site. The Hashcodex PAY
-                    Parties may make improvements and/or changes to the Hashcodex PAY Site, our
-                    products and Services and/or the materials described on the Hashcodex PAY Site
+                    added to the information contained on the Eco Banx PAY Site. The Eco Banx PAY
+                    Parties may make improvements and/or changes to the Eco Banx PAY Site, our
+                    products and Services and/or the materials described on the Eco Banx PAY Site
                     at any time.</li>
                 <li>From time to time, we may provide access to or link to third-party services
                     including, without limitation, gift card services; cryptocurrency staking;
@@ -348,7 +349,7 @@
                     Services”). We provide access to Third Party Services only as a convenience
                     and have no control over and do not warrant, endorse, guarantee, or assume
                     responsibility or liability for any product or service provided by a third
-                    party accessed through the Hashcodex PAY Site or any hyperlinked website or
+                    party accessed through the Eco Banx PAY Site or any hyperlinked website or
                     service, and we will not in any way monitor or be a party to any transaction
                     between you and any third-party. We are not responsible or liable for
                     ensuring that a third party you transact with will complete the transaction
@@ -359,13 +360,13 @@
                     our fees.</li>
                 <li>If, to the extent permitted by us from time to time, you grant express
                     permission to a third party to access or connect to your Account(s), either
-                    through the third party’s product or service or through the Hashcodex PAY Site,
+                    through the third party’s product or service or through the Eco Banx PAY Site,
                     you acknowledge that granting permission to a third party to take specific
                     actions on your behalf does not relieve you of any of your responsibilities
                     under this Agreement. You are fully responsible for all acts or omissions of
                     any third party with access to your Account(s). Further, you acknowledge and
-                    agree that you will not hold Hashcodex PAY responsible for, and will indemnify
-                    Hashcodex PAY from, any liability arising out of or related to any act or
+                    agree that you will not hold Eco Banx PAY responsible for, and will indemnify
+                    Eco Banx PAY from, any liability arising out of or related to any act or
                     omission of any third party with access to your Account(s). </li>
                 <li>WE MAKE NO WARRANTIES OR REPRESENTATIONS, EXPRESS OR IMPLIED, ABOUT LINKED
                     THIRD PARTY SERVICES, THE THIRD PARTIES THEY ARE OWNED AND OPERATED BY, THE
@@ -374,52 +375,52 @@
                     ACKNOWLEDGE SOLE RESPONSIBILITY FOR AND ASSUME ALL RISK ARISING FROM YOUR
                     USE OF THIRD-PARTY SERVICES, THIRD-PARTY WEBSITES, APPLICATIONS, OR
                     RESOURCES, INCLUDING RISK OF LOSS FOR ASSETS TRADED THROUGH SUCH THIRDPARTY
-                    SERVICES. IN NO EVENT WILL Hashcodex PAY BE LIABLE FOR ANY DAMAGES ARISING OUT
+                    SERVICES. IN NO EVENT WILL Eco Banx PAY BE LIABLE FOR ANY DAMAGES ARISING OUT
                     OF OR RELATING TO THIRD PARTY SERVICES. THIS SECTION OPERATES IN ADDITION TO
                     ANY LIMITATION OF LIABILITY EXPRESSED ELSEWHERE IN THIS AGREEMENT.</li>
                 <li><b> 2.6 Limitation of Liability.</b> To the maximum extent permitted by
-                    applicable law, in no event shall any of the Hashcodex PAY Parties be liable
+                    applicable law, in no event shall any of the Eco Banx PAY Parties be liable
                     for any indirect, punitive, incidental, special, consequential or exemplary
                     damages, including, without limitation, damages for loss of revenues,
                     property, profits, business opportunities, goodwill, anticipated savings,
                     use, data or other intangible losses arising out of or relating to: (a) the
-                    use of, or inability to use, the Hashcodex PAY Site or our Services; (b) any
-                    information provided by us or available from the Hashcodex PAY Site; (c) any
+                    use of, or inability to use, the Eco Banx PAY Site or our Services; (b) any
+                    information provided by us or available from the Eco Banx PAY Site; (c) any
                     conduct or content of any other User of our Services or third party; or (d)
                     the failure to receive in any way the transmission of any data, content,
                     digital currency, funds or property from you.</li>
                 <li>Furthermore, and without limiting the generality of the foregoing, under no
-                    circumstances will any Hashcodex PAY. Party be responsible for any liability,
+                    circumstances will any Eco Banx PAY. Party be responsible for any liability,
                     claim, proceeding, damage, loss, expense or injury resulting from hacking,
                     tampering or other unauthorized access or use of our Services or your
                     Account or the information, digital currency or funds contained therein.
                 </li>
-                <li>To the maximum extent permitted by applicable law, none of the Hashcodex PAY
+                <li>To the maximum extent permitted by applicable law, none of the Eco Banx PAY
                     Parties shall be responsible or liable for any: (a) errors, mistakes,
                     omissions or inaccuracies of information or content provided by us or on the
-                    Hashcodex PAY Site; (b) loss, liability, cost, expense or damage of any nature
+                    Eco Banx PAY Site; (b) loss, liability, cost, expense or damage of any nature
                     whatsoever suffered or incurred arising out of or in connection with your
-                    access to or use of the Hashcodex PAY Site, any of its content or our products
+                    access to or use of the Eco Banx PAY Site, any of its content or our products
                     or Services; (c) unauthorized access to or use of our secure servers and/or
                     any and all personal information stored therein; (d) faults, delays,
-                    interruptions or lack of availability of the Hashcodex PAY Site or any of our
-                    Services or products provided through the Hashcodex PAY Site; (e) bugs,
+                    interruptions or lack of availability of the Eco Banx PAY Site or any of our
+                    Services or products provided through the Eco Banx PAY Site; (e) bugs,
                     viruses, trojan horses, or the like that may be transmitted to or through
                     our Services by any User or any third party; (f) errors or omissions in any
                     content or for any loss or damage incurred as a result of the use of any
                     content posted, emailed, transmitted, or otherwise made available through
-                    the Hashcodex PAY Site or our Services; and/or (g) action of other Users, User
+                    the Eco Banx PAY Site or our Services; and/or (g) action of other Users, User
                     Content (as defined below) or the defamatory, offensive, or illegal conduct
                     of any third party. To the maximum extent permitted by applicable law, in no
-                    event shall the Hashcodex PAY Parties be liable to you for any claims,
+                    event shall the Eco Banx PAY Parties be liable to you for any claims,
                     proceedings, liabilities, obligations, expenses, damages, losses or costs in
-                    an amount exceeding the amount of fees paid by you to Hashcodex PAY for the
+                    an amount exceeding the amount of fees paid by you to Eco Banx PAY for the
                     applicable Services for the six (6) months preceding the date of any claim
                     giving rise to such liability or one hundred U.S. dollars (USD $100.00),
                     whichever is greater.</li>
                 <li>This limitation of liability section applies whether the alleged liability
                     is based on contract, tort, negligence, strict liability, or any other
-                    basis, even if a Hashcodex PAY Party has been advised of the possibility of
+                    basis, even if a Eco Banx PAY Party has been advised of the possibility of
                     such damage. The foregoing limitation of liability shall apply to the
                     fullest extent permitted by law in the applicable jurisdiction.</li>
                 <li>Some jurisdictions do not allow the exclusion of certain warranties or the
@@ -427,10 +428,10 @@
                     damages. Accordingly, some of the limitations of this section may not apply
                     to you.</li>
                 <li><b>2.7 Indemnification : </b>You agree to defend, indemnify and hold harmless
-                    each Hashcodex PAY Party from and against any and all claims, proceedings,
+                    each Eco Banx PAY Party from and against any and all claims, proceedings,
                     damages, obligations, losses, liabilities, costs or debt, and expenses
                     (including but not limited to attorney’s fees) arising from: (a) your use of
-                    and access to the Hashcodex PAY Site and our Services, including, without
+                    and access to the Eco Banx PAY Site and our Services, including, without
                     limitation, any data, digital currency or content transmitted or received by
                     you; (b) your violation of any term or condition of this Agreement,
                     including without limitation, your breach of any of the representations and
@@ -459,7 +460,8 @@
                     Merchants and business operators in high risk industries may be required to
                     pay higher fees in our sole discretion. If you are unsure whether you or
                     your business is classified as high risk or in violation of Section 7.1 of
-                    this Agreement, please contact <a href="{{ url('/') }}">support@Hashcodex.global.</a> Your Account and
+                    this Agreement, please contact <a href="{{ url('/') }}">support@Eco Banx .global.</a> Your Account
+                    and
                     all
                     Digital Currency Transactions are made and displayed in the currency of the
                     digital currency held or the digital currency of the Digital Currency
@@ -559,13 +561,13 @@
                     in our sole discretion (“Prohibited Activities”). The specific types of
                     prohibited activities listed below are illustrative, but not exhaustive. If
                     you are uncertain as to whether or not your use of our Services involves a
-                    Prohibited Activity, please contact support@Hashcodex.global .net as soon as
-                    possible. By accessing and using the Hashcodex PAY Site and our Services and/or
+                    Prohibited Activity, please contact support@Eco Banx .global .net as soon as
+                    possible. By accessing and using the Eco Banx PAY Site and our Services and/or
                     opening an Account, you agree that you will not violate any law, contract,
                     intellectual property or other third-party right or commit a tort, and that
                     you are solely responsible for your conduct while using our Services.
                     Without limiting the generality of the foregoing, you confirm that you will
-                    not use your Account, the Hashcodex PAY Site or our Services in any manner to
+                    not use your Account, the Eco Banx PAY Site or our Services in any manner to
                     do any of the following:</li>
                 <li><b>(a) Unlawful Activity : </b>Be, support or send payment to, an individual
                     or entity sanctioned under sanctions programs administered in the countries
@@ -605,7 +607,7 @@
                     unfair, deceptive, or predatory towards consumers; and (vii) any businesses
                     or activities that we believe pose elevated financial risk, legal liability,
                     or violates the law.</li>
-                <li><b>(c) Abusive Activity : </b> Transmit or upload any material to the Hashcodex
+                <li><b>(c) Abusive Activity : </b> Transmit or upload any material to the Eco Banx
                     PAY Site that contains viruses, trojan horses, worms, time bombs,
                     cancelbots, easter eggs or any other harmful or deleterious programs or
                     other computer programming routines that may damage, detrimentally interfere
@@ -613,10 +615,10 @@
                     personal information; actions which impose an unreasonable or
                     disproportionately large load on our infrastructure, or detrimentally
                     interferes with, intercepts, or expropriates any system, data, or
-                    information; attempt to gain unauthorized access to the Hashcodex PAY Site,
-                    other Users’ accounts, computer systems or networks connected to the Hashcodex
+                    information; attempt to gain unauthorized access to the Eco Banx PAY Site,
+                    other Users’ accounts, computer systems or networks connected to the Eco Banx
                     PAY Site, through password mining or any other means; use account
-                    information of another party to access or use the Hashcodex PAY Site; transfer
+                    information of another party to access or use the Eco Banx PAY Site; transfer
                     your Account access or rights to your Account to a third party, unless by
                     operation of law or with our express permission; any activity which creates
                     costs, expenses, losses or liability for us or causes us to lose (in whole
@@ -635,14 +637,14 @@
                     impersonate another person or otherwise misrepresent your affiliation with a
                     person or entity, conduct fraud, hide or attempt to hide your identity; use
                     any device, software or routine to bypass our robot exclusion headers, or to
-                    interfere or attempt to interfere with the proper working of the Hashcodex PAY
-                    Site or any activities conducted on the Hashcodex PAY Site or our Services;
-                    access any content on the Hashcodex PAY Site through any technology or means
+                    interfere or attempt to interfere with the proper working of the Eco Banx PAY
+                    Site or any activities conducted on the Eco Banx PAY Site or our Services;
+                    access any content on the Eco Banx PAY Site through any technology or means
                     other than those provided or authorized by us; bypass the measures we may
                     use to prevent or restrict access to our Services, including without
                     limitation remove, circumvent, disable or otherwise interfere with
                     security-related features or features that prevent or restrict use or
-                    copying of any content or enforce limitations on the use of the Hashcodex PAY
+                    copying of any content or enforce limitations on the use of the Eco Banx PAY
                     Site or the content therein; damage, disable, overburden or impair the
                     functioning of our Services in any manner; or delete our copyright,
                     trademark or other proprietary rights notices.</li>
@@ -650,11 +652,11 @@
                     libelous, unlawfully threatening or harassing or otherwise violate or
                     infringe the legal rights (such as, but not limited to, rights of privacy,
                     publicity and intellectual property) of others; interfere with another
-                    individual’s or entity’s access to or use of the Hashcodex PAY Site or any of
+                    individual’s or entity’s access to or use of the Eco Banx PAY Site or any of
                     our Services; interfere with, disrupt, negatively affect or inhibit other
                     users from fully enjoying our Services; incite, threaten, facilitate,
                     promote, or encourage hate, racial intolerance, or violent acts against
-                    others; harvest or otherwise collect information from the Hashcodex PAY Site
+                    others; harvest or otherwise collect information from the Eco Banx PAY Site
                     about others, including without limitation email addresses, without proper
                     consent.</li>
                 <li><b>(e) Intellectual Property Infringement : </b>Engage in transactions which
@@ -662,12 +664,12 @@
                     right of any person (such as copyright, trademarks, patents, or trade
                     secrets, or other proprietary rights of any party), right of publicity or
                     privacy or commit a tort; use of our intellectual property, name, or logo,
-                    including use of the Hashcodex PAY trade or service marks, without express
+                    including use of the Eco Banx PAY trade or service marks, without express
                     consent from us or in a manner that otherwise harms us or our brand; create
                     a false identity for the purpose of misleading others or fraudulently or
                     otherwise misrepresent yourself to be another person or a representative of
                     another entity including, but not limited to, an authorized user of the
-                    Hashcodex PAY Site or our representative, or fraudulently or otherwise
+                    Eco Banx PAY Site or our representative, or fraudulently or otherwise
                     misrepresent that you have an affiliation with a person, entity or group.
                 </li>
                 <li>We reserve the right at all times to monitor, review, retain and/or disclose
@@ -679,7 +681,7 @@
                 <li> Our Services are not available in every jurisdiction and we reserve the
                     right to select the markets and jurisdictions where we provide Services.
                     Persons and entities in jurisdictions where we do not provide Services are
-                    prohibited from using or accessing the Hashcodex PAY Site and any of our
+                    prohibited from using or accessing the Eco Banx PAY Site and any of our
                     Services. </li>
                 <li><b>7.2 License : </b> If you post, upload, input, provide or submit your
                     personal data to us, including without limitation, your name, email address,
@@ -688,12 +690,12 @@
                     your “User Content”), you must ensure that the User Content provided by you
                     at that or at any other time is true, accurate, up to date and complete and
                     that any User Content you post, upload, input, provide or submit to us or
-                    via the Hashcodex PAY Site does not breach or infringe the intellectual
+                    via the Eco Banx PAY Site does not breach or infringe the intellectual
                     property rights of any third party. We do not own, control or endorse any
-                    User Content that is transmitted, stored or processed via the Hashcodex PAY
+                    User Content that is transmitted, stored or processed via the Eco Banx PAY
                     Site or sent to us. You are solely responsible and liable for all of your
                     User Content and for your use of any interactive features, links or
-                    information or content on the Hashcodex PAY Site, and you represent and warrant
+                    information or content on the Eco Banx PAY Site, and you represent and warrant
                     that (i) you own all intellectual property rights (or have obtained all
                     necessary permissions) to provide your User Content and to grant the
                     licenses in this Agreement; (ii) your User Content will not violate any
@@ -708,7 +710,7 @@
                     responsible or liable for any loss or damages that you may incur as a result
                     of someone else using your User Content or Account, either with or without
                     your knowledge. However, you could be held liable for losses, expenses and
-                    costs incurred by any Hashcodex PAY Party or another party due to someone else
+                    costs incurred by any Eco Banx PAY Party or another party due to someone else
                     using your User Content or Account. You may not use anyone else’s User
                     Content or account at any time without the permission of such person or
                     entity.</li>
@@ -719,25 +721,25 @@
                     transmit, publicly perform and publicly display your User Content and
                     sub-license such rights to others. You must immediately update and inform us
                     of any changes to your User Content by updating your personal data by
-                    contacting us at support@Hashcodex.global, so that we can communicate with you
+                    contacting us at support@Eco Banx .global, so that we can communicate with you
                     effectively and provide accurate and up to date information to you. Although
                     we have no obligation to screen, edit or monitor User Content, we reserve
                     the right, and have absolute discretion, to remove, screen or edit User
                     Content. Furthermore, if we have reason to believe that there is likely to
-                    be a breach of security, breach or misuse of the Hashcodex PAY Site or if you
+                    be a breach of security, breach or misuse of the Eco Banx PAY Site or if you
                     breach any of your obligations under this Agreement or our Privacy Policy,
-                    we may suspend your use of the Hashcodex PAY Site at any time and for any
+                    we may suspend your use of the Eco Banx PAY Site at any time and for any
                     reason.</li>
-                <li>Any User Content submitted by you on the Hashcodex PAY Site may be accessed by
+                <li>Any User Content submitted by you on the Eco Banx PAY Site may be accessed by
                     us globally.</li>
-                <li><b>7.3 Our Proprietary Rights : </b> Except for your User Content, the Hashcodex
+                <li><b>7.3 Our Proprietary Rights : </b> Except for your User Content, the Eco Banx
                     PAY Site and all materials therein or transferred thereby, including,
                     without limitation, software, technology, code, images, text, graphics,
                     illustrations, logos, patents, trademarks, service marks, copyrights,
                     photographs, audio, videos, music, and User Content belonging to other Users
                     (the “Our Content”), and all Intellectual Property Rights related thereto,
                     are our exclusive property and our licensors (including other Users who post
-                    User Content to the Hashcodex PAY Site). Except as explicitly provided herein
+                    User Content to the Eco Banx PAY Site). Except as explicitly provided herein
                     or in any applicable additional terms and conditions, nothing in this
                     Agreement shall be deemed to create a license in or under any such
                     Intellectual Property Rights, and you agree not to sell, modify, reverse
@@ -764,19 +766,19 @@
                     on a non-confidential basis or otherwise to anyone. You further acknowledge
                     that, by acceptance of your submission, we do not waive any rights to use
                     similar or related ideas previously known to us, or developed by any of the
-                    Hashcodex PAY. Parties, or obtained from sources other than you.</li>
+                    Eco Banx PAY. Parties, or obtained from sources other than you.</li>
                 <li><b>7.4 Third Party Content. </b> We may display third-party content,
-                    advertisements, links, promotions, logos and other materials on the Hashcodex
+                    advertisements, links, promotions, logos and other materials on the Eco Banx
                     PAY Site (collectively, the “Third-Party Content”) for your convenience
                     only. We do not approve of, control, endorse or sponsor any third parties or
                     ThirdParty Content, and we make no representations or warranties of any kind
                     regarding such Third Party Content, including, without limitation, the
                     accuracy, validity, legality, copyright compliance, or decency of such
-                    content. If you access a third-party website or service from the Hashcodex PAY
+                    content. If you access a third-party website or service from the Eco Banx PAY
                     Site or share your User Content on or through any third-party website or
                     service, you do so at your own risk, and you understand that this Agreement
                     and our Privacy Policy do not apply to your use of such sites. You expressly
-                    relieve the Hashcodex PAY Parties from any and all responsibility and liability
+                    relieve the Eco Banx PAY Parties from any and all responsibility and liability
                     arising from your use of any third-party website, service, or content,
                     including without limitation User Content submitted by other Users.</li>
                 <li><b>8.1 Privacy. </b> We respect the privacy of our Users and we only request
@@ -826,7 +828,7 @@
                 <li>We are not responsible or liable for any damage or interruptions caused by
                     any computer viruses, spyware, scareware, Trojan horses, worms, or other
                     malware that may affect your computer or other equipment, or any phishing,
-                    spoofing or other attack from using the Hashcodex PAY Site. We advise the
+                    spoofing or other attack from using the Eco Banx PAY Site. We advise the
                     regular use of a reputable and readily available virus screening and
                     prevention software. You should also be aware that SMS and email services
                     are vulnerable to spoofing and phishing attacks and should use care in
@@ -900,7 +902,7 @@
                     to, where:</li>
                 <li><b>-</b> You are in breach of this Agreement or we have concerns or
                     reasonably suspect you are acting in breach of this Agreement.</li>
-                <li><b>-</b> We reasonably suspect you of using the Hashcodex PAY Site or our
+                <li><b>-</b> We reasonably suspect you of using the Eco Banx PAY Site or our
                     Services in connection with a Prohibited Activity.</li>
                 <li><b>-</b> You are in breach of applicable law, we have concerns or reasonably
                     suspect you are in breach of applicable law, or we are, in our reasonable
@@ -926,7 +928,7 @@
                     and/or we have concerns about the information collected about you.</li>
                 <li><b>-</b>Our service partners are unable to support your use of our Services.
                 </li>
-                <li><b>-</b>You take any action that may circumvent the security of the Hashcodex
+                <li><b>-</b>You take any action that may circumvent the security of the Eco Banx
                     PAY Site or our controls such as opening multiple Accounts or consummating
                     transactions for the benefit of a third party.</li>
                 <li><b>-</b>In the event of any Force Majeure Event (as defined in Section 10.3
@@ -973,16 +975,16 @@
                 <li><b>10 General Contract Terms :</b></li>
                 <li><b>10.1 Limited License :</b> We grant you a non-exclusive, limited,
                     non-transferable, freely revocable license, subject to the terms of this
-                    Agreement, to access and use the Hashcodex PAY Site, and related content,
+                    Agreement, to access and use the Eco Banx PAY Site, and related content,
                     materials, information (collectively, the “Content”) solely for approved
-                    purposes as permitted by us from time to time. Any other use of the Hashcodex
+                    purposes as permitted by us from time to time. Any other use of the Eco Banx
                     PAY Site or Content is expressly prohibited and all other right, title, and
-                    interest in the Hashcodex PAY Site or Content is exclusively the property of us
+                    interest in the Eco Banx PAY Site or Content is exclusively the property of us
                     and our licensors. You agree not to copy, transmit, distribute, sell,
                     license, reverse engineer, modify, publish, or participate in the transfer
                     or sale of, create derivative works from, or in any other way exploit any of
-                    the Content, in whole or in part. “Hashcodex PAY ”, and all logos related to
-                    our Services or displayed on the Hashcodex PAY Site are our or our licensors’
+                    the Content, in whole or in part. “Eco Banx PAY ”, and all logos related to
+                    our Services or displayed on the Eco Banx PAY Site are our or our licensors’
                     trademarks or registered marks. You may not copy, imitate or use them
                     without our prior written consent.</li>
                 <li><b>10.2 Assignment and Novation : </b> This Agreement is personal to you and
@@ -1042,7 +1044,7 @@
                 <li><b>10.8 Survival : </b>All provisions of this Agreement which by their nature
                     extend beyond the expiration or termination of this Agreement, including,
                     without limitation, the sections relating to suspension or termination,
-                    Account cancellation, debts owed to Hashcodex PAY , general use of the Hashcodex
+                    Account cancellation, debts owed to Eco Banx PAY , general use of the Eco Banx
                     PAY Site, and general provisions will continue to be binding and operate
                     after the termination or expiration of this Agreement or your Account.</li>
                 <li><b>10.9 Electronic Communications : </b> You agree that this Agreement
@@ -1052,7 +1054,7 @@
                     Services (collectively, the “Communications”) may be provided to you
                     electronically and you agree to receive all Communications from us in
                     electronic form. Electronic Communications may be posted on the pages of the
-                    Hashcodex PAY Site and/or delivered to your e-mail address. You may print a
+                    Eco Banx PAY Site and/or delivered to your e-mail address. You may print a
                     copy of any Communications and retain it for your records. All
                     Communications in either electronic or paper format will be considered to be
                     in “writing,” and to have been received no later than two (2) business days
@@ -1068,10 +1070,10 @@
                     will be deemed to have provided the Communication to you whether or not you
                     actually received the Communication. Please note that if you use a spam
                     filter that blocks or re-routes emails from senders not listed in your email
-                    address book, you must add Hashcodex PAY to your email address book so that you
+                    address book, you must add Eco Banx PAY to your email address book so that you
                     will be able to receive the Communications we send to you. You can update
                     your email address or street address at any time by logging into your
-                    Account or by sending such information to support@Hashcodex.global. If your
+                    Account or by sending such information to support@Eco Banx .global. If your
                     email address becomes invalid such that electronic Communications sent to
                     you by us are returned, we may deem your account to be inactive, and you may
                     not be able to complete any transaction via our Services until we receive a
@@ -1095,7 +1097,7 @@
                     law without regard to conflict-of-laws principles. The application of the
                     United Nations Convention on Contracts for the International Sale of Goods
                     is expressly excluded. </li>
-                <li><b>10.14 Dispute Resolution : </b> In the event that Hashcodex has to take legal
+                <li><b>10.14 Dispute Resolution : </b> In the event that Eco Banx has to take legal
                     actions towards you, we shall be entitled to do so at our discretion at your
                     country of residence, or country of nationality.</li>
                 <li><b>10.15 Change of Control : </b>In the event that we are acquired by or
