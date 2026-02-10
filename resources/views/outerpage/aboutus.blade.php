@@ -6,9 +6,9 @@
 
         <div class="contain-width">
             <div class="about-banner-content">
-                <h1><span>ABOUT</span> Hashcodex<span>.</span></h1>
+                <h1><span>ABOUT</span> Eco Banx <span>.</span></h1>
                 <p class="para-text">
-                    Hashcodex is a comprehensive financial institution group offering a wide range of services and
+                    Eco Banx is a comprehensive financial institution group offering a wide range of services and
                     solutions to individuals,
                     businesses, and financial entities across the globe, ensuring security, compliance, and
                     transparency.
@@ -56,7 +56,8 @@
                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                         <div class="mission-right">
                             <h3 class="card-sub-title"> Mission<span>.</span></h3>
-                            <p>Our mission at Hashcodex is to be at the forefront of the digital revolution that seamlessly
+                            <p>Our mission at Eco Banx is to be at the forefront of the digital revolution that
+                                seamlessly
                                 integrates fiat and digital
                                 assets, thereby supporting innovative monetary policies. By doing so, we aim to increase
                                 transaction volumes and foster
@@ -72,7 +73,7 @@
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                     <div class="card-block value-vision-block">
                         <h3 class="card-sub-title">Our Value<span>.</span></h3>
-                        <p>At Hashcodex, our core value centers around the belief that education and responsible
+                        <p>At Eco Banx , our core value centers around the belief that education and responsible
                             globalization are pivotal for building a prosperous, equitable future. We see this as the
                             key to unlocking a win-win economy that offers new opportunities and financial freedom to
                             all. By championing education and healthy globalization, we strive to empower individuals
@@ -82,7 +83,7 @@
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                     <div class="card-block value-vision-block vision-block">
                         <h3 class="card-sub-title">Vision<span>.</span></h3>
-                        <p>Hashcodex envisions a future where technology plays a pivotal role in shaping international
+                        <p>Eco Banx envisions a future where technology plays a pivotal role in shaping international
                             financial markets. Our expertise lies in crypto-assets, and we are dedicated to harnessing
                             their potential to drive positive changes in the world economy. We aim to achieve this by
                             facilitating the mass adoption of digital assets, offering advanced financial solutions, and
@@ -304,14 +305,15 @@
     <section class="press-say">
         <div class="contain-width">
 
-<h2><span>
-    WHAT DOES </span>THE PRESS SAY<span>?</span></h2>
+            <h2><span>
+                    WHAT DOES </span>THE PRESS SAY<span>?</span></h2>
 
             <div class="swiper mySwiper-1 slide-container">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide slider-block card  card-block card-bg">
                         <div class="press-logo">
-                            <img src="{{ url('/outerpage-assert/image/press-logo-1.png') }}" alt="" width="171" height="43">
+                            <img src="{{ url('/outerpage-assert/image/press-logo-1.png') }}" alt="" width="171"
+                                height="43">
                         </div>
                         <h3 class="card-sub-title">FIAT-BACKED STABLECOIN EURST NOW AVAILABLE IN BITGO CUSTODY.</h3>
                         <p>EURST, a fiat-backed stablecoin based on Ethereum network ERC20 token standard announces
@@ -335,9 +337,10 @@
                     </div>
                     <div class="swiper-slide slider-block card  card-block card-bg">
                         <div class="press-logo">
-                            <img src="{{ url('/outerpage-assert/image/press-logo-2.png') }}" alt="" width="171" height="43">
+                            <img src="{{ url('/outerpage-assert/image/press-logo-2.png') }}" alt="" width="171"
+                                height="43">
                         </div>
-                        <h3 class="card-sub-title">Hashcodex: UN INASPETTATO NUOVO GIGANTE.
+                        <h3 class="card-sub-title">Eco Banx : UN INASPETTATO NUOVO GIGANTE.
                         </h3>
                         <p>EURST, a fiat-backed stablecoin based on Ethereum network ERC20 token standard announces
                             today that...</p>
@@ -360,7 +363,8 @@
                     </div>
                     <div class="swiper-slide slider-block card  card-block card-bg">
                         <div class="press-logo">
-                            <img src="{{ url('/outerpage-assert/image/press-logo-3.png') }}" alt="" width="171" height="43">
+                            <img src="{{ url('/outerpage-assert/image/press-logo-3.png') }}" alt="" width="171"
+                                height="43">
                         </div>
                         <h3 class="card-sub-title">
                             LAUNCHING THE NEXT LEVEL ASSET AND DIGITAL ASSET ECOSYSTEM.
@@ -386,7 +390,8 @@
                     </div>
                     <div class="swiper-slide slider-block card  card-block card-bg">
                         <div class="press-logo">
-                            <img src="{{ url('/outerpage-assert/image/press-logo-4.png') }}" alt="" width="171" height="43">
+                            <img src="{{ url('/outerpage-assert/image/press-logo-4.png') }}" alt="" width="171"
+                                height="43">
                         </div>
                         <h3 class="card-sub-title">
                             FIAT-BACKED STABLECOIN EURST ANNOUNCES PUBLIC LAUNCH.</h3>
@@ -412,12 +417,12 @@
 
 
                 </div>
-           
+
             </div>
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
         </div>
-      
+
     </section>
 </main>
 
@@ -426,5 +431,3 @@
 
 
 @include('layouts.outerfooter')
-
-

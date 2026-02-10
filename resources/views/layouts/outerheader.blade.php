@@ -35,9 +35,9 @@ if (isset($atitle)) {
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     @if(isset($title))
-        <title>{{ $title . ' - ' . 'Hashcodex | Crypto Payment Gateway' }}</title>
+    <title>{{ $title . ' - ' . 'Eco Banx  | Crypto Payment Gateway' }}</title>
     @else
-        <title>{{ config('app.name', 'Hashcodex | Crypto Payment Gateway') }}</title>
+    <title>{{ config('app.name', 'Eco Banx  | Crypto Payment Gateway') }}</title>
     @endif
 
     <!-- CSS stylesheet -->
@@ -47,7 +47,7 @@ if (isset($atitle)) {
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css"
         integrity="sha512-rd0qOHVMOcez6pLWPVFIv7EfSdGKLt+eafXh4RO/12Fgr41hDQxfGvoi1Vy55QIVcQEujUE1LQrATCLl2Fs+ag=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -63,12 +63,12 @@ if (isset($atitle)) {
     <link rel="preload" href="{{ url('outerpage-assert/font/Clash-Display/ClashDisplay-Regular.otf') }}" as="font"
         type="font/otf" crossorigin>
     <style>
-        @font-face {
-            font-family: 'ClashDisplay, sans-serif';
-            font-style: normal;
-            src: url("../font/Clash-Display/ClashDisplay-Regular.otf");
-            font-display: swap;
-        }
+    @font-face {
+        font-family: 'ClashDisplay, sans-serif';
+        font-style: normal;
+        src: url("../font/Clash-Display/ClashDisplay-Regular.otf");
+        font-display: swap;
+    }
     </style>
 
 </head>
@@ -90,8 +90,8 @@ if (isset($atitle)) {
                     <a href="#" class="close-menu"><i class="fa-solid fa-xmark"></i></a>
                     <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link wallet-link" aria-current="page"
-                                href="https://Hashcodex.global/">Hashcodex</a>
+                            <a class="nav-link wallet-link" aria-current="page" href="#">Eco
+                                Banx </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link wallet-link @if ($active == 'support coins') active @endif"
@@ -103,7 +103,8 @@ if (isset($atitle)) {
                         </li>
 
                         <li class="nav-item dropdown head-dropdown">
-                            <a class="nav-link wallet-link @if ($active == 'fees') active @endif" href="{{ url('/fees') }}">FEES</a>
+                            <a class="nav-link wallet-link @if ($active == 'fees') active @endif"
+                                href="{{ url('/fees') }}">FEES</a>
                             <!-- <a class="nav-link dropdown-toggle head-dropdown-toggle" href="{{ url('/') }}"
                                 id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">

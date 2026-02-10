@@ -9,9 +9,9 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     @if(isset($title))
-        <title>{{ $title . ' | ' . 'Hashcodex | Crypto Payment Gateway' }}</title>
+    <title>{{ $title . ' | ' . 'Eco Banx  | Crypto Payment Gateway' }}</title>
     @else
-        <title>{{ config('app.name', 'Hashcodex | Crypto Payment Gateway') }}</title>
+    <title>{{ config('app.name', 'Eco Banx  | Crypto Payment Gateway') }}</title>
     @endif
 
     <!-- CSS stylesheet -->
@@ -32,12 +32,12 @@
     <link rel="preload" href="{{ url('outerpage-assert/font/Kanit/Kanit-Regular.ttf') }}" as="font" type="font/otf"
         crossorigin>
     <style>
-        @font-face {
-            font-family: "kanit";
-            font-style: normal;
-            src: url("../font/Kanit/Kanit-Regular.ttf");
-            font-display: swap;
-        }
+    @font-face {
+        font-family: "kanit";
+        font-style: normal;
+        src: url("../font/Kanit/Kanit-Regular.ttf");
+        font-display: swap;
+    }
     </style>
 
 </head>

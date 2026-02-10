@@ -16,9 +16,9 @@ $atitle = 'merchant';
                         <h1>
                             <span> MERCHANT</span> TOOLS<span>.</span>
                         </h1>
-                        <P class="para-text">Hashcodex Pay offers a variety of ways to accept crypto payments from your
+                        <P class="para-text">Eco Banx Pay offers a variety of ways to accept crypto payments from your
                             customers.</P>
-                        <P class="para-text"> Get started setting up your Hashcodex Pay account and accepting crypto
+                        <P class="para-text"> Get started setting up your Eco Banx Pay account and accepting crypto
                             payments by following
                             along in our Step-by-Step
                             Integration Guide.</P>

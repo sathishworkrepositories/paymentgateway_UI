@@ -36,7 +36,7 @@
                         <div class="crypto-sub-head">
                             <span> <img src="{{ url('/outerpage-assert/image/four-star.svg') }}"
                                     alt="about-wallet"></span>
-                            <span>About Hashcodex PAY</span>
+                            <span>About Eco Banx PAY</span>
                         </div>
                         <h2>The partner you can trust<span>.</span></h2>
                     </div>
@@ -195,148 +195,151 @@
     </section>
 
     <div class="crypto-bg">
-    <section class="crypto-currency-features section-top-padding ">
-        <div class="contain-width">
-            <div class="crypto-currency-block card-block card-bg">
+        <section class="crypto-currency-features section-top-padding ">
+            <div class="contain-width">
+                <div class="crypto-currency-block card-block card-bg">
+                    <div class="row">
+                        <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12">
+                            <div class="crypto-currency-block-left">
+                                <h3>We got all crypto currency<span> features.</span></h3>
+                                <ul>
+                                    <li>
+                                        <b>PAY IN CRYPTO</b>— Instantly pay your partners with any
+                                        crypto of your choice with a low mining fee.
+                                    </li>
+                                    <li>
+                                        <b>BUY CRYPTO WITH FIAT</b>— Top up your account with fiat
+                                        and buy crypto for your needs with our built-in exchange or
+                                        OTC desk.
+                                    </li>
+                                    <li>
+                                        <b>INVOICE WITH CRYPTO</b>— Bill your partners in crypto
+                                        with invoice and payment link options, and receive the
+                                        equivalent amount in fiat on your account.
+                                    </li>
+                                    <li>
+                                        <b>DO MASS PAYOUTS</b>— Make different crypto payouts on
+                                        multiple addresses from one single wallet by simply
+                                        uploading a balance sheet.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12">
+                            <div class="crypto-currency-block-right">
+                                <img src="{{ url('/outerpage-assert/image/crypto-currency-features-img.webp') }}"
+                                    alt="crypto-currency-features" loading="lazy" width="429" height="429" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="key-benefits section-top-padding">
+
+            <div class="contain-width">
+                <div class="section-head">
+                    <h2>
+                        key benefits of our <span>leading payment
+                        </span>solutions.
+                    </h2>
+                    <p class="para-text">
+                        Cryptoprocessing by Eco Banx satisfies 99% of your business & your
+                        customers needs.
+                    </p>
+                </div>
+                <div class="leading-payment-img text-center">
+                    <img src="{{ url('/outerpage-assert/image/leading-payment-img.webp') }}"
+                        alt="key-benefits-our-leading-payment-solution" class="img-fluid" width="400" height="400" />
+                </div>
                 <div class="row">
-                    <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12">
-                        <div class="crypto-currency-block-left">
-                            <h3>We got all crypto currency<span> features.</span></h3>
-                            <ul>
-                                <li>
-                                    <b>PAY IN CRYPTO</b>— Instantly pay your partners with any
-                                    crypto of your choice with a low mining fee.
-                                </li>
-                                <li>
-                                    <b>BUY CRYPTO WITH FIAT</b>— Top up your account with fiat
-                                    and buy crypto for your needs with our built-in exchange or
-                                    OTC desk.
-                                </li>
-                                <li>
-                                    <b>INVOICE WITH CRYPTO</b>— Bill your partners in crypto
-                                    with invoice and payment link options, and receive the
-                                    equivalent amount in fiat on your account.
-                                </li>
-                                <li>
-                                    <b>DO MASS PAYOUTS</b>— Make different crypto payouts on
-                                    multiple addresses from one single wallet by simply
-                                    uploading a balance sheet.
-                                </li>
-                            </ul>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                        <div class="card-block card key-benefits-card" data-animation="fadeInLeft">
+                            <h3 class="card-sub-title">Simple <br>integration <span>.</span></h3>
+                            <p>
+                                We offer one of the best APIs on the market with full integration support via a
+                                dedicated
+                                manager.
+                            </p>
+                            <div class="feature-card-img">
+                                <img src="{{ url('/outerpage-assert/image/key-benefits-img-1.svg') }}"
+                                    alt="Simple-integration" loading="lazy" width="80" height="80" />
+                            </div>
                         </div>
                     </div>
-                    <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12">
-                        <div class="crypto-currency-block-right">
-                            <img src="{{ url('/outerpage-assert/image/crypto-currency-features-img.webp') }}"
-                                alt="crypto-currency-features" loading="lazy" width="429" height="429" />
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 top-margin">
+                        <div class="card-block card key-benefits-card" data-animation="fadeInLeft">
+                            <h3 class="card-sub-title"> Instant<br>transactions <span>.</span></h3>
+                            <p>
+                                We support instant transaction confirmation for the most popular cryptocurrencies, even
+                                before they are confirmed by blockchain.
+                            </p>
+                            <div class="feature-card-img">
+                                <img src="{{ url('/outerpage-assert/image/key-benefits-img-2.svg') }}"
+                                    alt="Instant-transactions" loading="lazy" width="80" height="80" />
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="key-benefits section-top-padding">
-
-        <div class="contain-width">
-            <div class="section-head">
-                <h2>
-                    key benefits of our <span>leading payment
-                    </span>solutions.
-                </h2>
-                <p class="para-text">
-                    Cryptoprocessing by Hashcodex satisfies 99% of your business & your
-                    customers needs.
-                </p>
-            </div>
-            <div class="leading-payment-img text-center">
-                <img src="{{ url('/outerpage-assert/image/leading-payment-img.webp') }}"
-                    alt="key-benefits-our-leading-payment-solution" class="img-fluid" width="400" height="400" />
-            </div>
-            <div class="row">
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                    <div class="card-block card key-benefits-card" data-animation="fadeInLeft">
-                        <h3 class="card-sub-title">Simple <br>integration <span>.</span></h3>
-                        <p>
-                            We offer one of the best APIs on the market with full integration support via a dedicated
-                            manager.
-                        </p>
-                        <div class="feature-card-img">
-                            <img src="{{ url('/outerpage-assert/image/key-benefits-img-1.svg') }}"
-                                alt="Simple-integration" loading="lazy" width="80" height="80" />
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 ">
+                        <div class="card-block card key-benefits-card" data-animation="fadeInLeft">
+                            <h3 class="card-sub-title">Treasury<br> management <span>.</span></h3>
+                            <p>
+                                Multi-level wallet system which allows sending funds from hot wallet to external one or
+                                cold
+                                storage automatically based on set thresholds by merchants.
+                            </p>
+                            <div class="feature-card-img">
+                                <img src="{{ url('/outerpage-assert/image/key-benefits-img-3.svg') }}"
+                                    alt="Treasury-management" loading="lazy" width="80" height="80" />
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 top-margin">
-                    <div class="card-block card key-benefits-card" data-animation="fadeInLeft">
-                        <h3 class="card-sub-title"> Instant<br>transactions <span>.</span></h3>
-                        <p>
-                            We support instant transaction confirmation for the most popular cryptocurrencies, even
-                            before they are confirmed by blockchain.
-                        </p>
-                        <div class="feature-card-img">
-                            <img src="{{ url('/outerpage-assert/image/key-benefits-img-2.svg') }}"
-                                alt="Instant-transactions" loading="lazy" width="80" height="80" />
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                        <div class="card-block card key-benefits-card" data-animation="fadeInRight">
+                            <h3 class="card-sub-title">Innovative liquidity<br> aggregator <span>.</span></h3>
+                            <p>
+                                Our liquidity aggregator has integration with all the leading exchanges and liquidity
+                                providers giving you the best exchange rates and minimum slippage on any.
+                            </p>
+                            <div class="feature-card-img">
+                                <img src="{{ url('/outerpage-assert/image/key-benefits-img-4.svg') }}"
+                                    alt="Innovative-liquidity-aggregator" loading="lazy" width="80" height="80" />
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 ">
-                    <div class="card-block card key-benefits-card" data-animation="fadeInLeft">
-                        <h3 class="card-sub-title">Treasury<br> management <span>.</span></h3>
-                        <p>
-                            Multi-level wallet system which allows sending funds from hot wallet to external one or cold
-                            storage automatically based on set thresholds by merchants.
-                        </p>
-                        <div class="feature-card-img">
-                            <img src="{{ url('/outerpage-assert/image/key-benefits-img-3.svg') }}"
-                                alt="Treasury-management" loading="lazy" width="80" height="80" />
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 top-margin">
+                        <div class="card-block card key-benefits-card" data-animation="fadeInRight">
+                            <h3 class="card-sub-title">Loyalty program <br>discounts <span>.</span></h3>
+                            <p>
+                                Get up to a 50% discount on all transactions by using our own utility token. Contact
+                                sales
+                                team to learn more.
+                            </p>
+                            <div class="feature-card-img">
+                                <img src="{{ url('/outerpage-assert/image/key-benefits-img-5.svg') }}"
+                                    alt="Loyalty-program-discounts" loading="lazy" width="80" height="80" />
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                    <div class="card-block card key-benefits-card" data-animation="fadeInRight">
-                        <h3 class="card-sub-title">Innovative liquidity<br> aggregator <span>.</span></h3>
-                        <p>
-                            Our liquidity aggregator has integration with all the leading exchanges and liquidity
-                            providers giving you the best exchange rates and minimum slippage on any.
-                        </p>
-                        <div class="feature-card-img">
-                            <img src="{{ url('/outerpage-assert/image/key-benefits-img-4.svg') }}"
-                                alt="Innovative-liquidity-aggregator" loading="lazy" width="80" height="80" />
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 top-margin">
-                    <div class="card-block card key-benefits-card" data-animation="fadeInRight">
-                        <h3 class="card-sub-title">Loyalty program <br>discounts <span>.</span></h3>
-                        <p>
-                            Get up to a 50% discount on all transactions by using our own utility token. Contact sales
-                            team to learn more.
-                        </p>
-                        <div class="feature-card-img">
-                            <img src="{{ url('/outerpage-assert/image/key-benefits-img-5.svg') }}"
-                                alt="Loyalty-program-discounts" loading="lazy" width="80" height="80" />
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                    <div class="card-block card key-benefits-card" data-animation="fadeInRight">
-                        <h3 class="card-sub-title"> Swift & sepa <br>supported <span>.</span></h3>
-                        <p>
-                            Only transparent pricing with no hidden fees and zero markups on exchange rates.
-                        </p>
-                        <div class="feature-card-img">
-                            <img src="{{ url('/outerpage-assert/image/key-benefits-img-6.svg') }}"
-                                alt=" Swift-sepa-supported" loading="lazy" width="80" height="80" />
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                        <div class="card-block card key-benefits-card" data-animation="fadeInRight">
+                            <h3 class="card-sub-title"> Swift & sepa <br>supported <span>.</span></h3>
+                            <p>
+                                Only transparent pricing with no hidden fees and zero markups on exchange rates.
+                            </p>
+                            <div class="feature-card-img">
+                                <img src="{{ url('/outerpage-assert/image/key-benefits-img-6.svg') }}"
+                                    alt=" Swift-sepa-supported" loading="lazy" width="80" height="80" />
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
     </div>
-    
+
     <section class="start-crypto-journey section-top-padding crypto-bg">
         <div class="contain-width">
             <div class="section-head">
@@ -433,7 +436,7 @@
                         data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">
 
-                            <p> To set up a crypto payment gateway,such as Hashcodex Pay, is quick and straightforward.
+                            <p> To set up a crypto payment gateway,such as Eco Banx Pay, is quick and straightforward.
                                 Just follow the steps below.</p>
                             <ul>
 
@@ -465,7 +468,7 @@
                     <div id="flush-collapseThree" class="accordion-collapse collapse"
                         aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">
-                            <p>To create a crypto payment gateway with Hashcodex Pay, start by registering for an account
+                            <p>To create a crypto payment gateway with Eco Banx Pay, start by registering for an account
                                 on our platform.</p>
                             <p> The registration process is fast, typically taking around 5 minutes to complete.
                                 Afterward, you'll need to verify your identity. Once your account is verified, you can
@@ -490,7 +493,7 @@
                                 in traditional currencies, which are then seamlessly converted into cryptocurrency and
                                 credited to the merchant’s account.
                                  </p>
-                            <p> Hashcodex Pay supports both fiat and cryptocurrency payments, providing flexibility for
+                            <p> Eco Banx Pay supports both fiat and cryptocurrency payments, providing flexibility for
                                 businesses that wish to operate in both financial spaces.
                             </p>
 
