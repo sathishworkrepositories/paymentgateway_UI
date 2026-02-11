@@ -27,8 +27,8 @@ $title = "Reset Password";
                                 </div>
                                 @endif
 
-                                <form method="POST" action="{{ route('password.email') }}">
-                                    @csrf
+                                    <form method="POST" action="{{ route('password.email') }}">
+                                        @csrf
                                     <fieldset>
                                         <div class="form-card">
                                             <div class="form-group ">
@@ -45,10 +45,11 @@ $title = "Reset Password";
                                                 @enderror<br />
                                             </div>
                                             <div class="text-center">
-                                                <div class="form-group g-recaptcha-whl">
-                                                    {!! app('captcha')->display() !!}
-                                                    @if ($errors->has('g-recaptcha-response'))
-                                                    <span class="text-danger errors-text show_error_password">
+                                                    <div class="form-group g-recaptcha-whl">
+                                                        {!! NoCaptcha::display() !!}
+
+                                                        @if ($errors->has('g-recaptcha-response'))
+                                                        <span class="text-danger errors-text show_error_password">
                                                         <strong>{{ $errors->first('g-recaptcha-response') }}</strong>
                                                     </span>
                                                     @endif
@@ -88,7 +89,7 @@ $title = "Reset Password";
 
 
         </div>
-    </div>
-</section>
-<script src='https://www.google.com/recaptcha/api.js'></script>
+    </section>
+{!! NoCaptcha::renderJs() !!}
+
 @endsection

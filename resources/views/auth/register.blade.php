@@ -166,14 +166,15 @@ $title = "Sign Up";
                                         for="rememberMe">I agree with the terms of use</label><br />
                                 </div>
                                 <div class="">
-                                    <!-- <div class="form-group text-center g-recaptcha-whl">
-                                        {!! app('captcha')->display() !!}
+                                   <div class="form-group text-center g-recaptcha-whl">
+                                        {!! NoCaptcha::display() !!}
+
                                         @if ($errors->has('g-recaptcha-response'))
                                             <span class="text-danger errors-text show_error_password">
                                                 <strong>{{ $errors->first('g-recaptcha-response') }}</strong>
                                             </span>
                                         @endif
-                                    </div> -->
+                                        </div>
                                 </div>
                                 <div class="button">
                                     <button class="btn next_l action-button yellowbtn">{{ __('Register') }}</button>
@@ -186,6 +187,7 @@ $title = "Sign Up";
                         </form>
                     </div>
                 </div>
+{!! NoCaptcha::renderJs() !!}
 
                 <div class="coprights-menu">
                     <ul>
@@ -214,7 +216,7 @@ $title = "Sign Up";
         </div>
     </div>
 </section>
-<script src='https://www.google.com/recaptcha/api.js'></script>
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
     integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="

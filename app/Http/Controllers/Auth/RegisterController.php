@@ -64,8 +64,10 @@ class RegisterController extends Controller
             // 'company_website' => ['required_if:account,==,Business', 'max:190'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed','regex:/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{6,}$/'],
-            'referralid' => 'nullable|alpha_num|max:18'
-            // 'g-recaptcha-response' => 'required|captcha',
+            'referralid' => 'nullable|alpha_num|max:18',
+            'g-recaptcha-response' => 'required|captcha',
+        ],[],[
+            'g-recaptcha-response' => 'ReCaptcha',
         ]);
     }
 
@@ -77,7 +79,7 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        
+
         $secret1 = $this->createSecret();
         $referal_id = $this->generateBarcodeNumber();
         $role = $data['account'];
@@ -89,11 +91,11 @@ class RegisterController extends Controller
         }
         if(isset($data['referralid']) && $data['referralid'] !=""){
             $result = User::where('referral_id', $data['referralid'])->first();
-            if(empty($result)){  
+            if(empty($result)){
                 \Session::flash('error', 'Invalid referral code!');
                 return redirect('register');
-            }           
-             
+            }
+
             $user =  User::create([
                 'role'  => $role,
                 'name' => $name,
@@ -126,14 +128,14 @@ class RegisterController extends Controller
         $thisUser = User::findOrFail($user->id);
         UserMerchant::create($user->id,keygenerate());
         $this->sendEmail($thisUser);
-        Auth::logout(); 
+        Auth::logout();
         return $user;
     }
-    
+
     public function sendEmail($thisUser)
     {
         try {
-            Mail::send('email.sendEmail', ['user' => $thisUser], function($message) use ($thisUser) {                
+            Mail::send('email.sendEmail', ['user' => $thisUser], function($message) use ($thisUser) {
                 $message->subject("Account Activation");
                 $message->to($thisUser['email']);
             });
@@ -151,13 +153,13 @@ class RegisterController extends Controller
             return view('/auth.register',[
             'referral_code' => $result['referral_id'],
             'name' => $result['name'],
-            ]);  
+            ]);
         }
         else
         {
             \Session::flash('error', 'Invalid referral code!');
              return redirect('/register');
-        }     
+        }
 
     }
     public function codeNumberExists($number) {

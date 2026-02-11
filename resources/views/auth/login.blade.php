@@ -81,12 +81,12 @@ $title = "Sign In";
 
                                             <div class="form-group text-center ">
 
-                                                <!-- {!! app('captcha')->display() !!} -->
-                                                <!-- @if ($errors->has('g-recaptcha-response'))
-                                              <span class="text-danger errors-text show_error_password">
-                                                <strong>{{ $errors->first('g-recaptcha-response') }}</strong>
-                                                    </span>
-                                                    @endif -->
+                                                {!! NoCaptcha::display() !!}
+                                                @if ($errors->has('g-recaptcha-response'))
+                                                <span class="text-danger errors-text show_error_password">
+                                                    <strong>{{ $errors->first('g-recaptcha-response') }}</strong>
+                                                </span>
+                                                @endif
 
                                             </div>
                                         </div>
@@ -139,7 +139,7 @@ $title = "Sign In";
             </div>
             <!-- <div class="col-lg-6 col-xl-6 col-md-12 col-sm-12 col-xs-12 right-side">
                 <div class="signin-right-side-img">
-                     <img src="{{ url('/img/confirm-pageright-img.png') }}" alt="" class="img-fluid"> 
+                     <img src="{{ url('/img/confirm-pageright-img.png') }}" alt="" class="img-fluid">
                 </div>
             </div> -->
 
@@ -147,7 +147,7 @@ $title = "Sign In";
     </div>
 </section>
 
-<script src='https://www.google.com/recaptcha/api.js'></script>
+{!! NoCaptcha::renderJs() !!}
 
 <script>
 //password show/hide
