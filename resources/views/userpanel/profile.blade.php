@@ -177,7 +177,7 @@
                                             </span>
                                             @endif
                                         </div>
-                                        <!-- <div class="form-group">  
+                                        <!-- <div class="form-group">
                     <label>Phone Number <span>*</span></label>
                     <input name="phone" type="text" id="phone" class="form-control phone" value="{{ $user->phone_no }}" />
                     <input type="hidden" readonly name="country_code" id="country_code" value=" {{ old('country_code') != '+49' ? old('country_code') : 1 }} "/>
@@ -665,7 +665,7 @@
             ZAN: "Zanzibar",
             ZIM: "Zimbabwe"
         }
-        @if($user - > country != "")
+        @if($user -> country != "")
         var out = "<select><option rel=''>{{$user->country }}</option>";
         @else
         var out = "<select><option rel=''>Country</option>";

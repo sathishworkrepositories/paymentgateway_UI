@@ -38,4 +38,14 @@ class VerificationController extends Controller
         $this->middleware('signed')->only('verify');
         $this->middleware('throttle:6,1')->only('verify', 'resend');
     }
+
+     protected function validator(array $data)
+    {
+        return Validator::make($data, [
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'g-recaptcha-response' => 'required|captcha',
+        ],[],[
+            'g-recaptcha-response' => 'ReCaptcha',
+        ]);
+    }
 }
