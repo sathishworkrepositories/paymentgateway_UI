@@ -1,8 +1,8 @@
 <?php
 namespace App\Traits;
 
-trait Bitcoin 
-{	
+trait Bitcoin
+{
 	private $ch;
 	private $params;
 	private $result;
@@ -22,17 +22,18 @@ trait Bitcoin
 			echo 'Error:' . curl_error($this->ch);
 		}
 		curl_close($this->ch);
+
 		return json_decode($this->result);
 	}
-	
+
 	private function sathosi($amount){
-		if(!empty($amount)){		
+		if(!empty($amount)){
 			$value =  bcmul(100000000 , $amount,0);
 			//dd($value);
 			return intval($value);
 		}
 	}
-	
+
 	private function sathositobtc($amount){
 		if($amount != 0){
 			if(!empty($amount)){
@@ -42,7 +43,7 @@ trait Bitcoin
 			return $amount;
 		}
 	}
-	
+
 	// create address
 	public function createaddress_btc(){
 		$params = array("method" => "create_address");
@@ -50,18 +51,18 @@ trait Bitcoin
 			return $this->_call($params);
 		}
 	}
-	
+
 	public function createmsigaddress(){
 		$params = array("method" => "create_multisig_address");
 		if(!empty($params)){
 			return $this->_call($params);
 		}
 	}
-	
+
 	// send bitcoin
 	/* public function send($to, $amount, $from=null,$pvtkey, $fee=null){
 		$utxo = self::utxo($from);
-		
+
 		if(!empty($utxo)){
     		$params = array(
     			"method" => "create_rawtx",
@@ -81,7 +82,7 @@ trait Bitcoin
     		}
     	}
 	}
-	
+
 	private function sendbtc($rawtx){
 		if(!empty($rawtx)){
 			$url_link = $this->url_link."tx/send";
@@ -105,14 +106,14 @@ trait Bitcoin
 			return json_decode($result);
 		}
 	}
-	
+
 	 private function utxo($address){
 		if(!empty($address)){
 			$url_link = $this->url_link."addr/$address/utxo?noCache=1";
 			return $this->cUrl1($url_link);
 		}
 	} */
-	
+
 	public function send($to_address, $amount, $from=null,$pvtkey, $fee=null){
 		//amount & fee
 		$amount = self::sathosi($amount);
@@ -160,7 +161,7 @@ trait Bitcoin
     		}
     	}
 	}
-	
+
 	private function sendraw_tx($rawtx){
 		if(!empty($rawtx)){
 			$btcurl = "https://api.blockcypher.com/v1/btc/main/txs/push?token=18e614dc-8c14-4f92-bb78-f413c0d39b45";
@@ -186,14 +187,14 @@ trait Bitcoin
 			return json_decode($result);
 		}
 	}
-	
+
 	private function utxo($address){
 		if(!empty($address)){
 			$url = "https://blockchain.info/unspent?active=".$address;
 			return $this->execCurl($url);
 		}
 	}
-	
+
 	public function tx($txid){
 		if(!empty($txid)){
 			$url_link = $this->url_link."tx/$txid";
@@ -206,7 +207,7 @@ trait Bitcoin
 			return json_decode($this->cUrl1($url_link));
 		}
 	}
-	
+
 	public function getBalance($address){
 		if(!empty($address)){
 		    $url_link = "https://chain.so/api/v2/get_address_balance/BTC/".$address;
@@ -216,7 +217,7 @@ trait Bitcoin
 			return 0;
 		}
 	}
-	
+
 	public function totalReceived($address){
 		if(!empty($address)){
 			$url_link = $this->url_link."addr/$address/totalReceived";
@@ -224,7 +225,7 @@ trait Bitcoin
 			return $this->sathositobtc($balance);
 		}
 	}
-	
+
 	public function totalSent($address){
 		if(!empty($address)){
 			$url_link = $this->url_link."addr/$address/totalSent";
@@ -232,7 +233,7 @@ trait Bitcoin
 			return $this->sathositobtc($balance);
 		}
 	}
-	
+
 	public function unconfirmedBalance($address){
 		if(!empty($address)){
 			$url_link = $this->url_link."addr/$address/unconfirmedBalance";
@@ -240,7 +241,7 @@ trait Bitcoin
 			return $this->sathositobtc($balance);
 		}
 	}
-	
+
 	private function cUrl1($url_link){
 		$ch = curl_init();
 		curl_setopt($ch, CURLOPT_URL, $url_link);
@@ -258,7 +259,7 @@ trait Bitcoin
 		curl_close($ch);
 		return $result;
 	}
-	
+
 	public function execCurl($url_link)
     {
         $ch = curl_init();
@@ -277,6 +278,6 @@ trait Bitcoin
 		curl_close($ch);
 		return json_decode($result, true);
     }
-	
+
 }
 ?>

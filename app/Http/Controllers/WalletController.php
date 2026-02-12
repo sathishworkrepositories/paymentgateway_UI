@@ -37,14 +37,14 @@ class WalletController extends Controller {
     }
 
     public function index() {
-        $coins = Commission::where('status',1)->get();     
+        $coins = Commission::where('status',1)->get();
         $uid = Auth::id();
         $currency = array();
         $price = array();
         if($coins->count()) {
             foreach($coins as $data) {
                 $coin = $data->source;
-                $price[$coin] = LivePrice::usersBalance($coin,$uid);  
+                $price[$coin] = LivePrice::usersBalance($coin,$uid);
                 $balance = UsersWallet::where(['uid'=>$uid,'currency'=>$data->source])->first();
                 if($balance){
                     $currency[$balance->currency]['balance'] = sprintf("%.8f", $balance->balance);
@@ -52,11 +52,11 @@ class WalletController extends Controller {
                     $currency[$balance->currency]['margin'] = sprintf("%.8f", $balance->vilimpu_camanilai);
                 }else{
                     if($data->type == 'fiat'){
-                        UsersWallet::insert(['uid' => $uid, 'currency' => $data->source, 'balance' => 0, 'escrow_balance' => 0, 'created_at' => date('Y-m-d H:i:s',time()), 'updated_at' => date('Y-m-d H:i:s',time())]); 
-                    }                    
+                        UsersWallet::insert(['uid' => $uid, 'currency' => $data->source, 'balance' => 0, 'escrow_balance' => 0, 'created_at' => date('Y-m-d H:i:s',time()), 'updated_at' => date('Y-m-d H:i:s',time())]);
+                    }
                     $currency[$data->source]['balance'] = sprintf("%.8f", 0);
                     $currency[$data->source]['escrow'] = sprintf("%.8f", 0);
-                    $currency[$data->source]['margin'] = sprintf("%.8f", 0); 
+                    $currency[$data->source]['margin'] = sprintf("%.8f", 0);
                 }
             }
         }
@@ -68,9 +68,9 @@ class WalletController extends Controller {
     public function Deposit($coin) {
         $uid = Auth::user()->id;
         $user = Auth::user();
-        $coin_data = UserCommission::where(['status'=>1,'uid'=>$uid,'source' => $coin])->first();     
+        $coin_data = UserCommission::where(['status'=>1,'uid'=>$uid,'source' => $coin])->first();
         if($coin_data){
-            $coins = UserCommission::where(['status'=>1,'uid'=>$uid,'source' => $coin])->first();     
+            $coins = UserCommission::where(['status'=>1,'uid'=>$uid,'source' => $coin])->first();
         }else{
             $coins = Commission::where(['status' => 1,'source' => $coin])->first();
         }
@@ -80,7 +80,7 @@ class WalletController extends Controller {
         $currency = array();
         $comdetails = Commission::index();
         if($comdetails->count()) {
-          foreach($comdetails as $data) {  
+          foreach($comdetails as $data) {
             $balance = Wallet::where(['uid'=>$uid,'currency'=>$data->source])->first();
             if($balance) {
               $currency[$balance->currency]['balance'] = sprintf("%.8f", $balance->balance);
@@ -88,7 +88,7 @@ class WalletController extends Controller {
               $currency[$balance->currency]['margin'] = sprintf("%.8f", $balance->vilimpu_camanilai);
             } else {
               if($data->type == 'fiat') {
-                Wallet::insert(['uid' => $uid, 'currency' => $data->source, 'balance' => 0, 'escrow_balance' => 0, 'created_at' => date('Y-m-d H:i:s',time()), 'updated_at' => date('Y-m-d H:i:s',time())]);              
+                Wallet::insert(['uid' => $uid, 'currency' => $data->source, 'balance' => 0, 'escrow_balance' => 0, 'created_at' => date('Y-m-d H:i:s',time()), 'updated_at' => date('Y-m-d H:i:s',time())]);
               }
               $currency[$data->source]['balance'] = sprintf("%.8f", 0);
               $currency[$data->source]['escrow'] = sprintf("%.8f", 0);
@@ -99,6 +99,7 @@ class WalletController extends Controller {
         $networks = Commission::where(['source' => $coin])->get();
         $trxaddress = Wallet::where(['uid'=> $uid,'currency'=> 'TRX'])->value('mukavari');
         $ethaddress = Wallet::where(['uid'=> $uid,'currency'=> 'ETH'])->value('mukavari');
+
         if($coins){
             $address = Wallet::getAddress($uid,$coin);
             if(!$address){
@@ -106,14 +107,16 @@ class WalletController extends Controller {
                 $address = "";
                 $symbol = $coinsList->source;
                 $vault_id = $user->vault_id;
+
                 if($symbol == 'BTC' && $coinsList->assertype == 'coin'){
+
                     $address = $this->create_user_btc($uid);
                 }elseif($symbol == 'TRX' || $coinsList->assertype == 'TRC20'){
                     $address = $this->createTrcAddress($uid);
                 }else{
                     $address = $this->create_user_evm($uid);
-                }                
-            }       
+                }
+            }
             return view('userpanel.cryptodeposit',['coin' => $coin,'coindetail' => $coins,'address' => $address,'comdetails' => $comdetails, 'wallet' => $currency,'trxaddress' =>$trxaddress,'ethaddress' => $ethaddress,'networks' => $networks]);
         }else{
             return redirect('wallet')->with('error','Invalid coin/currency !');
@@ -123,9 +126,9 @@ class WalletController extends Controller {
     public function Withdraw($coin) {
 
         $uid = Auth::user()->id;
-        $coin_data = UserCommission::where(['status'=>1,'uid'=>$uid,'source' => $coin])->first();     
+        $coin_data = UserCommission::where(['status'=>1,'uid'=>$uid,'source' => $coin])->first();
         if($coin_data){
-            $coins = UserCommission::where(['status'=>1,'uid'=>$uid,'source' => $coin])->first();     
+            $coins = UserCommission::where(['status'=>1,'uid'=>$uid,'source' => $coin])->first();
         }else{
             $coins = Commission::where(['status' => 1,'source' => $coin])->first();
         }
@@ -135,7 +138,7 @@ class WalletController extends Controller {
                 $currency = array();
                 $comdetails = Commission::index();
                 if($comdetails->count()) {
-                  foreach($comdetails as $data) {  
+                  foreach($comdetails as $data) {
                     $balance = UsersWallet::where(['uid'=>$uid,'currency'=>$data->source])->first();
                     if($balance) {
                       $currency[$balance->currency]['balance'] = sprintf("%.8f", $balance->balance);
@@ -143,7 +146,7 @@ class WalletController extends Controller {
                       $currency[$balance->currency]['margin'] = sprintf("%.8f", $balance->vilimpu_camanilai);
                     } else {
                       if($data->type == 'fiat') {
-                        UsersWallet::insert(['uid' => $uid, 'currency' => $data->source, 'balance' => 0, 'escrow_balance' => 0, 'created_at' => date('Y-m-d H:i:s',time()), 'updated_at' => date('Y-m-d H:i:s',time())]);              
+                        UsersWallet::insert(['uid' => $uid, 'currency' => $data->source, 'balance' => 0, 'escrow_balance' => 0, 'created_at' => date('Y-m-d H:i:s',time()), 'updated_at' => date('Y-m-d H:i:s',time())]);
                       }
                       $currency[$data->source]['balance'] = sprintf("%.8f", 0);
                       $currency[$data->source]['escrow'] = sprintf("%.8f", 0);
@@ -153,7 +156,7 @@ class WalletController extends Controller {
                 }
 
                 $wallet = UsersWallet::GetUserBalance($uid,$coin);
-                $address = UsersWallet::GetUserAddress($uid,$coin);   
+                $address = UsersWallet::GetUserAddress($uid,$coin);
                 $coinname = $coins->coinname;
                 $symbol = $coins->source;
                 $withdraw_com = bcdiv($coins->withdraw, 100, 8);
@@ -186,9 +189,9 @@ public function ValidateCryptoWithdraw(Request $request) {
     $balance = 0;
 
         $uid = \Auth::id();
-        $coin_data = UserCommission::where(['uid'=>$uid,'source' => $currency])->first();     
+        $coin_data = UserCommission::where(['uid'=>$uid,'source' => $currency])->first();
         if($coin_data){
-        $btcDeatils = UserCommission::where(['uid'=>$uid,'source' => $currency])->first();     
+        $btcDeatils = UserCommission::where(['uid'=>$uid,'source' => $currency])->first();
         }else{
         $btcDeatils = Commission::where('source', $currency)->first();
         }
@@ -211,22 +214,22 @@ public function ValidateCryptoWithdraw(Request $request) {
                     $data['amount']     =  $amount;
                     $data['currency']   =  $currency;
                     $data['network']   =  $network;
-                    \Session::put('withdrawl', $data);   
-                    $this->otp_function();                 
+                    \Session::put('withdrawl', $data);
+                    $this->otp_function();
                     return Redirect('/withdrawconform');
                 } else {
-                    return redirect('/withdraw/'.$currency)->with('fail', "Insufficient fund in your ".$currency." Wallet !!!.You need  ".$amount."  ".$currency); 
+                    return redirect('/withdraw/'.$currency)->with('fail', "Insufficient fund in your ".$currency." Wallet !!!.You need  ".$amount."  ".$currency);
                 }
             } else {
-                return redirect('/withdraw/'.$currency)->with('fail', 'Please enter valid '.$currency.' Address!'); 
+                return redirect('/withdraw/'.$currency)->with('fail', 'Please enter valid '.$currency.' Address!');
             }
         } else {
-            return redirect('/withdraw/'.$currency)->with('fail', "Amount should be less than of ".$max_amount. " And minmum of ".$min_amount); 
-        } 
+            return redirect('/withdraw/'.$currency)->with('fail', "Amount should be less than of ".$max_amount. " And minmum of ".$min_amount);
+        }
     } else {
-        return redirect('/withdraw/'.$currency)->with('fail', "Withdraw amount must be greater than or equal to  ".$fee ." ".$currency); 
-    }          
-    return Redirect::back(); 
+        return redirect('/withdraw/'.$currency)->with('fail', "Withdraw amount must be greater than or equal to  ".$fee ." ".$currency);
+    }
+    return Redirect::back();
 }
 
 /**
@@ -270,34 +273,34 @@ public function withdrawstore(Request $request) {
     $currency = $ses['currency'];
     $amount =$ses['amount'];
     $network =$ses['network'];
-    $url = 'withdraw/'.$currency; 
+    $url = 'withdraw/'.$currency;
     $user = User::where('id',$uid)->first();
     $twofa =$user->twofa;
     if($twofa == 'google_otp') {
         $one_time_password = $request->otp;
         $secret = $user->google2fa_secret;
         $oneCode = $this->getCode($secret);
-        $data = $this->verifyCode($secret, $one_time_password, 2); 
-        if($data) { 
+        $data = $this->verifyCode($secret, $one_time_password, 2);
+        if($data) {
             $this->withdrawconfirm($to_address,$currency,$amount,$network);
             session()->forget('withdrawl');
             return redirect('withdrawhistroy/'.$currency);
         } else {
-            return redirect('/withdrawconform')->with('faild','Invalid OTP!');            
-        } 
+            return redirect('/withdrawconform')->with('faild','Invalid OTP!');
+        }
     }
-    elseif($twofa == 'email_otp') {   
+    elseif($twofa == 'email_otp') {
         \Session::flash('success_otp', 'Check your email inbox/spam folder for verification code!.');
         if($user->profile_otp  == $request->otp) {
-            $this->withdrawconfirm($to_address,$currency,$amount,$network); 
+            $this->withdrawconfirm($to_address,$currency,$amount,$network);
             session()->forget('withdrawl');
 
             return redirect('withdrawhistroy/'.$currency);
         } else {
-            return redirect('/withdrawconform')->with('faild','Invalid OTP! Please try again!');            
+            return redirect('/withdrawconform')->with('faild','Invalid OTP! Please try again!');
         }
     } else {
-        return redirect('/withdrawconform')->with('faild','Invalid Request! Please try again!');            
+        return redirect('/withdrawconform')->with('faild','Invalid Request! Please try again!');
     }
 }
 
@@ -306,9 +309,9 @@ public function withdrawconfirm($to_address,$currency,$amount,$network=null) {
         //$btcDeatils = Commission::where('source', $currency)->first();
 
         $uid = \Auth::id();
-        $coin_data = UserCommission::where(['uid'=>$uid,'source' => $currency])->first();     
+        $coin_data = UserCommission::where(['uid'=>$uid,'source' => $currency])->first();
         if($coin_data){
-        $btcDeatils = UserCommission::where(['uid'=>$uid,'source' => $currency])->first();     
+        $btcDeatils = UserCommission::where(['uid'=>$uid,'source' => $currency])->first();
         }else{
         $btcDeatils = Commission::where('source', $currency)->first();
         }
@@ -324,8 +327,8 @@ public function withdrawconfirm($to_address,$currency,$amount,$network=null) {
                 $paymenttype = $ses['paymenttype'];
                 }
             }else{
-                $url = 'withdraw/'.$currency;               
-            }            
+                $url = 'withdraw/'.$currency;
+            }
 
         $decimal = $btcDeatils->point_value;
 
@@ -334,7 +337,7 @@ public function withdrawconfirm($to_address,$currency,$amount,$network=null) {
         }else{
         $commission = bcdiv($btcDeatils->withdraw,100,8);
         }
-        
+
         $amount = abs($amount);
         $fee = display_format($btcDeatils->netfee,8);
         $admin_amount = bcmul($commission, $amount,8);
@@ -344,7 +347,7 @@ public function withdrawconfirm($to_address,$currency,$amount,$network=null) {
         if($amount >= $fee AND $amount!=""){
             if($to_address!=""){
                 if($balance >= $amount){
-                    
+
                     $autowithdrawstatus = 0;
                     if($btcDeatils->autowithdraw > $amount) {
                         $autowithdrawstatus = 1;
@@ -355,35 +358,35 @@ public function withdrawconfirm($to_address,$currency,$amount,$network=null) {
 
                     if($type == 'fiat'){
                     $Withdrawid = CurrencyWithdraw::createTransaction($uid,$currency,$ses['bankid'],$to_address,$amount,$debitamt1,$debitamt,$paymenttype);
-                    }else{       
-                    $wallet = UsersWallet::where([['uid', '=', $uid],['currency',$currency]])->first();                              
+                    }else{
+                    $wallet = UsersWallet::where([['uid', '=', $uid],['currency',$currency]])->first();
                     $fromaddress    = $wallet->mukavari;
                     $sathosiamount = $this->sathosi($amount);
                     $Withdrawid = UsersWithdraw::createTransaction($uid,$currency,$fromaddress,$to_address,$amount,$debitamt1,$debitamt,$sathosiamount,$autowithdrawstatus,$network);
                     }
-                    
+
                     $wallet = UsersWallet::debitAmount($uid,$currency,$amount,$decimal,$statustype,$remark,$Withdrawid);
 
                     session()->forget('withdrawl');
                     return true;
                 } else {
-                    return redirect($url)->with('fail', "Insufficient fund in your".$currency." Wallet !!!.You need". $amount." ".$currency); 
+                    return redirect($url)->with('fail', "Insufficient fund in your".$currency." Wallet !!!.You need". $amount." ".$currency);
                 }
             } else {
-                return redirect($url)->with('fail', 'Please enter valid '.$currency.' Address!'); 
-            } 
+                return redirect($url)->with('fail', 'Please enter valid '.$currency.' Address!');
+            }
         } else {
-            return redirect($url)->with('fail', "Withdraw amount must be greater than or equal to" .$fee." ".$currency); 
+            return redirect($url)->with('fail', "Withdraw amount must be greater than or equal to" .$fee." ".$currency);
         }
     }else{
-        return redirect('/withdrawconform')->with('faild','Invalid Request! Please try again');            
-    } 
+        return redirect('/withdrawconform')->with('faild','Invalid Request! Please try again');
+    }
 }
 
 public function fiatwithdraw($coin) {
     $user = Auth::user()->id;
     $details = Commission::coindetails($coin);
-    if($details){                        
+    if($details){
         if(Auth::user()->kyc_verify == 1){
             $carddetail = Usercarddetails::where([['uid', '=', $user], ['status', '=', 1]])->first();
             $bankdetail = Bankuser::where([['uid', '=', $user], ['status', '=', 1]])->get();
@@ -391,11 +394,11 @@ public function fiatwithdraw($coin) {
             $balance = UsersWallet::where([['uid', '=', $user], ['currency',$fiat_name]])->value('balance');
 
             $com = Commission::where('status',1)->where('source', $fiat_name)->first();
-            
+
             $uid = \Auth::id();
-            $coin_data = UserCommission::where(['uid'=>$uid,'source' => $fiat_name])->first();     
+            $coin_data = UserCommission::where(['uid'=>$uid,'source' => $fiat_name])->first();
             if($coin_data){
-            $com = UserCommission::where(['uid'=>$uid,'source' => $fiat_name])->first();     
+            $com = UserCommission::where(['uid'=>$uid,'source' => $fiat_name])->first();
             }else{
             $com = Commission::where('source', $fiat_name)->first();
             }
@@ -406,7 +409,7 @@ public function fiatwithdraw($coin) {
              $commission2 = $com->card_com;
              $naijapaycard_withdraw = bcdiv($com->card_com, 100, $point_value);
             return view('userpanel.fiatwithdraw', ['balance'=>$balance, 'commission' => $com->withdraw, 'fee' => $withdraw_com, 'currency' => $fiat_name, 'carddetail' => $carddetail,'commission1' => $commission1,'commission2' => $commission2, 'naijapaycard_withdraw' => $naijapaycard_withdraw, 'bankdetail' => $bankdetail]);
-        }else{   
+        }else{
             $url = url('/kyc');
             return redirect('security')->with('warning','Identity verification must be done and approved by the admin to withdraw or make Fiat currency deposits!'. '<a href="' . $url . '"> click here </a>');
         }
@@ -415,7 +418,7 @@ public function fiatwithdraw($coin) {
     }
 }
 
-public function carddropdown(Request $request) {        
+public function carddropdown(Request $request) {
     $uid= \Auth::id();
     $bank_name=$request->bank_name;
     $bankno= Usercarddetails::where(['uid'=> $uid,'id' => $bank_name])->first();
@@ -430,11 +433,11 @@ public function carddropdown(Request $request) {
 public function validatefiatWithdraw(Request $request) {
     $uid = \Auth::id();
 
-    
+
     $this->validate($request, [
         'paymenttype'    => 'required|alpha_num',
     ]);
-        
+
     if($request->paymenttype == 'Bank') {
     $this->validate($request, [
         'bank_name'    => 'required|alpha_num',
@@ -456,7 +459,7 @@ public function validatefiatWithdraw(Request $request) {
     }
 
     $paymenttype = $request->paymenttype;
-    
+
     if($paymenttype == 'Naijapaycard'){
     $bankid = $request->card_type;
     $account_no = $request->card_number;
@@ -466,13 +469,13 @@ public function validatefiatWithdraw(Request $request) {
     }
 
     $currency = $request->coin;
-    
+
     $balance = 0;
     $fee = 0;
     $commissions = Commission::coindetails($currency);
 
             $uid = \Auth::id();
-            $coin_data = UserCommission::where(['uid'=>$uid,'source' => $fiat_name])->first();     
+            $coin_data = UserCommission::where(['uid'=>$uid,'source' => $fiat_name])->first();
             if($coin_data){
             $commissions = UserCommission::coindetails($currency,$uid);
             }else{
@@ -492,7 +495,7 @@ public function validatefiatWithdraw(Request $request) {
     }
 
     $amount = abs($request->amount);
-    $admin_amount = bcmul($commission, $amount,$point_value);        
+    $admin_amount = bcmul($commission, $amount,$point_value);
     if($admin_amount > $fee) {
         $admin_amount = $fee;
     }
@@ -512,7 +515,7 @@ public function validatefiatWithdraw(Request $request) {
                 Session::put('withdrawl', $data);
                 if(\Auth::user()->twofa == 'google_otp') {
                     return Redirect('/withdrawconform');
-                } else if(\Auth::user()->twofa == 'email_otp') { 
+                } else if(\Auth::user()->twofa == 'email_otp') {
                     $user = Auth::user();
                     $security = User::where('id', $uid)->first();
                     $rand = rand(100000,999999);
@@ -522,21 +525,21 @@ public function validatefiatWithdraw(Request $request) {
                     return Redirect('/withdrawconform');
                 } else {
                     return $this->WithoutOTP();
-                }         
+                }
             }else {
-                return redirect('/fiatwithdraw/'.$currency)->with('fail', "Insufficient fund in your $currency Wallet !!!.You need avilable balance $amount $currency"); 
+                return redirect('/fiatwithdraw/'.$currency)->with('fail', "Insufficient fund in your $currency Wallet !!!.You need avilable balance $amount $currency");
             }
         }else {
-            return redirect('/fiatwithdraw/'.$currency)->with('fail', 'Please enter valid '.$currency.' Address!'); 
+            return redirect('/fiatwithdraw/'.$currency)->with('fail', 'Please enter valid '.$currency.' Address!');
         }
 
 } else {
-            return redirect('/fiatwithdraw/'.$currency)->with('fail', "Amount should be less than of ".$max_amount. " And minmum of ".$min_amount); 
+            return redirect('/fiatwithdraw/'.$currency)->with('fail', "Amount should be less than of ".$max_amount. " And minmum of ".$min_amount);
         }
 
     } else {
-        return redirect('/fiatwithdraw/'.$currency)->with('fail', "Withdraw amount must be greater than or equal to $fee  $currency"); 
-    }          
+        return redirect('/fiatwithdraw/'.$currency)->with('fail', "Withdraw amount must be greater than or equal to $fee  $currency");
+    }
     return Redirect::back();
 }
 
@@ -553,11 +556,11 @@ function TransactionString($length = 15) {
 
 
 public function bankdropdown(Request $request)
-{        
+{
     $uid= \Auth::id();
     $bank_name=$request->bank_name;
     $bankno= Bankuser::where(['uid'=> $uid,'id' => $bank_name])->first();
-  
+
     $var['account_number']= $bankno->account_number;
     $var['id']= $bankno->id;
     echo json_encode($var);
@@ -571,9 +574,9 @@ public function bankdropdown(Request $request)
         $coins = Commission::where([['source','=',$fiat_name],['type','=','fiat'],['status','=',1]])->first();
 
             $uid = \Auth::id();
-            $coin_data = UserCommission::where(['uid'=>$uid,'source' => $fiat_name])->first();     
+            $coin_data = UserCommission::where(['uid'=>$uid,'source' => $fiat_name])->first();
             if($coin_data){
-            $coins = UserCommission::where(['uid'=>$uid,'source' => $fiat_name])->first();     
+            $coins = UserCommission::where(['uid'=>$uid,'source' => $fiat_name])->first();
             }else{
             $coins = Commission::where([['source','=',$fiat_name],['type','=','fiat'],['status','=',1]])->first();
             }
@@ -585,7 +588,7 @@ public function bankdropdown(Request $request)
                 if($admin_account && $admin_account->count() > 0)
                 {
                     $account = trim($admin_account->account," ");
-                    $account_details = str_replace(array("\r\n", "\r", "\n"), "<br />", $account); 
+                    $account_details = str_replace(array("\r\n", "\r", "\n"), "<br />", $account);
                     $depositfee = $coins->deposit_fee;
                     $admindepositfee = ncDiv($coins->deposit_fee,100,8);
 
@@ -596,31 +599,31 @@ public function bankdropdown(Request $request)
             }else{
                 return redirect('wallet')->with('adminwalletbank','Invalid Coin/Currency');
             }
-        }else{          
+        }else{
 
             $url = url('/kyc');
                 return redirect('security')->with('warning','Identity verification must be done and approved by the admin to withdraw or make Fiat currency deposits!'. '<a href="' . $url . '"> click here </a>');
         }
-        
+
     }
 
 
     public function uploadProof(Request $request)
-    {        
+    {
         $user = Auth::user()->id;
-        $currency = $request->currency;       
+        $currency = $request->currency;
         $validator = $this->validate($request, [
             'amount' => 'required|numeric',
             'proof' => 'required|mimes:jpeg,jpg,png|max:5120',
         ]);
-        $amount = $request->amount; 
+        $amount = $request->amount;
         $admin_account = AdminBank::where('id' , 1)->first();
         if($admin_account && $admin_account->count() > 0)
         {
             $account = trim($admin_account->account," ");
-            $account_details = str_replace(array("\r\n", "\r", "\n"), "<br />", $account); 
+            $account_details = str_replace(array("\r\n", "\r", "\n"), "<br />", $account);
         }
-        
+
         if($amount > 0){
 
             if($this->imgvalidaion($_FILES['proof']['tmp_name']) == 1 ){
@@ -671,10 +674,10 @@ public function bankdropdown(Request $request)
       $myfile = fopen($img, "r") or die("Unable to open file!");
 
       $value = fread($myfile,filesize($img));
-      
+
       if (! empty($value) && strpos($value, "<?php") !== false) {
         $img = 0;
-      } 
+      }
       elseif (! empty($value) && strpos($value, "<?=") !== false){
         $img = 0;
       }

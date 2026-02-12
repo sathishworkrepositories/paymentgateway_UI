@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'ECOBanx Payment Gateway Demo'),
+    'name' => env('APP_NAME', 'Ecobanx'),
 
     /*
     |--------------------------------------------------------------------------
@@ -175,7 +175,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         Anhskohbo\NoCaptcha\NoCaptchaServiceProvider::class,
-        
+
         Torann\Hashids\HashidsServiceProvider::class,
 
     ],

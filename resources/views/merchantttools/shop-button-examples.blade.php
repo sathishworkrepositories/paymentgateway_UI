@@ -61,7 +61,7 @@
                  <input type="hidden" name="want_shipping" value="0">
                  <input type="image" style="width: 100%; max-width: 200px;" src="https://pgdemo1.hashcodex.com/img/add-to-cart.svg" alt="Add to Cart...">
               </form>
-        
+
 						</textarea>
 						<div class="buttonlogo mt-20">
 							<img src="{{ url('img/add-to-cart.svg') }}" border="0">
@@ -77,13 +77,13 @@
             <input type="hidden" name="cart_name" value="Test Cart">
             <input type="hidden" name="currency" value="ETH">
             <input type="hidden" name="amount" value="10.00000000">
-            <input type="hidden" name="allow_quantity" value="1">   
-            <input type="hidden" name="shippingf" value="1.00">   
-            <input type="hidden" name="shipping2f" value="0.50">    
+            <input type="hidden" name="allow_quantity" value="1">
+            <input type="hidden" name="shippingf" value="1.00">
+            <input type="hidden" name="shipping2f" value="0.50">
             <input type="hidden" name="item_number" value="TEST-2">
             <input type="hidden" name="item_name" value="Test Item">
             <input type="hidden" name="want_shipping" value="1">
-            <input type="image" style="width: 100%; max-width: 200px;" src="https://pgdemo1.hashcodex.com/img/add-to-cart.svg" alt="Add to Cart...">
+            <input type="image" style="width: 100%; max-width: 200px;" src="https://pgdemo1.hashcodex.com/img/add-to-cart.svg" alt="...">
           </form>
 						</textarea>
 						<div class="buttonlogo mt-20">
@@ -101,14 +101,14 @@
             <input type="hidden" name="want_shipping" value="0">
             <input type="hidden" name="currency" value="ETH">
             <input type="hidden" name="amount" value="10.00000000">
-            <input type="hidden" name="allow_quantity" value="1">   
-            <input type="hidden" name="shippingf" value="1.00">   
-            <input type="hidden" name="shipping2f" value="0.50">    
+            <input type="hidden" name="allow_quantity" value="1">
+            <input type="hidden" name="shippingf" value="1.00">
+            <input type="hidden" name="shipping2f" value="0.50">
             <input type="hidden" name="item_number" value="TEST-3">
             <input type="hidden" name="item_name" value="Test Item">
-            <input type="hidden" name="success_url" value="https://...."> 
-            <input type="hidden" name="cancel_url" value="https://...."> 
-            <input type="hidden" name="return_url" value="https://...."> 
+            <input type="hidden" name="success_url" value="https://....">
+            <input type="hidden" name="cancel_url" value="https://....">
+            <input type="hidden" name="return_url" value="https://....">
             <input type="image" style="width: 100%; max-width: 200px;" src="https://pgdemo1.hashcodex.com/img/add-to-cart.svg" alt="Add to Cart...">
           </form>
 						</textarea>
@@ -126,7 +126,7 @@
 	</section>
 </article>
 
-          
+
         </div>
 
      </div>
@@ -150,7 +150,7 @@
   })
 
  })
-  
+
 </script>
 
 </body>

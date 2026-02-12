@@ -50,9 +50,9 @@ Route::get('/user-agreement', function () {
 Route::get('/privacy-policy', function () {
     return view('outerpage.privacypolicy');
 });
-Route::get('/kycpage', function () {
-    return view('kycpage');
-});
+// Route::get('/kycpage', function () {
+//     return view('kycpage');
+// });
 
 
 
@@ -95,7 +95,11 @@ Route::post('uploadkyc', 'UserpanelController@uploadkyc');
 Route::post('upload-photo', 'UserpanelController@uploadProfilePic')->name('uploadProfile');
 
 //Sumsub KYC
-Route::get('kyc-verify', 'SumsubKycController@index')->name('kycsumsub');
+Route::get('kyc-verify', 'SumsubKycController@kycdisplayer')->name('kyc-verify');
+Route::post('kyc-save', 'SumsubKycController@kycsubmits')->name('kyc-save');
+
+// Route::get('kyc-verify', 'SumsubKycController@index')->name('kycsumsub');
+Route::get('kycform','SumsubKycController@kycForm')->name('kycform');
 Route::get('/sumsubkyc', 'SumsubKycController@index')->name('sumsubkyc');
 Route::post('/ajaxkyc', 'SumsubKycController@ajaxkyc')->name('ajaxkyc');
 Route::get('/kycstatus', 'SumsubKycController@kycstatus')->name('kycstatus');
@@ -142,6 +146,7 @@ Route::post('merchant-setting-create', 'MyAccountController@MerchantSettingsCrea
 
 //Multiple remove api keys
 Route::post('api-remove', 'MyAccountController@ApiRemove');
+
 Route::get('ipn-history', 'MyAccountController@IPNHistroy')->name('ipnhistroy');
 Route::get('key-list', 'MyAccountController@APIKey')->name('apikeylist');
 Route::get('create-api', 'MyAccountController@CreateUserAPI')->name('addapi');
@@ -253,6 +258,9 @@ Route::get('invoiceview/{id}', 'InvoiceController@InvoiceView');
 Route::get('testdata', 'TestController@testdata')->name('testdata');
 
 Route::get('/help-center', 'HomeController@Helpcenter');
+
+Route::get('delete-apikey/{id}', 'MyAccountController@ApiSingleRemover');
+
 
 Route::get('/qr-code/{ethaddress}', function ($ethaddress) {
     // Generate the QR code image using the provided $ethaddress

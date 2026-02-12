@@ -99,7 +99,7 @@
                                 </div>
                             </div>
 
-                            <div class="security backcolor">
+                            {{-- <div class="security backcolor">
                                 <div class="authentication">
                                     <div class="google">
                                         <img src="{{ url('/img/kyc.svg') }}" alt="">
@@ -122,10 +122,10 @@
                                     <button class="btn btn-primary">KYC Verified</button>
                                     @endif
                                     @else
-                                    <a href="{{ route('kycsumsub') }}" class="btn-blue">Update</a>
+                                    <a href="{{ route('kycform') }}" class="btn-blue">Update</a>
                                     @endif
                                 </div>
-                            </div>
+                            </div> --}}
 
 
                             <div class="security backcolor">
