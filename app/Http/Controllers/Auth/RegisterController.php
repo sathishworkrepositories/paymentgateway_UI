@@ -64,11 +64,9 @@ class RegisterController extends Controller
             // 'company_website' => ['required_if:account,==,Business', 'max:190'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed','regex:/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{6,}$/'],
-            'referralid' => 'nullable|alpha_num|max:18',
-            'g-recaptcha-response' => 'required|captcha',
-        ],[],[
-            'g-recaptcha-response' => 'ReCaptcha',
-        ]);
+            'referralid' => 'nullable|alpha_num|max:18'
+            // 'g-recaptcha-response' => 'required|captcha',
+        ],);
     }
 
     /**
