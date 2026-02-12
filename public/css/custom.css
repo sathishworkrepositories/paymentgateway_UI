@@ -362,6 +362,8 @@ container.footer-bottom .right span {
   background-size: 100% 100%;
   background-repeat: no-repeat; */
   height: auto;
+  position: sticky;
+  top: 10px;
 }
 
 section.Dashboard-page>.container-fluid {
