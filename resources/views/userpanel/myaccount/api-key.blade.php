@@ -54,10 +54,10 @@
                   <a href="#" class="show-keys-key " onClick="getPasswordResponse({{$data->id}})"><span id="passtexticon{{$data->id}}"><i class="fa-regular fa-eye" ></i></span> Show keys</a></td>
               </tr>
               @empty
-              <tr><td colspan="8" class="text-center"><div class="transaction-details">                           
+              <tr><td colspan="8" class="text-center"><div class="transaction-details">
               <span>Record not found !</span>
             </div></td></tr>
-              @endforelse 
+              @endforelse
             </table>
           </div>
           <div class="two-buttons-space-btwn">

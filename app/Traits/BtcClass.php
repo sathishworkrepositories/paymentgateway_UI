@@ -22,8 +22,8 @@ trait BtcClass
       $publickey = Crypt::encryptString($btc->publickey);
       $wif = Crypt::encryptString($btc->wif);
       $privatekey = Crypt::encryptString($btc->privatekey);
-        
-        
+
+
         $btcaddress = new UserBtcAddress;
         $credential = $publickey.','.$wif.','.$privatekey;
         $btcaddress->user_id = $uid;
@@ -38,17 +38,17 @@ trait BtcClass
     $walletaddress = Wallet::where(['uid'=> $uid,'currency' => 'BTC'])->first();
     $balance = 0;
     if(!$walletaddress){
-      $walletaddress = new Wallet; 
+      $walletaddress = new Wallet;
       $walletaddress->uid = $uid;
       $walletaddress->currency = 'BTC';
     }
 
-    $walletaddress->mukavari 		= $address; 
+    $walletaddress->mukavari 		= $address;
     $walletaddress->balance 		= $walletaddress->balance + $balance;
-    $walletaddress->escrow_balance  = $walletaddress->escrow_balance + $balance; 
+    $walletaddress->escrow_balance  = $walletaddress->escrow_balance + $balance;
     $walletaddress->site_balance 	= $walletaddress->balance + $balance;
-    $walletaddress->created_at 		= date('Y-m-d H:i:s',time()); 
-    $walletaddress->updated_at 		= date('Y-m-d H:i:s',time()); 
+    $walletaddress->created_at 		= date('Y-m-d H:i:s',time());
+    $walletaddress->updated_at 		= date('Y-m-d H:i:s',time());
     $walletaddress->save();
 
    	return $address;
@@ -93,7 +93,7 @@ trait BtcClass
     $credential = explode(',',$private->narcanru);
     if($fromaddress){
       $pvtkey = Crypt::decryptString($credential[2]);
-      //$fee=0.0001;      
+      //$fee=0.0001;
       $send = $this->send($toaddress, $amt, $fromaddress,$pvtkey, $fee);
       return $send;
     }

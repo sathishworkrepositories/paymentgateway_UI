@@ -42,7 +42,7 @@
                     <div class="row">
                         <div class="col-lg-12 col-xl-12 col-md-12 col-sm-12 col-xs-12">
                             <div class="kyc-wrapper">
-                                <form action="" method="POST" enctype="multipart/form-data">
+                                <form action="{{ route('kyc-save') }}" method="POST" enctype="multipart/form-data">
                                     @csrf
 
                                     <div class="kyc-card">
@@ -51,32 +51,43 @@
                                         <div class="row kyc-row">
                                             <div class="col-md-6">
                                                 <label>First Name <span class="required-clr">*<span></label>
-                                                <input type="text" name="first_name"
+                                                <input type="text" name="fname"
                                                     class="form-control kyc-input required-field">
                                                 <small class="error-msg"></small>
+                                                @error('fname')
+                                                    <span class="text-danger">{{ $message }}</span>
+                                                @enderror
                                             </div>
 
                                             <div class="col-md-6">
                                                 <label>Last Name <span class="required-clr">*<span></label>
-                                                <input type="text" name="last_name"
+                                                <input type="text" name="lname"
                                                     class="form-control kyc-input required-field">
                                                 <small class="error-msg"></small>
-
+                                                @error('lname')
+                                                    <span class="text-danger">{{ $message }}</span>
+                                                @enderror
                                             </div>
 
                                             <div class="col-md-6">
                                                 <label>Phone Number</label>
-                                                <input type="text" name="phone" class="form-control kyc-input">
+                                                <input type="text" name="phone_no" class="form-control kyc-input required-field">
+                                                @error('phone_no')
+                                                    <span class="text-danger">{{ $message }}</span>
+                                                @enderror
                                             </div>
 
                                             <div class="col-md-6">
                                                 <label>Gender <span class="required-clr">*<span></label>
-                                                <select name="gender" class="form-control kyc-input required-field">
+                                                <select name="gender_type" class="form-control kyc-input required-field">
                                                     <option value="">Select Gender</option>
                                                     <option value="Male">Male</option>
                                                     <option value="Female">Female</option>
                                                 </select>
                                                 <small class="error-msg"></small>
+                                                @error('gender_type')
+                                                    <span class="text-danger">{{ $message }}</span>
+                                                @enderror
 
                                             </div>
 
@@ -85,15 +96,23 @@
                                                 <input type="date" name="dob"
                                                     class="form-control kyc-input required-field">
                                                 <small class="error-msg"></small>
-
+                                                @error('dob')
+                                                    <span class="text-danger">{{ $message }}</span>
+                                                @enderror
                                             </div>
 
                                             <div class="col-md-6">
                                                 <label>Country <span class="required-clr">*<span></label>
-                                                <input type="text" name="country"
-                                                    class="form-control kyc-input required-field">
+                                                <select name="country" class="form-control kyc-input required-field">
+                                                    <option value="">Select Country</option>
+                                                    @foreach ($country as $countries)
+                                                        <option value="{{ $countries->id ?? ''}}">{{ $countries->name ?? ''}}</option>
+                                                    @endforeach
+                                                </select>
                                                 <small class="error-msg"></small>
-
+                                                @error('country')
+                                                    <span class="text-danger">{{ $message }}</span>
+                                                @enderror
                                             </div>
 
 
@@ -102,37 +121,47 @@
                                                 <input type="text" name="state"
                                                     class="form-control kyc-input required-field">
                                                 <small class="error-msg"></small>
-
+                                                @error('state')
+                                                    <span class="text-danger">{{ $message }}</span>
+                                                @enderror
                                             </div>
 
                                             <div class="col-md-6">
                                                 <label>City <span class="required-clr">*<span></label>
                                                 <input type="text" name="city"
                                                     class="form-control kyc-input required-field">
+                                                    @error('city')
+                                                    <span class="text-danger">{{ $message }}</span>
+                                                @enderror
                                             </div>
                                             <div class="col-md-6">
                                                 <label>Zip / Postal Code <span class="required-clr">*<span></label>
                                                 <input type="text" name="zip_code" class="form-control kyc-input required-field">
                                                 <small class="error-msg"></small>
-
+                                                    @error('zip_code')
+                                                    <span class="text-danger">{{ $message }}</span>
+                                                @enderror
                                             </div>
 
                                             <div class="col-md-6">
                                                 <label>Telegram Username</label>
-                                                <input type="text" name="telegram" class="form-control kyc-input">
+                                                <input type="text" name="telegram_name" class="form-control kyc-input">
                                             </div>
 
                                             <div class="col-md-6">
                                                 <label>Address Line 1 <span class="required-clr">*<span></label>
-                                                <textarea name="address1"
+                                                <textarea name="address_line1"
                                                     class="form-control kyc-input required-field"></textarea>
                                                 <small class="error-msg"></small>
+                                                 @error('address_line1')
+                                                    <span class="text-danger">{{ $message }}</span>
+                                                @enderror
 
                                             </div>
 
                                             <div class="col-md-6">
                                                 <label>Address Line 2</label>
-                                                <textarea name="address2" class="form-control kyc-input"></textarea>
+                                                <textarea name="address_line2" class="form-control kyc-input"></textarea>
                                             </div>
                                         </div>
                                         <p class="kyc-note">
@@ -157,7 +186,7 @@
 
                                             <div class="col-md-6">
                                                 <label>ID document type <span class="required-clr">*<span></label>
-                                                <select name="doc_type" class="form-control kyc-input required-field">
+                                                <select name="id_type" class="form-control kyc-input required-field">
                                                     <option value="">Select ID Type</option>
                                                     <option value="Passport">Passport</option>
                                                     <option value="National_ID">National ID</option>
@@ -166,17 +195,25 @@
                                                     <option value="others">others</option>
                                                 </select>
                                                 <small class="error-msg"></small>
-
+                                                @error('id_type')
+                                                    <span class="text-danger">{{ $message }}</span>
+                                                @enderror
                                             </div>
 
                                             <div class="col-md-6">
                                                 <label>ID document number <span class="required-clr">*<span></label>
-                                                <input type="text" name="doc_number" class="form-control kyc-input">
+                                                <input type="text" name="id_number" class="form-control kyc-input">
+                                                @error('id_number')
+                                                    <span class="text-danger">{{ $message }}</span>
+                                                @enderror
                                             </div>
 
                                             <div class="col-md-6 mt-3">
                                                 <label>Expiry Date</label>
-                                                <input type="date" name="expiry_date" class="form-control kyc-input">
+                                                <input type="date" name="id_exp" class="form-control kyc-input">
+                                                @error('id_exp')
+                                                    <span class="text-danger">{{ $message }}</span>
+                                                @enderror
                                             </div>
 
                                         </div>
@@ -202,10 +239,13 @@
                                                             class="upload-preview">
                                                     </div>
                                                     <div>
-                                                        <input type="file" name="id_front" id="id_front" hidden
+                                                        <input type="file" name="front_img" id="id_front" hidden
                                                             class="required-field"
                                                             onchange="previewImage(event,'frontPreview')">
                                                         <small class="error-msg"></small>
+                                                        @error('front_img')
+                                                    <span class="text-danger">{{ $message }}</span>
+                                                @enderror
                                                     </div>
 
                                                     <button type="button" class="btn update-btn mt-2"
@@ -227,10 +267,14 @@
                                                             class="upload-preview">
                                                     </div>
                                                     <div>
-                                                        <input type="file" name="id_back" id="id_back" hidden
+                                                        <input type="file" name="back_img" id="id_back" hidden
                                                             class="required-field"
                                                             onchange="previewImage(event,'backPreview')">
+
                                                         <small class="error-msg"></small>
+                                                        @error('back_img')
+                                                    <span class="text-danger">{{ $message }}</span>
+                                                        @enderror
                                                     </div>
 
 
@@ -253,10 +297,13 @@
                                                             class="upload-preview">
                                                     </div>
                                                     <div>
-                                                        <input type="file" name="selfie" id="selfie" hidden
+                                                        <input type="file" name="selfie_img" id="selfie" hidden
                                                             class="required-field"
                                                             onchange="previewImage(event,'selfiePreview')">
                                                         <small class="error-msg"></small>
+                                                        @error('selfie_img')
+                                                    <span class="text-danger">{{ $message }}</span>
+                                                        @enderror
                                                     </div>
 
 
@@ -284,7 +331,7 @@
 
                                                 <label style="color: #000">Proof of address <span
                                                         class="required-clr">*<span></label>
-                                                <select name="address_proof_type"
+                                                <select name="proofpaper"
                                                     class="form-control kyc-input required-field">
                                                     <option value="">Bank Statement</option>
                                                     <option value="utility_bill">Utility Bill (gas,electricity,water)
@@ -298,7 +345,9 @@
                                                     <option value="bank_confirmation">Bank confirmation</option>
                                                 </select>
                                                 <small class="error-msg"></small>
-
+                                                @error('proofpaper')
+                                                    <span class="text-danger">{{ $message }}</span>
+                                                        @enderror
 
                                                 <ul class="kyc-doc-list">
                                                     <li>Utility bills (gas, electricity, water)</li>
@@ -326,11 +375,14 @@
                                                         <img id="addressPreview" src="{{ asset('img/file_residential.jpg') }}"
                                                             class="upload-preview">
 
-                                                        <input type="file" name="address_proof" id="address_proof"
+                                                        <input type="file" name="proofpaper_img" id="address_proof"
                                                             class="required-field" hidden
                                                             onchange="previewImage(event,'addressPreview')">
 
                                                               <small class="error-msg"></small>
+                                                              @error('proofpaper_img')
+                                                    <span class="text-danger">{{ $message }}</span>
+                                                        @enderror
                                                     </div>
 
                                                     <button type="button" class="btn update-btn mt-2"
@@ -364,12 +416,12 @@
                                         <div class="kyc-declaration">
 
                                             <label>
-                                                <input type="checkbox" name="terms">
+                                                <input type="checkbox" name="agreement">
                                                 I have read the Terms and Condition and AML-KYC.
                                             </label>
 
                                             <label>
-                                                <input type="checkbox" name="info_correct">
+                                                <input type="checkbox" name="agreements">
                                                 All the personal information I have entered is correct.
                                             </label>
 
@@ -380,13 +432,16 @@
                                             </label>
 
                                         </div>
+                                        @error('agreement')
+                                            <span class="text-danger">{{ $message }}</span>
+                                        @enderror
                                     </div>
 
 
                                     <br>
                                     <div class="d-flex justify-content-center">
 
-                                        <button class="btn btn-success" id="kycSubmit">Submit KYC</button>
+                                        <button class="btn btn-success" type="submit">Submit KYC</button>
                                     </div>
 
                                 </form>

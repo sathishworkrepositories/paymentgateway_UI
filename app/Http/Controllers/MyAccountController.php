@@ -25,12 +25,12 @@ class MyAccountController extends Controller
 
     public function BasicsSettings()
     {
-        $user = Auth::user();    
-        $merchant_id = UserMerchant::getmerchant($user->id); 
+        $user = Auth::user();
+        $merchant_id = UserMerchant::getmerchant($user->id);
         if($merchant_id == ""){
             UserMerchant::create($user->id,keygenerate());
-        }   
-        $UsersProfile = UsersProfile::getData($user->id); 
+        }
+        $UsersProfile = UsersProfile::getData($user->id);
 
         return view('userpanel.myaccount.basics-settings',['datas' => $user,'merchant_id' => $merchant_id,'UsersProfile' => $UsersProfile]);
     }
@@ -42,19 +42,19 @@ class MyAccountController extends Controller
         'sex' => 'required'
         ]);
 
-        $uid = Auth::user()->id;  
+        $uid = Auth::user()->id;
 
-        
-        $merchant_id = UsersProfile::UpdateAccount($uid,$request); 
-        return redirect('/account-setting')->with('success','Updated Successfully!');   
-       
+
+        $merchant_id = UsersProfile::UpdateAccount($uid,$request);
+        return redirect('/account-setting')->with('success','Updated Successfully!');
+
     }
 
     public function MerchantSettings()
     {
         $uid = Auth::user()->id;
-        $merchant = MerchantSetting::GetData($uid);    
-        $commission = Commission::get();    
+        $merchant = MerchantSetting::GetData($uid);
+        $commission = Commission::get();
         return view('userpanel.myaccount.merchant-settings',['datas' => $merchant,'commission' => $commission]);
 
     }
@@ -71,7 +71,7 @@ class MyAccountController extends Controller
         ]);
 
         $uid = Auth::user()->id;
-        $histroy = MerchantSetting::UpdateMerchant($uid, $request);    
+        $histroy = MerchantSetting::UpdateMerchant($uid, $request);
         return redirect('/merchant-setting')->with('success','Updated Successfully!');
     }
 
@@ -83,13 +83,13 @@ class MyAccountController extends Controller
         $histroy = Ipnhistory::where('uid',$uid)->paginate(20);
         return view('userpanel.myaccount.ipn-histroy',['history' => $histroy]);
     }
-    
+
 
     public function APIKey()
     {
         $uid = Auth::user()->id;
         $count = UsersApi::where('user_id',$uid)->count();
-        $data = UsersApi::where(['user_id' => $uid])->get();            
+        $data = UsersApi::where(['user_id' => $uid])->get();
         return view('userpanel.myaccount.api-key',['datas' => $data,'count' => $count]);
     }
 
@@ -101,7 +101,7 @@ class MyAccountController extends Controller
         }
         $uid = Auth::id();
         $apiset = UsersApiSetting::where(['api_id' => $aid,'uid' => Auth::id()])->first();
-        if($apiset){    
+        if($apiset){
             return view('userpanel.myaccount.api-key-edit',['apiset' => $apiset,'apiid' => $aid]);
         }else{
             return redirect('/key-list')->with('error', 'Something went wrong Please try again!');
@@ -155,16 +155,16 @@ class MyAccountController extends Controller
         $basicinfo = $balance = $convert_coins = $deposit = $transaction = $deposit_history = $withdraw_history = $withdraw= 0;
         if (isset($request->basicinfo)){
             $basicinfo = $request->basicinfo;
-        } 
+        }
         if (isset($request->balance)){
             $balance = $request->balance;
-        } 
+        }
         if (isset($request->convert_coins)){
             $convert_coins = $request->convert_coins;
-        } 
+        }
         if (isset($request->deposit)){
             $deposit = $request->deposit;
-        } 
+        }
         if (isset($request->transaction)){
             $transaction = $request->transaction;
         }
@@ -184,7 +184,7 @@ class MyAccountController extends Controller
             return redirect('/edit-key/'.$apiid)->with('error', 'Please fill the api setting!');
         }
 
-        
+
     }
 
     public function Emptyapisetting($apiid){
@@ -192,7 +192,7 @@ class MyAccountController extends Controller
         if(empty($aid)){
             return redirect('/key-list')->with('error', 'Something went wrong Please try again!');
         }
-    
+
         $uid = Auth::user()->id;
         $data = UsersApiSetting::UpdateSetting($aid,$uid);
         if($data){
@@ -207,7 +207,7 @@ class MyAccountController extends Controller
         if(empty($aid)){
             return redirect('/key-list')->with('error', 'Something went wrong Please try again!');
         }
-    
+
         $uid = Auth::user()->id;
         $data = UsersApiSetting::Permissionupdate($aid,$uid);
         if($data){
@@ -237,15 +237,32 @@ class MyAccountController extends Controller
         if(isset($checked))
         {
             foreach ($checked as $id) {
-            UsersApiSetting::where(["uid" => Auth::id(),"api_id"=>\Hashids::decode($id)])->delete(); //Assuming you have a Todo model. 
-            UsersApi::where(["user_id" => Auth::id(),"id"=>\Hashids::decode($id)])->delete(); //Assuming you have a Todo model. 
+            UsersApiSetting::where(["uid" => Auth::id(),"api_id"=>\Hashids::decode($id)])->delete(); //Assuming you have a Todo model.
+            UsersApi::where(["user_id" => Auth::id(),"id"=>\Hashids::decode($id)])->delete(); //Assuming you have a Todo model.
             }
              return redirect('/key-list')->with('success', 'Deleted Successfully!');
         }
         else
         {
              return redirect('/key-list')->with('error', 'Something went wrong Please try again!');
-        } 
+        }
+
+    }
+
+    public function ApiSingleRemover($id){
+
+        if(!$id || !isset($id)){
+            return redirect('/key-list')->with('error', 'Api key ID is required!');
+        }
+
+        $delOne = UsersApiSetting::where(["uid" => Auth::id(),"api_id"=>\Hashids::decode($id)])->delete();
+        $delTwo = UsersApi::where(["user_id" => Auth::id(),"id"=>\Hashids::decode($id)])->delete();
+
+        if($delOne && $delTwo){
+             return redirect('/key-list')->with('success', 'Deleted Successfully!');
+        }else{
+            return redirect('/key-list')->with('error', 'Something went wrong Please try again!');
+        }
 
     }
 

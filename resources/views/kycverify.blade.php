@@ -51,7 +51,7 @@
 						        <a href="{{url('/profile')}}" class="btn next_l action-button yellowbtn" >Skip</a>
 						        </div>
 
-								
+
 							</div>
 						</div>
 					</div>
@@ -92,26 +92,26 @@ function(messageType, payload) {
 console.log('[IDENSIC DEMO] Idensic message:', messageType, payload);
 console.log("Vinoth",payload);
 console.log("Vinoth cc",messageType);
-if(messageType == 'idCheck.onApplicantLoaded'){ 
+if(messageType == 'idCheck.onApplicantLoaded'){
     if(payload.applicantId){
             $.ajax({
                 headers: {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                 },
                 type: "POST",
-                url: '{{url("/ajaxkyc")}}', 
+                url: '{{url("/ajaxkyc")}}',
                 data: 'data='+payload.applicantId
-            });  
+            });
     }
 }
 
-if(messageType == 'idCheck.applicantStatus'){ 
+if(messageType == 'idCheck.applicantStatus'){
     if(payload.reviewStatus == 'pending'){
     document.getElementById('skipbtn').style.display = 'block';
-    setTimeout(function(){ 
+    setTimeout(function(){
       window.location.href = '{{url("/profile")}}';
     }, 8000)
-    
+
     }
 }
 }
