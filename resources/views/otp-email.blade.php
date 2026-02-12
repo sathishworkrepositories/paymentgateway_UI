@@ -15,10 +15,10 @@ $title = "OTP Page";
 	    background: #eef2f3;
 	}
 </style>
-<section class="sign-in-page otp">
+<section class="sign-in-page otp success-page">
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-lg-6 col-xl-6 col-md-12 col-sm-12 col-xs-12 my-auto bg-img">
+			<div class="col-lg-12 col-xl-12 col-md-12 col-sm-12 col-xs-12 my-auto bg-img">
 				<div class="loginouterbox">
 					<div class="login-form">
 						<div class="logo">
@@ -72,11 +72,11 @@ $title = "OTP Page";
 				</div>
 			</div>
 
-			<div class="col-lg-6 col-xl-6 col-md-12 col-sm-12 col-xs-12 right-side">
+			<!-- <div class="col-lg-6 col-xl-6 col-md-12 col-sm-12 col-xs-12 right-side">
 				<div class="signin-right-side-img">
-					<!-- <img src="{{ url('/img/otp-pageright-img.png') }}" alt="" class="img-fluid"> -->
+					 <img src="{{ url('/img/otp-pageright-img.png') }}" alt="" class="img-fluid"> 
 				</div>
-			</div>
+			</div> -->
 
 		</div>
 	</div>

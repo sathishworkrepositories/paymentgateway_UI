@@ -4,10 +4,11 @@
 
 
 
-<section class="sign-in-page">
+<section class="sign-in-page  success-page">
+<section class="sign-in-page ">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-6 col-xl-6 col-md-12 col-sm-12 col-xs-12 my-auto bg-img">
+                <div class="col-lg-12 col-xl-12 col-md-12 col-sm-12 col-xs-12 my-auto bg-img">
                     <div class="loginouterbox">
                         <div class="login-form">
                        
@@ -46,12 +47,12 @@
                         </div>
                      </div>
                 </div>
-                
+<!--                 
                 <div class="col-lg-6 col-xl-6 col-md-12 col-sm-12 col-xs-12">
                     <div class="signin-right-side-img">
                         <img src="{{ url('img/otp-pageright-img.png') }}" alt="" class="img-fluid">
                     </div>
-                </div>
+                </div> -->
                 
             </div>
         </div>
