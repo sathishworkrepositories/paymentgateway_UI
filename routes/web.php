@@ -50,6 +50,9 @@ Route::get('/user-agreement', function () {
 Route::get('/privacy-policy', function () {
     return view('outerpage.privacypolicy');
 });
+Route::get('/kycpage', function () {
+    return view('kycpage');
+});
 
 
 
