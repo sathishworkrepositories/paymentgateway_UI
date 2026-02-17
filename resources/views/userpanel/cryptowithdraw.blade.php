@@ -41,7 +41,7 @@
             @if (session('fail'))
             <div class="error-message" role="alert"><i class="fa fa-times-circle text-danger"></i>
               {{ session('fail') }}
-            </div>              
+            </div>
             @endif
               <form method="post" id="withdraw_form" autocomplete="off" action="{{ url('verifywithdraw') }}">
                 {{ csrf_field() }}
@@ -50,8 +50,8 @@
               <div class="enter-value">
                 <h3>Withdraw Address</h3>
                 <div class="copy-text">
-                  <input type="text" class="form-control" name="address" id="withdraw_address" required> 
-                  
+                  <input type="text" class="form-control" name="address" id="withdraw_address" required>
+
                   @if ($errors->has('address'))
                   <span class="help-block">
                   <strong>{{ $errors->first('address') }}</strong>
@@ -109,18 +109,18 @@
 
                   <div class="col-lg-12 col-xl-12 col-md-12 col-sm-12 col-xs-12">
                     <ul class="nav nav-pills DWT WDP" role="tablist">
-                     <li class="nav-item">
+                     <a href="#"><li class="nav-item">
                        <span class="nav-link" data-bs-toggle="pill" onclick="calculateBalanceAmount('25')">25%</span>
-                     </li>
-                     <li class="nav-item">
+                     </li></a>
+                     <a href="#"><li class="nav-item">
                        <span class="nav-link" data-bs-toggle="pill" onclick="calculateBalanceAmount('50')">50%</span>
-                     </li>
-                     <li class="nav-item">
+                     </li></a>
+                     <a href="#"><li class="nav-item">
                        <span class="nav-link" data-bs-toggle="pill" onclick="calculateBalanceAmount('75')">75%</span>
-                     </li>
-                     <li class="nav-item">
+                     </li></a>
+                     <a href="#"><li class="nav-item">
                       <span class="nav-link" data-bs-toggle="pill" onclick="calculateBalanceAmount('100')">100%</span>
-                    </li>
+                    </li></a>
                   </ul>
                 </div>
 
@@ -187,7 +187,7 @@
           </tr>
           @empty
           @endforelse
-          
+
         </table>
       </div>
    </div>
@@ -278,7 +278,7 @@
   })
 
  })
-  
+
 </script>
 
 <script>

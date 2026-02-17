@@ -1657,7 +1657,7 @@ span.coin-coin-2 {
 
 .history-body ul.nav.nav-pills.DWT a {
   font-size: 16px;
-  padding: 12px 32px;
+  padding: 8px 20px;
   border-radius: 46.5785px;
 }
 
@@ -2472,7 +2472,7 @@ section.sign-in-page {
     background: url(../img/xchange-bg.png);
     background-repeat: no-repeat;
     background-size: auto;
-    
+
 } */
 .form-control {
   background: #ffffff;
@@ -4766,9 +4766,9 @@ span.mp-icon {
 }
 
 /* .history ::-webkit-scrollbar-track{
-    border: 1px solid #000; 
-     border-bottom: none; 
-     border-radius: 0; 
+    border: 1px solid #000;
+     border-bottom: none;
+     border-radius: 0;
      border-top: none;
 }
 .history ::-webkit-scrollbar-thumb{
