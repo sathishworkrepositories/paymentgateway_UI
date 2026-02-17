@@ -28,13 +28,13 @@
        <div class="col-lg-12 col-xl-12 col-md-12 col-sm-12 col-xs-12">
          <ul class="nav nav-pills DWT" role="tablist">
           <li class="nav-item">
-            <a class="nav-link " href="{{ url('deposit-history/BTC') }}">Deposit History</a>
+            <a class="nav-link ar3" href="{{ url('deposit-history/BTC') }}">Deposit History</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active"  data-bs-toggle="pill" href="{{ url('withdrawhistroy/BTC') }}">Withdraw History</a>
+            <a class="nav-link active "  data-bs-toggle="pill" href="{{ url('withdrawhistroy/BTC') }}">Withdraw History</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link"  href="{{ route('accounthistroy') }}">Transaction History</a>
+            <a class="nav-link ar3"  href="{{ route('accounthistroy') }}">Transaction History</a>
           </li>
         </ul>
       </div>
