@@ -99,7 +99,7 @@
                                 </div>
                             </div>
 
-                            {{-- <div class="security backcolor">
+                            <div class="security backcolor">
                                 <div class="authentication">
                                     <div class="google">
                                         <img src="{{ url('/img/kyc.svg') }}" alt="">
@@ -116,16 +116,26 @@
                                 </div>
                                 <div class="enable-btn">
                                     @if(Auth::user()->kyc_verify == 1)
-                                    @if(Auth::user()->role == 'Business')
-                                    <button class="btn btn-primary">KYB Verified</button>
+                                        @if(Auth::user()->role == 'Business')
+                                                <button class="btn btn-primary" disabled>KYB Verified</button>
+                                            @else
+                                                <button class="btn btn-primary" disabled>KYC Verified</button>
+                                        @endif
                                     @else
-                                    <button class="btn btn-primary">KYC Verified</button>
-                                    @endif
-                                    @else
-                                    <a href="{{ route('kycform') }}" class="btn-blue">Update</a>
+                                        @if($kycdetail == 0)
+                                            <a href="{{ route('kycform') }}" class="btn-blue">Update</a>
+                                        @endif
+                                        @if($kycdetail == 3)
+                                            <a  class="btn-blue" disabled>Pending</a>
+                                        @endif
+                                        @if($kycdetail == 2)
+                                            <label style="color:red">Your KYC has been rejected</label>
+
+                                            <a href="{{ route('kycform') }}" class="btn-blue">Re-submit</a>
+                                        @endif
                                     @endif
                                 </div>
-                            </div> --}}
+                            </div>
 
 
                             <div class="security backcolor">

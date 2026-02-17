@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\DB;
 use App\User;
 use App\Models\UsersApi;
 use App\Models\UserLogin;
+use App\Models\Kyc;
+
 use Auth;
 use Mail;
 use App\Mail\SendOtpVerification;
@@ -36,19 +38,19 @@ class DashboardController extends Controller
             auth()->logout();
             return back()->with('warning', 'Your account has been deactivated for the '. $security->reason);
         }
-        elseif($security->twofa!=""){           
+        elseif($security->twofa!=""){
             if($security->twofa == 'email_otp')
             {
                 $user = Auth::user();
                 $rand = rand(100000,999999);
                 $security->profile_otp = $rand;
                 $security->save();
-                try 
+                try
                 {
                     \Session::flash('status', 'Check your email inbox/spam folder for verification code!');
                     Mail::to($user->email)->send(new SendOtpVerification($rand));
                     return redirect('twofaverfication');
-                } 
+                }
                 catch (Exception $e)
                 {
                     dd($e);
@@ -64,21 +66,23 @@ class DashboardController extends Controller
                 \Session::put('otpstatus', 1);
                 return redirect('/profile');
             }
-        } 
+        }
         else
         {
             \Session::put('otpstatus', 1);
             //return view('dashboard');
-            return redirect('/dashboard'); 
+            return redirect('/dashboard');
         }
 
     }
 
     public function TwoFaEnable(){
-
+        $kyc = "";
         $user = Auth::user();
         $login = UserLogin::where('user_id',$user->id)->orderBy('id','Desc')->first();
-        return view('2faverification',['user'=>$user,'login' => $login]);
+        $kyc = Kyc::where('uid',$user->id)->orderBy('id','desc')->first();
+
+        return view('2faverification',['user'=>$user,'login' => $login,'kycdetail' => is_object($kyc) ? $kyc->status : ""]);
     }
 
     public function TwoFactorVerfication(){
@@ -101,20 +105,20 @@ class DashboardController extends Controller
                     else{
                         if($security->twofastatus == 1)
                         {
-                           return view('otp-googleauth'); 
+                           return view('otp-googleauth');
                         }
                         else{
                         \Session::put('otpstatus', 1);
                         return redirect('/userpanel');
                         }
-        
+
                     }
-                    
+
                 }elseif($security->twofa == 'email_otp'){
 
                       if($security->twofastatus == 1)
-                        {   
-                            
+                        {
+
                             return view('otp-email');
                         }
                         else{
@@ -136,9 +140,9 @@ class DashboardController extends Controller
         $user->twofastatus = 1;
         $user->save();
         $QR_Image = "";
-        
+
         if($user->google2fa_verify == 0){
-            $secret = $user->google2fa_secret; 
+            $secret = $user->google2fa_secret;
             $QR_Image = $this->getQRCodeGoogleUrl('paymentgatewaydemoment-('.$user->email.')', $secret);
             return view('otp-googleauth',['image' => $QR_Image, 'secret' => $secret]);
         }else{
@@ -179,7 +183,7 @@ class DashboardController extends Controller
     public function VerifyGoogleAuth(Request $request){
         $this->validate($request, [
             'code' => 'required|numeric'
-        ]); 
+        ]);
 
         $user = Auth::user();
         $secret = $user->google2fa_secret;
@@ -202,7 +206,7 @@ class DashboardController extends Controller
     public function VerifyEmail(Request $request){
         $this->validate($request, [
             'code' => 'required|numeric'
-        ]); 
+        ]);
 
         $user = Auth::user();
         $code = $request->code;
@@ -223,33 +227,33 @@ class DashboardController extends Controller
         {
             $user_id = Auth::user()->id;
             $security = User::where(['id' => $user_id, 'email_verify' => 1])->first();
-            if($security->twofa!=""){           
+            if($security->twofa!=""){
                 if($security->twofa == 'email_otp')
                 {
                     $user = Auth::user();
                     $rand = rand(100000,999999);
                     $security->profile_otp = $rand;
                     $security->save();
-                    try 
+                    try
                     {
                         Mail::to($user->email)->send(new SendOtpVerification($rand));
                         $data =1;
 
-                    } 
+                    }
                     catch (Exception $e)
                     {
                         dd($e);
 
                     }
-                
-                } 
+
+                }
                  return json_encode($data);
-         
+
             }
         }
 
         public function Otpkeycheck(Request $request)
-        {   
+        {
 
             $user_id = Auth::user()->id;
             $security = User::where(['id' => $user_id, 'email_verify' => 1])->first();
@@ -266,7 +270,7 @@ class DashboardController extends Controller
                         $data = $private_key;
 
                     }
-                    else 
+                    else
                     {
                             $data = false;
                     }
@@ -283,15 +287,15 @@ class DashboardController extends Controller
                         $data = $private_key;
 
                     }
-                    else 
+                    else
                     {
                             $data = false;
                     }
             }
 
-            
+
             return json_encode($data);
-         
-            
+
+
         }
 }

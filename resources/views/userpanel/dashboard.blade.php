@@ -1,4 +1,4 @@
-@php$title = 'Dashboard';
+@php $title = 'Dashboard';
     $atitle = 'Dashboard';
 @endphp
 @include('layouts.headercss')
@@ -119,7 +119,7 @@
               </div>
           </div> -->
 
-                            {{-- @if (Auth::user()->kyc_verify == 1)
+                            @if (Auth::user()->kyc_verify == 1)
 
                                 <div class="security backcolor dash">
 
@@ -153,7 +153,7 @@
 
                                 </div>
 
-                            @endif --}}
+                            @endif
 
 
 
