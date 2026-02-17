@@ -31,10 +31,10 @@
             <a class="nav-link active" data-bs-toggle="pill" href="{{ url('deposit-history/BTC') }}">Deposit History</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ url('withdrawhistroy/BTC') }}">Withdraw History</a>
+            <a class="nav-link ar3" href="{{ url('withdrawhistroy/BTC') }}">Withdraw History</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ route('accounthistroy') }}">Transaction History</a>
+            <a class="nav-link ar3" href="{{ route('accounthistroy') }}">Transaction History</a>
           </li>
         </ul>
       </div>
