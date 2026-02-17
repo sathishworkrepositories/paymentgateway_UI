@@ -3,6 +3,8 @@
 
 @section('content')
 
+
+
 <section class="Dashboard-page wallet-page-main">
     <div class="container-fluid">
         <div class="row">
@@ -44,14 +46,14 @@
                             <div class="kyc-wrapper">
                                 <form action="{{ route('kyc-save') }}" method="POST" enctype="multipart/form-data">
                                     @csrf
-
+                                    <input type="hidden" name="uid" value="{{ auth()->user()->id ?? ""}}">
                                     <div class="kyc-card">
                                         <h4 class="kyc-title">PERSONAL INFORMATION</h4>
 
                                         <div class="row kyc-row">
                                             <div class="col-md-6">
                                                 <label>First Name <span class="required-clr">*<span></label>
-                                                <input type="text" name="fname"
+                                                <input type="text" name="fname" value="{{ old('fname') }}"
                                                     class="form-control kyc-input required-field">
                                                 <small class="error-msg"></small>
                                                 @error('fname')
@@ -61,7 +63,7 @@
 
                                             <div class="col-md-6">
                                                 <label>Last Name <span class="required-clr">*<span></label>
-                                                <input type="text" name="lname"
+                                                <input type="text" name="lname" value="{{ old('lname') }}"
                                                     class="form-control kyc-input required-field">
                                                 <small class="error-msg"></small>
                                                 @error('lname')
@@ -71,7 +73,7 @@
 
                                             <div class="col-md-6">
                                                 <label>Phone Number</label>
-                                                <input type="text" name="phone_no" class="form-control kyc-input required-field">
+                                                <input type="text" name="phone_no" value="{{ old('phone_no') }}" class="form-control kyc-input required-field">
                                                 @error('phone_no')
                                                     <span class="text-danger">{{ $message }}</span>
                                                 @enderror
@@ -79,10 +81,10 @@
 
                                             <div class="col-md-6">
                                                 <label>Gender <span class="required-clr">*<span></label>
-                                                <select name="gender_type" class="form-control kyc-input required-field">
+                                                <select name="gender_type"  class="form-control kyc-input required-field">
                                                     <option value="">Select Gender</option>
-                                                    <option value="Male">Male</option>
-                                                    <option value="Female">Female</option>
+                                                    <option value="male" @if(old('gender_type') == "male") selected @endif>Male</option>
+                                                    <option value="female" @if(old('gender_type') == "female") selected @endif>Female</option>
                                                 </select>
                                                 <small class="error-msg"></small>
                                                 @error('gender_type')
@@ -93,7 +95,7 @@
 
                                             <div class="col-md-6">
                                                 <label>Date of Birth <span class="required-clr">*<span></label>
-                                                <input type="date" name="dob"
+                                                <input type="date" name="dob" value="{{ old('dob') }}"
                                                     class="form-control kyc-input required-field">
                                                 <small class="error-msg"></small>
                                                 @error('dob')
@@ -106,7 +108,7 @@
                                                 <select name="country" class="form-control kyc-input required-field">
                                                     <option value="">Select Country</option>
                                                     @foreach ($country as $countries)
-                                                        <option value="{{ $countries->id ?? ''}}">{{ $countries->name ?? ''}}</option>
+                                                        <option value="{{ $countries->id ?? ''}}" @if(old('country') == $countries->id) selected @endif>{{ $countries->name ?? ''}}</option>
                                                     @endforeach
                                                 </select>
                                                 <small class="error-msg"></small>
@@ -118,7 +120,7 @@
 
                                             <div class="col-md-6">
                                                 <label>State <span class="required-clr">*<span></label>
-                                                <input type="text" name="state"
+                                                <input type="text" name="state" value="{{ old('state') }}"
                                                     class="form-control kyc-input required-field">
                                                 <small class="error-msg"></small>
                                                 @error('state')
@@ -128,7 +130,7 @@
 
                                             <div class="col-md-6">
                                                 <label>City <span class="required-clr">*<span></label>
-                                                <input type="text" name="city"
+                                                <input type="text" name="city" value="{{ old('city') }}"
                                                     class="form-control kyc-input required-field">
                                                     @error('city')
                                                     <span class="text-danger">{{ $message }}</span>
@@ -136,7 +138,7 @@
                                             </div>
                                             <div class="col-md-6">
                                                 <label>Zip / Postal Code <span class="required-clr">*<span></label>
-                                                <input type="text" name="zip_code" class="form-control kyc-input required-field">
+                                                <input type="text" name="zip_code" value="{{ old('zip_code') }}" class="form-control kyc-input required-field">
                                                 <small class="error-msg"></small>
                                                     @error('zip_code')
                                                     <span class="text-danger">{{ $message }}</span>
@@ -145,13 +147,13 @@
 
                                             <div class="col-md-6">
                                                 <label>Telegram Username</label>
-                                                <input type="text" name="telegram_name" class="form-control kyc-input">
+                                                <input type="text" name="telegram_name" value="{{ old('telegram_name') }}" class="form-control kyc-input">
                                             </div>
 
                                             <div class="col-md-6">
                                                 <label>Address Line 1 <span class="required-clr">*<span></label>
                                                 <textarea name="address_line1"
-                                                    class="form-control kyc-input required-field"></textarea>
+                                                    class="form-control kyc-input required-field">{{ old('telegram_name') ?? ""}}</textarea>
                                                 <small class="error-msg"></small>
                                                  @error('address_line1')
                                                     <span class="text-danger">{{ $message }}</span>
@@ -161,7 +163,7 @@
 
                                             <div class="col-md-6">
                                                 <label>Address Line 2</label>
-                                                <textarea name="address_line2" class="form-control kyc-input"></textarea>
+                                                <textarea name="address_line2" class="form-control kyc-input">{{ old('address_line2') ?? ""}}</textarea>
                                             </div>
                                         </div>
                                         <p class="kyc-note">
@@ -188,11 +190,11 @@
                                                 <label>ID document type <span class="required-clr">*<span></label>
                                                 <select name="id_type" class="form-control kyc-input required-field">
                                                     <option value="">Select ID Type</option>
-                                                    <option value="Passport">Passport</option>
-                                                    <option value="National_ID">National ID</option>
-                                                    <option value="Driving_License">Driving License</option>
-                                                    <option value="Government_Issue_ID">Government Issue ID</option>
-                                                    <option value="others">others</option>
+                                                    <option value="passport" @if(old('id_type') == "passport") selected @endif>Passport</option>
+                                                    <option value="national_id"  @if(old('id_type') == "national_id") selected @endif>National ID</option>
+                                                    <option value="driving_license"  @if(old('id_type') == "driving_license") selected @endif>Driving License</option>
+                                                    <option value="government_issue_id"  @if(old('id_type') == "government_issue_id") selected @endif>Government Issue ID</option>
+                                                    <option value="others"  @if(old('id_type') == "others") selected @endif>others</option>
                                                 </select>
                                                 <small class="error-msg"></small>
                                                 @error('id_type')
@@ -202,7 +204,7 @@
 
                                             <div class="col-md-6">
                                                 <label>ID document number <span class="required-clr">*<span></label>
-                                                <input type="text" name="id_number" class="form-control kyc-input">
+                                                <input type="text" name="id_number" value="{{ old('id_number') }}" class="form-control kyc-input">
                                                 @error('id_number')
                                                     <span class="text-danger">{{ $message }}</span>
                                                 @enderror
@@ -210,7 +212,7 @@
 
                                             <div class="col-md-6 mt-3">
                                                 <label>Expiry Date</label>
-                                                <input type="date" name="id_exp" class="form-control kyc-input">
+                                                <input type="date" name="id_exp" value="{{ old('id_exp') }}" class="form-control kyc-input">
                                                 @error('id_exp')
                                                     <span class="text-danger">{{ $message }}</span>
                                                 @enderror
@@ -333,16 +335,17 @@
                                                         class="required-clr">*<span></label>
                                                 <select name="proofpaper"
                                                     class="form-control kyc-input required-field">
-                                                    <option value="">Bank Statement</option>
-                                                    <option value="utility_bill">Utility Bill (gas,electricity,water)
+                                                    <option value="">Select proof type</option>
+                                                    <option value="bank_statement" @if(old('proofpaper') == "bank_statement") ? selected @endif>Bank Statement</option>
+                                                    <option value="utility_bill" @if(old('proofpaper') == "utility_bill") ? selected @endif>Utility Bill (gas,electricity,water)
                                                     </option>
-                                                    <option value="tax_statement">Tax Statement</option>
-                                                    <option value="pension_statement">Pension Statement</option>
-                                                    <option value="telephone_bill">Telephone / internet bill (no cell
+                                                    <option value="tax_statement" @if(old('proofpaper') == "tax_statement") ? selected @endif>Tax Statement</option>
+                                                    <option value="pension_statement" @if(old('proofpaper') == "pension_statement") ? selected @endif>Pension Statement</option>
+                                                    <option value="telephone_bill" @if(old('proofpaper') == "telephone_bill") ? selected @endif>Telephone / internet bill (no cell
                                                         phone bill)</option>
-                                                    <option value="certificate_registration">Certificate of registration
+                                                    <option value="certificate_registration" @if(old('proofpaper') == "certificate_registration") ? selected @endif>Certificate of registration
                                                     </option>
-                                                    <option value="bank_confirmation">Bank confirmation</option>
+                                                    <option value="bank_confirmation" @if(old('proofpaper') == "bank_confirmation") ? selected @endif>Bank confirmation</option>
                                                 </select>
                                                 <small class="error-msg"></small>
                                                 @error('proofpaper')
@@ -416,17 +419,17 @@
                                         <div class="kyc-declaration">
 
                                             <label>
-                                                <input type="checkbox" name="agreement">
+                                                <input type="checkbox" name="agreement[]">
                                                 I have read the Terms and Condition and AML-KYC.
                                             </label>
 
                                             <label>
-                                                <input type="checkbox" name="agreements">
+                                                <input type="checkbox" name="agreement[]">
                                                 All the personal information I have entered is correct.
                                             </label>
 
                                             <label>
-                                                <input type="checkbox" name="individual_confirm">
+                                                <input type="checkbox" name="agreement[]">
                                                 I certify that I am registering as an individual,
                                                 not as a corporate representative.
                                             </label>

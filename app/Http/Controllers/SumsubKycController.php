@@ -2,12 +2,12 @@
 namespace App\Http\Controllers;
 
 use App\Models\Country;
+use App\Models\Kyc;
 use App\User;
+use DB;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
-// use App\Models\SumsubKyc;
-use Illuminate\Support\Facades\Validator;
 
 class SumsubKycController extends Controller
 {
@@ -73,8 +73,7 @@ class SumsubKycController extends Controller
             "uid"            => "required",
             "fname"          => "required",
             "lname"          => "required",
-            "phone_no"       => "required",
-            // "phone_code" => "required",
+            "phone_no"       => "required|numeric",
             "gender_type"    => "required",
             "dob"            => "required",
             "country"        => "required",
@@ -85,13 +84,14 @@ class SumsubKycController extends Controller
             "id_type"        => "required",
             "id_number"      => "required",
             "id_exp"         => "required",
-            "front_img"      => "required",
-            "back_img"       => "required",
-            "selfie_img"     => "required",
+            "front_img"      => "required|mimes:jpeg,jpg,png|max:2048",
+            "back_img"       => "required|mimes:jpeg,jpg,png|max:2048",
+            "selfie_img"     => "required|mimes:jpeg,jpg,png|max:2048",
             "proofpaper"     => "required",
-            "proofpaper_img" => "required",
-            "agreement" => "required"
+            "proofpaper_img" => "required|mimes:jpeg,jpg,png|max:2048",
+            "agreement"      => "required|array|size:3",
         ], [
+            "uid.required"            => "User Id is required",
             "fname.required"          => "Firstname is required",
             "lname.required"          => "Lastname is required",
             "phone_no.required"       => "Phonenumber is required",
@@ -105,48 +105,116 @@ class SumsubKycController extends Controller
             "id_type.required"        => "Document type is required",
             "id_number.required"      => "Document number is required",
             "id_exp.required"         => "Document expiring date is required",
-            "front_img.required"      => "Document front side is required",
+            "front_img.required"      => "Document front side image is required",
+            "front_img.mimes"         => "Only file type jpg, jpeg, png is allowed",
+
+            "front_img.max"           => "Upload file size must be less than 2048 kb",
             "back_img.required"       => "Document back side image is required",
+            "back_img.mimes"          => "Only file type jpg, jpeg, png is allowed",
+
+            "back_img.max"            => "Upload file size must be less than 2048 kb",
             "selfie_img.required"     => "Document selfie is required",
+            "selfie_img.mimes"        => "Only file type jpg, jpeg, png is allowed",
+
+            "selfie_img.max"          => "Upload file size must be less than 2048 kb",
             "proofpaper.required"     => "Address proof type is required",
             "proofpaper_img.required" => "Address proof image is required",
+            "proofpaper_img.mimes"    => "Only file type jpg, jpeg, png is allowed",
+
+            "proofpaper_img.max"      => "Upload file size must be less than 2048 kb",
+            "agreement.required"      => "Kindly accept the consent",
+            "agreement.size"          => "Kindly accept all consent",
         ]);
+
+        $fullFname          = "";
+        $fullback_img       = "";
+        $fullselfie_img     = "";
+        $fullproofpaper_img = "";
+        $milliseconds       = "";
+
+        if ($request->hasFile('front_img')) {
+
+            $milliseconds = round(microtime(true) * 1000);
+            $ext          = $request->file('front_img')->extension();
+            $filename     = $milliseconds . '.' . $ext;
+            $file         = $request->file('front_img');
+            $file->move(public_path('uploads/kyc'), $filename);
+            $fullFname = 'uploads/kyc/' . $filename;
+        }
+        if ($request->hasFile('back_img')) {
+            $milliseconds = round(microtime(true) * 1000);
+            $extTwo       = $request->file('back_img')->extension();
+            $filenameTwo  = $milliseconds . '.' . $extTwo;
+            $fileTwo      = $request->file('back_img');
+            $fileTwo->move(public_path('uploads/kyc'), $filenameTwo);
+            $fullback_img = 'uploads/kyc/' . $filenameTwo;
+
+        }
+        if ($request->hasFile('selfie_img')) {
+            $milliseconds  = round(microtime(true) * 1000);
+            $extThree      = $request->file('selfie_img')->extension();
+            $filenameThree = $milliseconds . '.' . $extThree;
+            $fileThree     = $request->file('selfie_img');
+            $fileThree->move(public_path('uploads/kyc'), $filenameThree);
+            $fullselfie_img = 'uploads/kyc/' . $filenameThree;
+
+        }
+        if ($request->hasFile('proofpaper_img')) {
+            $milliseconds = round(microtime(true) * 1000);
+            $extFour      = $request->file('proofpaper_img')->extension();
+            $filenameFour = $milliseconds . '.' . $extFour;
+            $fileFour     = $request->file('proofpaper_img');
+            $fileFour->move(public_path('uploads/kyc'), $filenameFour);
+            $fullproofpaper_img = 'uploads/kyc/' . $filenameFour;
+
+        }
 
         try {
 
-            $payload = [
-                'fname'          => $request->fname ?? "",
-                'lname'          => $request->lname ?? "",
-                'dob'            => $request->dob ?? "",
-                'city'           => $request->city ?? "",
-                'state'          => $request->state ?? "",
-                'country'        => $request->country ?? "",
-                'phone_no'       => $request->phonenumber ?? "",
-                'zip_code'       => $request->zip_code ?? "",
-                'gender_type'    => $request->gender_type ?? "",
-                'address_line1'  => $request->address_line1 ?? "",
-                'address_line2'  => $request->address_line2 ?? "",
-                'telegram_name'  => $request->telegram_name ?? "",
-                'id_type'        => $request->id_type ?? "",
-                'id_number'      => $request->id_number ?? "",
-                'id_exp'         => $request->id_exp ?? "",
-                'front_img'      => $request->front_img ?? "",
-                'back_img'       => $request->back_img ?? "",
-                'selfie_img'     => $request->selfie_img ?? "",
-                'proofpaper'     => $request->proofpaper ?? "",
-                'proofpaper_img' => $request->proofpaper_img ?? "",
-            ];
+            $save = DB::transaction(function () use ($request, $fullFname, $fullback_img, $fullselfie_img, $fullproofpaper_img) {
 
-            $save = Kyc::insert($payload);
+                $payload = [
+                    'uid'            => $request->uid ?? "",
+                    'fname'          => $request->fname ?? "",
+                    'lname'          => $request->lname ?? "",
+                    'dob'            => $request->dob ?? "",
+                    'city'           => $request->city ?? "",
+                    'state'          => $request->state ?? "",
+                    'country'        => $request->country ?? "",
+                    'phone_no'       => $request->phone_no ?? "",
+                    'zip_code'       => $request->zip_code ?? "",
+                    'gender_type'    => $request->gender_type ?? "",
+                    'address_line1'  => $request->address_line1 ?? "",
+                    'address_line2'  => $request->address_line2 ?? "",
+                    'telegram_name'  => $request->telegram_name ?? "",
+                    'id_type'        => $request->id_type ?? "",
+                    'id_number'      => $request->id_number ?? "",
+                    'id_exp'         => $request->id_exp ?? "",
+                    'front_img'      => $fullFname ?? "",
+                    'back_img'       => $fullback_img ?? "",
+                    'selfie_img'     => $fullselfie_img ?? "",
+                    'proofpaper'     => $request->proofpaper ?? "",
+                    'proofpaper_img' => $fullproofpaper_img ?? "",
+                    'is_agreed'      => count($request->agreement) > 1 ? 1 : 0,
+                    'status'         => 3,
+                    'created_at'     => date('Y-m-d H:i:s'),
+                    'updated_at'     => date('Y-m-d H:i:s'),
+                ];
+
+                return Kyc::insert($payload);
+
+            });
 
             if ($save) {
-                return redirect('kyc-verify')->with('success', 'KYC submitted successfully');
+
+                return redirect('security')->with('success', 'KYC submitted successfully');
             }
 
-            return redirect('kyc-verify')->with('error', 'Unable to submit kyc!');
+            return redirect('kycform')->with('error', 'Unable to submit kyc!');
 
         } catch (\Exception $err) {
-            return redirect('kyc-verify')->with('error', 'something went wrong');
+
+            return redirect('kycform')->with('error', 'something went wrong');
         }
 
     }
