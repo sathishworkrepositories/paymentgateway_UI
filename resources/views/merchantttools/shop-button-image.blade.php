@@ -43,15 +43,15 @@
   <div class="container sitecontainer">
     <div class="buttonmakerbg htmlpostbg">
       <div class="examplecodebg">
-                Image Code: &lt;input type="image" src="https://pgdemo1.hashcodex.com/img/add-to-cart.svg" alt="Add to Cart..."&gt;
+                Image Code: &lt;input type="image" src="https://pg.ecobanx.com/img/add-to-cart.svg" alt="Add to Cart..."&gt;
         <div class="buttonlogo shop ">
-            <image src="https://pgdemo1.hashcodex.com/img/shopping-button.svg" width="300"/>
+            <image src="https://pg.ecobanx.com/img/add-to-cart.svg" width="300"/>
 
         </div>
     </div>
   </div>
 </div></article>
-          
+
         </div>
 
      </div>
@@ -64,7 +64,7 @@ function myFunction() {
   var copyText = document.getElementById("myInput");
   copyText.select();
   document.execCommand("copy");
-  
+
   var tooltip = document.getElementById("myTooltip");
   tooltip.innerHTML = "Copied";
 }
@@ -87,7 +87,7 @@ function myFunction() {
   })
 
  })
-  
+
 </script>
 </body>
 </html>

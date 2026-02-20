@@ -5,7 +5,12 @@
 <tr><td colspan='3' align='center' height='3' style='padding:0px;'></td></tr>
 <tr><td colspan='3' align='center' height='15' style='padding:0px;'></td></tr>
 <tr><td colspan='3' align='center' height='15' style='padding:0px;'></td></tr>
-<tr><td colspan='3' height='50' style='text-align:center; background-color:#0974FF;padding:0px;'>Copyright © {{ config('app.name') }}, 2023-2024. All Rights Reserved.</td></tr>
+@php
+$nYear = date("Y") + 1;
+$years = date("Y");
+$yearTo = $years." - ".$nYear;
+@endphp
+<tr><td colspan='3' height='50' style='text-align:center; background-color:#0974FF;padding:0px;'>Copyright © {{ config('app.name') }}, {{ $yearTo ?? $years}}. All Rights Reserved.</td></tr>
 </table>
 </body>
 </html>
