@@ -244,7 +244,7 @@ class MyAccountController extends Controller
         }
         else
         {
-             return redirect('/key-list')->with('error', 'Something went wrong Please try again!');
+             return redirect('/key-list')->with('error', 'Select api key to delete!');
         }
 
     }
