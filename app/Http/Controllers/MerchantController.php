@@ -48,7 +48,7 @@ class MerchantController extends Controller
     }
 
     public function AdvanceButtonMaker(){
-        $mid ='';        
+        $mid ='';
         if (Auth::check()){
             $uid = Auth::user()->id;
             $mid = UserMerchant::getmerchant($uid);
@@ -186,7 +186,7 @@ class MerchantController extends Controller
         }
         return view('merchantttools.APIDocumentation',['merchant' => $mid,'comDetails' => $comDetails,'requestparam' =>""]);
     }
-    
+
     public function posTutorial(){
         $mid ='';
         if (Auth::check()){
@@ -206,7 +206,7 @@ class MerchantController extends Controller
         }
         return view('merchantttools.posHtmlFields',['merchant' => $mid,'comDetails' => $comDetails,'requestparam' =>""]);
     }
-    
+
     public function posbutton(){
         $mid ='';
         if (Auth::check()){
@@ -283,8 +283,8 @@ class MerchantController extends Controller
             'paymentcurrency' => 'required',
             'currency_amount' => 'required|numeric'
         ]);
-        if ($validator->fails()) { 
-            return response()->json(['status'=> false,'result' => '','msg' => $validator->errors()->first()], 200);           
+        if ($validator->fails()) {
+            return response()->json(['status'=> false,'result' => '','msg' => $validator->errors()->first()], 200);
         }
         $tcoin = $request->convert_currency;
         $fcoin = $request->paymentcurrency;
@@ -306,8 +306,8 @@ class MerchantController extends Controller
             'shipping_address' => 'nullable',
             'shipping_cost' => 'nullable|numeric'
         ]);
-         if ($validator->fails()) { 
-            return response()->json(['status'=> false,'result' => '','msg' => $validator->errors()->first()], 200);           
+         if ($validator->fails()) {
+            return response()->json(['status'=> false,'result' => '','msg' => $validator->errors()->first()], 200);
         }
         $uid = Auth::user()->id;
         $backphoto = null;
@@ -332,7 +332,7 @@ class MerchantController extends Controller
             $tran->logo = $backphoto;
             $tran->created_at = date('Y-m-d H:i:s',time());
             $tran->updated_at = date('Y-m-d H:i:s',time());
-            
+
             if($tran->save()){
                 $trans_id = $tran->id;
                 $trans = new ItemDetails();
@@ -346,7 +346,7 @@ class MerchantController extends Controller
                 $trans->updated_at = date('Y-m-d H:i:s',time());
                 $trans->save();
                 $url = url('/shareinvoice/'.\Hashids::encode($tran->id));
-                return response()->json(["status" => 'success','result' => NULL,'msg'=> "<span id='coinaddress1'>$url</span>"], 200); 
+                return response()->json(["status" => 'success','result' => NULL,'msg'=> "<span id='coinaddress1'>$url</span>"], 200);
             }
         return response()->json(["status" => 'fail','result' => NULL,'msg'=> "Somethingwent wrong"], 200);
     }
@@ -427,7 +427,7 @@ class MerchantController extends Controller
         $subcategory =ItemDetails::where('invoice_id',$id)->get();
         return view('merchantttools.editinvoice',['category' => $category,'subcategory' => $subcategory]);
         }else{
-            return redirect('view-invoice')->with('error','Invoice not Found');   
+            return redirect('view-invoice')->with('error','Invoice not Found');
         }
     }
 
@@ -439,7 +439,7 @@ class MerchantController extends Controller
         $subcategory =ItemDetails::where('invoice_id',$id)->get();
         return view('merchantttools.shareinvoice',['category' => $category,'subcategory' => $subcategory]);
         }else{
-            return redirect('view-invoice')->with('error','Invoice not Found');   
+            return redirect('view-invoice')->with('error','Invoice not Found');
         }
     }
 
@@ -454,7 +454,7 @@ class MerchantController extends Controller
     }
 
     public function InvoiceMakerSubmit(Request $request){
-    
+
         $this->validate($request, [
         'invoiceId' => 'required',
         'companydetails' => 'required',
@@ -484,7 +484,7 @@ class MerchantController extends Controller
 
         if(Input::hasFile('logo_upload'))
         {
-        
+
         $this->validate($request, [
              'logo_upload' => 'dimensions:min_width=100,max_width=250'
         ]);
@@ -503,7 +503,7 @@ class MerchantController extends Controller
               $back->move($path, $backphoto);
               $back_img = $location.$backphoto;
         }  else {
-            return back()->with('error','Invoice not Generated,Unwanted images can not be accepted');    
+            return back()->with('error','Invoice not Generated,Unwanted images can not be accepted');
         }
         }
 
@@ -527,9 +527,9 @@ class MerchantController extends Controller
             $tran->logo = $backphoto;
             $tran->created_at = date('Y-m-d H:i:s',time());
             $tran->updated_at = date('Y-m-d H:i:s',time());
-            
+
             if($tran->save()){
-                for ($i=0; $i < count($request->itemno); $i++) { 
+                for ($i=0; $i < count($request->itemno); $i++) {
                     $trans_id = $tran->id;
                     $trans = new ItemDetails();
                     $trans->invoice_id = $trans_id;
@@ -543,21 +543,21 @@ class MerchantController extends Controller
                     $trans->save();
                 }
 
-            return redirect('/shareinvoice/'.\Hashids::encode($tran->id))->with('success','Invoice Generated Successfully');   
-            //return back()->with('success','Invoice Generated Successfully');    
+            return redirect('/shareinvoice/'.\Hashids::encode($tran->id))->with('success','Invoice Generated Successfully');
+            //return back()->with('success','Invoice Generated Successfully');
             }else{
-            return back()->with('error','Invoice not Generated');    
-            }            
+            return back()->with('error','Invoice not Generated');
+            }
         } else { return back()->with('error','Please enter the shipping value'); }
         } else { return back()->with('error','Please enter the Price per Item value'); }
         } else { return back()->with('error','Please enter the Quantity'); }
         } else { return back()->with('error','Please enter the Item Name'); }
         } else { return back()->with('error','Please enter the Item Number'); }
 
-    }    
+    }
 
     public function updateinvoice(Request $request){
-    
+
         $this->validate($request, [
         'id' => 'required',
         'invoiceId' => 'required',
@@ -588,7 +588,7 @@ class MerchantController extends Controller
 
 
         if(Input::hasFile('logo_upload')){
-        
+
         $this->validate($request, [
              'logo_upload' => 'dimensions:min_width=100,max_width=250'
         ]);
@@ -608,7 +608,7 @@ class MerchantController extends Controller
               $back_img = $location.$backphoto;
               $tran->logo = $backphoto;
         }  else {
-            return back()->with('error','Invoice not Generated,Unwanted images can not be accepted');    
+            return back()->with('error','Invoice not Generated,Unwanted images can not be accepted');
         }
         }
 
@@ -629,12 +629,12 @@ class MerchantController extends Controller
             $tran->payment_checkamt = $request->payment_checkamt;
             $tran->created_at = date('Y-m-d H:i:s',time());
             $tran->updated_at = date('Y-m-d H:i:s',time());
-            
+
             if($tran->save()){
                 $trans_id = $tran->id;
                 //ItemDetails::where('invoice_id', '=', $trans_id)->delete();
-                for ($i=0; $i < count($request->itemno); $i++) { 
-                  
+                for ($i=0; $i < count($request->itemno); $i++) {
+
                   if((!empty($request->itemid[$i]))){
                     $trans =ItemDetails::where('id',$request->itemid[$i])->first();
                     if($trans){
@@ -663,14 +663,14 @@ class MerchantController extends Controller
 
                 }
 
-            return redirect('/shareinvoice/'.\Hashids::encode($tran->id))->with('success','Invoice update Successfully');   
-            //return back()->with('success','Invoice update Successfully');    
+            return redirect('/shareinvoice/'.\Hashids::encode($tran->id))->with('success','Invoice update Successfully');
+            //return back()->with('success','Invoice update Successfully');
             }else{
-            return back()->with('error','Invoice not Generated');    
+            return back()->with('error','Invoice not Generated');
             }
             }else{
-            return back()->with('error','Invoice not Found');    
-            }            
+            return back()->with('error','Invoice not Found');
+            }
         } else { return back()->with('error','Please enter the shipping value'); }
         } else { return back()->with('error','Please enter the Price per Item value'); }
         } else { return back()->with('error','Please enter the Quantity'); }
@@ -683,9 +683,9 @@ class MerchantController extends Controller
         $id = \Hashids::decode($id);
         if($id){
         $subcategory =ItemDetails::where('id',$id)->delete();
-        return back()->with('success','Invoice item Deleted');    
+        return back()->with('success','Invoice item Deleted');
         }else{
-            return redirect('view-invoice')->with('error','Invoice not Found');   
+            return redirect('view-invoice')->with('error','Invoice not Found');
         }
     }
 
@@ -711,14 +711,14 @@ class MerchantController extends Controller
             //dd();
             $subcategory =InvoiceDetails::where(['id'=>$id[0],'status'=> 0])->delete();
             $subcategorys =ItemDetails::where('invoice_id',$id[0])->delete();
-            return back()->with('success','Invoice item Deleted');    
+            return back()->with('success','Invoice item Deleted');
         }else{
-            return redirect('view-invoice')->with('error','Invoice not Found');   
+            return redirect('view-invoice')->with('error','Invoice not Found');
         }
     }
 
     public function checkamount(Request $request){
-        
+
         $currency1 = $request->coin;
         $currency2 = $request->cointwo;
         $total = $request->total;
@@ -727,27 +727,27 @@ class MerchantController extends Controller
             $amount    = ncDiv($total,$lprice);
         }else{
             $amount    = $total;
-        }   
+        }
 
         $data['msg'] = 'success';
         $data['currency'] = $currency2;
         $data['amount'] = $amount;
-        return $data;      
+        return $data;
    }
 
     public function imgvalidaion($img)
     {
       $myfile = fopen($img, "r") or die("Unable to open file!");
       $value = fread($myfile,filesize($img));
-      
+
       if (strpos($value, "<?php") !== false) {
         $img = 0;
-      } 
+      }
       elseif (strpos($value, "<?=") !== false){
         $img = 0;
       }
       elseif (strpos($value, "eval") !== false) {
-        $img = 0;   
+        $img = 0;
       }
       elseif (strpos($value,"<script") !== false) {
         $img = 0;
@@ -777,7 +777,7 @@ class MerchantController extends Controller
         'itemname' => 'required',
         'payment_checkamt' => 'required',
         ]);
-        
+
         $uid = Auth::user()->id;
         $backphoto = null;
 
@@ -801,7 +801,7 @@ class MerchantController extends Controller
             $tran->logo = $backphoto;
             $tran->created_at = date('Y-m-d H:i:s',time());
             $tran->updated_at = date('Y-m-d H:i:s',time());
-            
+
             if($tran->save()){
                     $trans_id = $tran->id;
                     $trans = new ItemDetails();
@@ -815,11 +815,11 @@ class MerchantController extends Controller
                     $trans->updated_at = date('Y-m-d H:i:s',time());
                     $trans->save();
 
-            return redirect('/shareinvoice/'.\Hashids::encode($tran->id))->with('success','Invoice Generated Successfully');   
-            //return back()->with('success','Invoice Generated Successfully');    
+            return redirect('/shareinvoice/'.\Hashids::encode($tran->id))->with('success','Invoice Generated Successfully');
+            //return back()->with('success','Invoice Generated Successfully');
             }else{
-            return back()->with('error','Invoice not Generated');    
-            }            
+            return back()->with('error','Invoice not Generated');
+            }
         return view('merchantttools.request-invoice-maker');
     }
 
@@ -832,7 +832,7 @@ class MerchantController extends Controller
         $subcategory =ItemDetails::where('invoice_id',$id)->first();
         return view('merchantttools.editrequestinvoice',['category' => $category,'subcategory' => $subcategory]);
         }else{
-            return redirect('view-request-invoice')->with('error','Invoice not Found');   
+            return redirect('view-request-invoice')->with('error','Invoice not Found');
         }
     }
 
@@ -844,7 +844,7 @@ class MerchantController extends Controller
         $subcategory =ItemDetails::where('invoice_id',$id)->first();
         return view('merchantttools.sharerequestinvoice',['category' => $category,'subcategory' => $subcategory]);
         }else{
-            return redirect('view-request-invoice')->with('error','Invoice not Found');   
+            return redirect('view-request-invoice')->with('error','Invoice not Found');
         }
     }
 
@@ -894,14 +894,14 @@ class MerchantController extends Controller
                     $trans->save();
                     }
 
-            return redirect('/shareinvoice/'.\Hashids::encode($tran->id))->with('success','Invoice update Successfully');   
-            //return back()->with('success','Invoice update Successfully');    
+            return redirect('/shareinvoice/'.\Hashids::encode($tran->id))->with('success','Invoice update Successfully');
+            //return back()->with('success','Invoice update Successfully');
             }else{
-            return back()->with('error','Invoice not Generated');    
+            return back()->with('error','Invoice not Generated');
             }
             }else{
-            return back()->with('error','Invoice not Found');    
-            }            
+            return back()->with('error','Invoice not Found');
+            }
     }
 
 }
